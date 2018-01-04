@@ -127,3 +127,77 @@
 	text-align: center;
 	color: #fbdab2;
 }
+/*追投记录*/
+.content ul#catch{
+	width: 100%;
+	background-color: #8e4f3e;
+	display: none;
+
+}
+.content ul#catch li{
+    width: 100%;
+    height: 3.4rem;
+    box-sizing: border-box;
+    padding: 0.6rem 0.5rem 0.1rem 1rem;
+    overflow: hidden;
+}
+.content ul#catch li a{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.content ul#catch li .left{
+    width: 13rem;
+    height: 100%;
+    float: left;
+    line-height: 1rem;
+    border-bottom: 1px solid #7e412f;
+}
+.content ul#catch li .left p{
+	overflow: hidden;
+}
+
+.content ul#catch li .left p:first-child{
+	color: #fbdab2;
+	font-size: 0.6rem;
+}
+.content ul#catch li .left p:first-child i#chase{
+	border: 1px solid #fbdab2;
+    width: 1.7rem;
+    height: 0.7rem;
+    display: block;
+    line-height: 0.69rem;
+    text-align: center;
+    border-radius: 1rem;
+    font-size: 0.2rem;
+    margin-top: 0.1rem;
+    margin-left: 0.3rem;
+}
+.content ul#catch li .left p:first-child span#coin{
+	background-color: rgba(0,0,0,0.3);
+    padding: 0 0.5rem;
+    border-radius: 1rem;
+}
+.content ul#catch li .left p:last-child{
+	color: #d28362;
+	font-size: 0.5rem;
+}
+
+.content ul#catch li .left p .p_left{
+	float: left;
+}
+.content ul#catch li .left p .p_right{
+	float: right;
+}
+
+.content ul#catch li .right{
+	width: 1.5rem;
+	height: 100%;
+	float: left;
+	line-height: 2rem;
+	text-align: center;
+	color: #fbdab2;
+}
+
+
+
