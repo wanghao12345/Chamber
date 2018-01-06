@@ -5,16 +5,452 @@
 /*上面部分*/
 .box-top{
     width: 100%;
-    height: 55%;
-    background:url(../img/index/bg-body.png);
-    background-size: 100% 100%;
+    height: 60%;
     position: relative;
 }
+
+.box-top .back{
+	width: 100%;
+}
+.box-top .back1{
+	height: 70%;
+	background: url(../img/index/back-1.png);
+	background-size: 100% 100%;
+}
+.box-top .back1 .back1-content{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0.5rem;
+}
+.box-top .back1 .back1-content .back1-left{
+    width: 4.5rem;
+    height: 2.6rem;
+    float: left;
+    background: url(../img/index/嗨币大奖.png);
+    background-size: 100% 100%;
+}
+.box-top .back1 .back1-content .back1-left p{
+	width: 100%;
+	height: 50%;
+	display: block;
+}
+
+.box-top .back1 .back1-content .back1-left p:first-child{
+    box-sizing: border-box;
+    font-size: 0.6rem;
+    text-align: center;
+    line-height: 1.5rem;
+    color: #edbb64;
+
+}
+.box-top .back1 .back1-content .back1-left p:last-child{
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 0.5rem;
+    line-height: 1.1rem;
+    color: #7e2a0e;
+}
+
+
+.box-top .back1 .back1-content .back1-right{
+    width: 1.8rem;
+    height: 2rem;
+    float: right;
+    background: url(../img/index/更多.png);
+    background-size: 100% 100%;
+}
+.box-top .back1 .back1-content .back1-right a{
+    color: #edbb64;
+    display: block;
+    text-align: center;
+    margin-top: 1.8rem;
+    text-decoration: none;
+    font-size: 0.6rem;
+}
+
+.box-top .back2{
+	height: 30%;
+	background: url(../img/index/back-2.png);
+	background-size: 100% 100%;
+}
+.box-top .door-content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 2rem 0.7rem 2.5rem 0.7rem;
+}
+.box-top .door-content .door{
+	width: 33.3%;
+	height: 100%;
+	float: left;
+	position: relative;
+
+}
+.box-top .door-content .door1{
+    box-sizing: border-box;
+    padding-top: 1.5rem;
+}
+.box-top .door-content .door2{
+    box-sizing: border-box;
+    padding-bottom: 1.6rem;
+    z-index: 2;
+}
+.box-top .door-content .door3{
+	box-sizing: border-box;
+    padding-top: 1.5rem;
+}
+.door .door-in{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+ .door .door-in .door-kuang{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+}
+.door .door-in .door-kuang img{
+	width: 100%;
+	height: 100%;
+} 
+ .door .door-in .door-kuang-1{
+ 	right: -0.55rem;
+ }
+ .door .door-in .door-kuang-3{
+ 	left: -0.5rem;
+ }
+
+
+
+/* .door .door-in-1{
+	background: url(../img/index/门-银.png);
+    background-size: 100% 100%;
+}
+
+.door .door-in-2{
+	background: url(../img/index/门-金.png);
+    background-size: 100% 100%;
+}
+.door .door-in-3{
+	background: url(../img/index/门-铜.png);
+    background-size: 100% 100%;
+} */
+.door .door-in .door-in-content{
+    width: 100%;
+    height: 100%;
+}
+.door-in-1 .door-in-content{
+    box-sizing: border-box;
+    padding-top: 2.7rem;
+    padding-left: 0.8rem;
+    padding-right: 0.19rem;
+    padding-bottom: 0.5rem;
+}
+.door-in-2 .door-in-content{
+    box-sizing: border-box;
+    padding-top: 2.7rem;
+    padding-left: 0.7rem;
+    padding-right: 0.65rem;
+    padding-bottom: 0.5rem;
+}
+.door-in-3 .door-in-content{
+    box-sizing: border-box;
+    padding-top: 2.7rem;
+    padding-left: 0.25rem;
+    padding-right: 0.75rem;
+    padding-bottom: 0.5rem;
+}
+
+
+.door .door-in .door-left{
+	width: 50%;
+	height: 100%;
+	float: left;	
+}
+.door .door-in .door-left img{
+	width: 100%;
+	height: 100%;
+}
+.door .door-in .door-right{
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+.door .door-in .door-right img{
+	width: 100%;
+	height: 100%;
+}
+
+
+
 
 
 
 /*下面部分*/
 .box-bottom{
 	width: 100%;
-	height: 45%;
+	height: 40%;
+	margin-top: -1rem;
+	background-color: #682628;
+}
+/*截止投注 上期密码*/
+.deadLine{
+    width: 100%;
+    height: 1.4rem;
+    background-color: #91443e;
+    padding: 0rem 0.3rem;
+    box-sizing: border-box;
+    padding-top: 0.3rem;
+
+}
+.deadLine .deadline-content{
+    width: 6.1rem;
+    height: 1rem;
+    background-color: #823732;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+.deadLine .deadTime{
+	float: left;
+}
+.deadLine .upcode{
+	float: right;
+}
+.deadLine .deadline-content .title{
+    width: 50%;
+    height: 100%;
+    display: block;
+    float: left;
+    text-align: center;
+    line-height: 1rem;
+    font-size: 0.6rem;
+    color: #b76b51;
+}
+.deadLine .deadline-content .shu{
+	position: absolute;
+    width: 1px;
+    height: 0.6rem;
+    display: block;
+    left: 50%;
+    margin-left: 0.5px;
+    margin-top: 0.2rem;
+    background-color: #681d18;
+}
+.deadLine .deadline-content .result{
+	width: 50%;
+    height: 100%;
+    display: block;
+    float: left;
+    text-align: center;
+    line-height: 1rem;
+    font-size: 0.6rem;
+    color: #febe81;
+}
+.deadLine .upcode .result{
+	text-align: left;
+    box-sizing: border-box;
+    padding-left: 0.5rem;
+}
+.deadLine .upcode .result img{
+	width: 0.9rem;
+    height: 0.9rem;
+    float: right;
+    margin-top: 0.05rem;
+}
+/*投注数字*/
+
+.selectList{
+    width: 100%;
+    height: 7rem;
+    background-color: #682628;
+    box-sizing: border-box;
+    padding: 0rem 0.5rem;
+}
+.selectList ul{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.selectList ul li{
+    width: 20%;
+    height: 50%;
+    float: left;
+    box-sizing: border-box;
+    padding: 0.4rem 0.2rem 0.8rem 0.2rem;
+}
+.selectList ul li .list-top{
+    width: 100%;
+    height: 1.7rem;
+    background: url(../img/index/list-top.png);
+    background-size: 100% 100%;
+    text-align: center;
+    line-height: 1.7rem;
+    color: #edbb64;
+    font-weight: 600;
+}
+.selectList ul li .list-bottom{
+    width: 90%;
+    height: 0.7rem;
+    background: url(../img/index/list-bottom.png);
+    background-size: 100% 100%;
+    margin-top: 0.2rem;
+    text-align: center;
+    font-size: 0.3rem;
+    line-height: 0.7rem;
+    color: #d6ad4b;
+    box-sizing: border-box;
+    margin-left: 5%;
+}
+
+
+/*底下按钮*/
+
+.bottomSelect{
+    width: 100%;
+    height: 4rem;
+    background-color: #712d2e;
+    box-shadow: 0px -5px 0px 0px #62201d;
+}
+.bottomSelect .select-top{
+	width: 100%;
+	height: 40%;
+	overflow: hidden;
+	box-sizing: border-box;
+	padding: 0.2rem;
+}
+.bottomSelect .select-top .coin{
+	width: 5rem;
+	height: 100%;
+	float: left;
+}
+.bottomSelect .select-top .coin a{
+	display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    line-height: 1.2rem;
+    border-top-right-radius: 1rem;
+    padding-left: 0.5rem;
+    box-sizing: border-box;
+    border-bottom-right-radius: 1rem;
+    text-decoration: none;
+    color: #edbb64;
+}
+
+
+.bottomSelect .select-top .coinSelec{
+    width: 10rem;
+    height: 100%;
+    float: right;
+}
+.bottomSelect .select-top .coinSelec ul{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.bottomSelect .select-top .coinSelec ul li{
+	width: 3rem;
+	height: 100%;
+	float: left;
+}
+.bottomSelect .select-top .coinSelec ul li a{
+	width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #b5665f;
+    line-height: 1.1rem;
+    display: block;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 1px solid #b5665f;
+    border-radius: 0.2rem;
+    background-color: #662523;
+    font-size: 0.65rem;
+    font-weight: 540;
+}
+.bottomSelect .select-top .coinSelec ul li a img{
+    width: 0.8rem;
+    height: 0.8rem;
+    display: block;
+    float: left;
+    margin-top: 0.2rem;
+    margin-right: 0.2rem;
+    margin-left: 0.2rem;
+}
+.bottomSelect .select-top .coinSelec ul li a span{
+
+}
+
+
+/*海币数量*/
+.bottomSelect .select-bottom{
+	width: 100%;
+	height: 60%;
+	overflow: hidden;
+}
+.bottomSelect .select-bottom .numberList{
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+
+.bottomSelect .select-bottom .numberList ul{
+	width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 0.4rem 0rem;
+}
+.bottomSelect .select-bottom .numberList ul li{
+    width: 2rem;
+    height: 1.1rem;
+    margin-left: 0.5rem;
+    float: left;
+}
+.bottomSelect .select-bottom .numberList ul li a.selc-coin{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.1rem;
+    background-color: #a6462e;
+    color: #eab96a;
+    border-radius: 0.2rem;
+    font-size: 0.5rem;
+    font-weight: 500;
+}
+.bottomSelect .select-bottom .numberList ul li a.active{
+	background-color: #eab96a;
+	color:#a6462e;
+}
+
+
+.bottomSelect .select-bottom .query{
+    width: 50%;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+    padding: 0.2rem;
+    padding-right: 0.4rem;
+}
+.bottomSelect .select-bottom .query a{
+	display: block;
+    width: 100%;
+    height: 1.5rem;
+    text-decoration: none;
+    text-align: center;
+    background-color: #eab96a;
+    color: #a6462e;
+    font-size: 0.6rem;
+    font-weight: 550;
+    line-height: 1.5rem;
+    border-radius: 0.1rem;
 }
