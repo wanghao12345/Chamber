@@ -16,6 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<script type="text/javascript" src="js/share/rem.js"></script>
 	<script type="text/javascript" src="js/share/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/share/animation.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
@@ -35,7 +36,7 @@
 								<li><a href="#">玩法介绍</a></li>
 								<li><a href="#">排行榜</a></li>
 								<li><a href="#">娱乐大厅</a></li>
-							</ul>
+							</ul>								
 						</div>
 					</div>
 				</div>
@@ -45,11 +46,17 @@
 				<div class="door door1">
 					<div class="door-in door-in-1">
 							<div class="door-in-content">
-								<div class="door-left">
-									<img src="img/index/door-left.png" alt="左门">
-								</div>
-								<div class="door-right">
-									<img src="img/index/door-right.png" alt="右门">
+								<div class="door-backColor">
+									<div class="door-left">
+										<img src="img/index/door-left.png" alt="左门">
+									</div>
+									<div class="door-right">
+										<img src="img/index/door-right.png" alt="右门">
+									</div>	
+									<div class="round">
+										<img src="img/index/round.png" alt="转圈">
+									</div>	
+									<div class="cipher">9</div>							
 								</div>
 							</div>
 							
@@ -61,12 +68,19 @@
 				<div class="door door2">
 					<div class="door-in door-in-2">
 							<div class="door-in-content">
-								<div class="door-left">
-									<img src="img/index/door-left.png" alt="左门">
+								<div class="door-backColor">
+									<div class="door-left">
+										<img src="img/index/door-left.png" alt="左门">
+									</div>
+									<div class="door-right">
+										<img src="img/index/door-right.png" alt="右门">
+									</div>	
+									<div class="round">
+										<img src="img/index/round.png" alt="转圈">
+									</div>	
+									<div class="cipher">5</div>								
 								</div>
-								<div class="door-right">
-									<img src="img/index/door-right.png" alt="右门">
-								</div>
+
 							</div>
 							
 							<div class="door-kuang door-kuang-2">
@@ -77,12 +91,19 @@
 				<div class="door door3">
 					<div class="door-in door-in-3">
 							<div class="door-in-content">
-								<div class="door-left">
-									<img src="img/index/door-left.png" alt="左门">
+								<div class="door-backColor">
+									<div class="door-left">
+										<img src="img/index/door-left.png" alt="左门">
+									</div>
+									<div class="door-right">
+										<img src="img/index/door-right.png" alt="右门">
+									</div>	
+									<div class="round">
+										<img src="img/index/round.png" alt="转圈">
+									</div>	
+									<div class="cipher">6</div>								
 								</div>
-								<div class="door-right">
-									<img src="img/index/door-right.png" alt="右门">
-								</div>
+
 							</div>
 							
 							<div class="door-kuang door-kuang-3">
@@ -97,7 +118,7 @@
 				<div class="deadline-content deadTime">
 					<span class="title">截止投注</span>
 					<span class="shu"></span>
-					<span class="result">00:32:51</span>
+					<span class="result" id="cutdown">00:00:00</span>
 				</div>
 				<div class="deadline-content upcode">
 					<span class="title">上期密码</span>
@@ -108,7 +129,7 @@
 					</span>
 				</div>
 			</div>
-			<div class="selectList">
+			<div class="selectList" id="selectList">
 				<ul>
 					<li>
 						<div class="list-top">0</div>
@@ -116,39 +137,39 @@
 					</li>
 					<li>
 						<div class="list-top">1</div>
-						<div class="list-bottom">200</div>
+						<div class="list-bottom">0</div>
 					</li>
 					<li>
 						<div class="list-top">2</div>
-						<div class="list-bottom">400</div>
+						<div class="list-bottom">0</div>
 					</li>
 					<li>
 						<div class="list-top">3</div>
-						<div class="list-bottom">200</div>
+						<div class="list-bottom">0</div>
 					</li>
 					<li>
 						<div class="list-top">4</div>
-						<div class="list-bottom">200</div>
+						<div class="list-bottom">0</div>
 					</li>
 					<li>
 						<div class="list-top" style="margin-top: -0.2rem">5</div>
-						<div class="list-bottom">200</div>
+						<div class="list-bottom">0</div>
 					</li>
 					<li>
 						<div class="list-top" style="margin-top: -0.2rem">6</div>
-						<div class="list-bottom">2000</div>
+						<div class="list-bottom">0</div>
 					</li>
 					<li>
 						<div class="list-top" style="margin-top: -0.2rem">7</div>
-						<div class="list-bottom">20000</div>
+						<div class="list-bottom">0</div>
 					</li>
 					<li>
 						<div class="list-top" style="margin-top: -0.2rem">8</div>
-						<div class="list-bottom">20000</div>
+						<div class="list-bottom">0</div>
 					</li>
 					<li>
 						<div class="list-top" style="margin-top: -0.2rem">9</div>
-						<div class="list-bottom">20000</div>
+						<div class="list-bottom">0</div>
 					</li>
 				</ul>
 			</div>
@@ -162,22 +183,22 @@
 					<div class="coinSelec">
 						<ul>
 							<li><a href="#"><img src="img/index/zhuitou.png" alt="追投"><span>追投</span></a></li>
-							<li style="margin: 0rem 0.3rem;"><a href="#"><img src="img/index/quanxuan.png" alt="全选"><span>全选</span></a></li>
-							<li><a href="#"><img src="img/index/chexiao.png" alt="撤销"><span>撤销</span></a></li>
+							<li style="margin: 0rem 0.3rem;"><a id="quanxuan"><img src="img/index/quanxuan.png" alt="全选"><span>全选</span></a></li>
+							<li><a id="chexiao"><img src="img/index/chexiao.png" alt="撤销"><span>撤销</span></a></li>
 						</ul>
 					</div>
 				</div>
 
 				<div class="select-bottom">
-					<div class="numberList">
+					<div class="numberList" id="numberList">
 						<ul>
-							<li><a href="#" class="selc-coin active">100</a></li>
+							<li><a href="#" class="selc-coin active">200</a></li>
 							<li><a href="#" class="selc-coin">1000</a></li>
 							<li><a href="#" class="selc-coin">5000</a></li>
 						</ul>
 					</div>
 					<div class="query">
-						<a href="#">立即消耗<span>2000</span>金豆</a>
+						<a href="#">立即消耗<span id="sumcoin" style="margin: 0rem 0.1rem">0</span>金豆</a>
 					</div>
 				</div>
 			</div>
