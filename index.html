@@ -182,7 +182,7 @@
 					</div>
 					<div class="coinSelec">
 						<ul>
-							<li><a href="#"><img src="img/index/zhuitou.png" alt="追投"><span>追投</span></a></li>
+							<li><a id="zhuitou"><img src="img/index/zhuitou.png" alt="追投"><span>追投</span></a></li>
 							<li style="margin: 0rem 0.3rem;"><a id="quanxuan"><img src="img/index/quanxuan.png" alt="全选"><span>全选</span></a></li>
 							<li><a id="chexiao"><img src="img/index/chexiao.png" alt="撤销"><span>撤销</span></a></li>
 						</ul>
@@ -198,11 +198,64 @@
 						</ul>
 					</div>
 					<div class="query">
-						<a href="#">立即消耗<span id="sumcoin" style="margin: 0rem 0.1rem">0</span>金豆</a>
+						<!-- <a>立即消耗<span id="sumcoin" style="margin: 0rem 0.1rem">0</span>嗨币</a> -->
+						<a>至少选择一个密码</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
+
+	<!-- 追投悬浮框 -->
+	<div class="mask chasingFrame">
+		<div class="chasing-content">
+			<div class="chasing-top">
+				<div class="back-btn" id="chasing-back">
+					<img src="img/index/bottom-btn.png" alt="返回">
+					返回
+				</div>
+			</div>
+			<div class="chasing-bottom">
+				<div class="chasing-period">
+					<div class="programme" id="programme">追选方案 <i>0</i> <i>1</i></div>
+					<div class="period-selec period-selec-1">
+						<span class="left">追</span>
+						<div class="period-content">
+							<!-- <img src="" id="remove" alt="减号" /> -->
+							<span class="fang" id="reduce">-</span>
+							<!-- <span class="value" id="period-value">1</span> -->
+							<input type="text" class="value" id="period-value" value="1" />
+							<span class="fang" id="add">+</span>
+							<!-- <img src="" id="add" alt="加号" /> -->
+						</div>
+						<span class="left">期</span>	
+					</div>
+					<div class="period-selec period-selec-2" id="period-selec-2">
+						<ul>
+							<li>×<i>5</i></li>
+							<li>×<i>20</i></li>
+							<li>×<i>50</i></li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="recharge">
+					<div class="coin">
+						<a>
+							1188						
+						</a>
+					</div>
+					<div class="query">
+						<a>立即消耗<span id="sumcoin" style="margin: 0rem 0.1rem">0</span>嗨币</a>
+					</div>
+				</div>
+
+			</div>			
+		</div>
+	</div>
+
+
+
 </body>
 </html>

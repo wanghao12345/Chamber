@@ -523,3 +523,209 @@
     line-height: 1.5rem;
     border-radius: 0.1rem;
 }
+/*追投悬浮框*/
+.mask{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 4;
+}
+.chasingFrame{
+    /*display: none;*/
+}
+.chasingFrame .chasing-content{
+    width: 100%;
+    height: 7rem;
+    bottom: 0;
+    position: absolute;
+}
+
+.chasingFrame .chasing-content .chasing-top{
+    width: 100%;
+    height: 1rem;
+
+}
+
+.chasingFrame .chasing-content .chasing-top .back-btn{
+    width: 2.3rem;
+    height: 1rem;
+    float: right;
+    margin-right: 0.2rem;
+    background-color: #712d2e;
+    border-top-left-radius: 0.2rem;
+    border-top-right-radius: 0.2rem;
+    font-size: 0.4rem;
+    line-height: 1rem;
+    color: #b5665f;
+}
+.chasingFrame .chasing-content .chasing-top .back-btn img{
+    width: 0.6rem;
+    float: left;
+    margin-top: 0.2rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+}
+
+
+
+
+/*充值*/
+.chasingFrame .chasing-content .chasing-bottom{
+    width: 100%;
+    height: 6rem;
+    background-color: #712d2e;
+    
+}
+.chasing-bottom .chasing-period{
+    width: 100%;
+    height: 4rem;
+    overflow: hidden;
+}
+/*追选方案*/
+.chasing-period .programme{
+    width: 100%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 0.6rem;
+    box-sizing: border-box;
+    padding-left: 0.5rem;
+    color: #b5665f;
+}
+.chasing-period .programme i{
+    margin-left: 0.3rem;
+}
+
+
+.chasing-bottom .chasing-period .period-selec{
+    width: 50%;
+    height: 2.5rem;
+    float: left;
+}
+
+.period-selec-1{
+    box-sizing: border-box;
+    padding: 0.7rem 0.5rem 0.5rem 0.5rem;
+}
+.period-selec-1 div.period-content{
+    width: 5rem;
+    height: 1rem;
+    float: left;
+    background: red;
+}
+.period-selec-1 div.period-content span.fang{
+    width: 0.9rem;
+    height: 0.9rem;
+    display: block;
+    float: left;
+    background: #ad472e;
+    margin-top: 0.05rem;
+    text-align: center;
+    line-height: 0.9rem;
+}
+.period-selec-1 div.period-content span.value{
+    width: 3.2rem;
+    height: 1rem;
+    display: block;
+    float: left;
+    line-height: 1rem;
+    text-align: center;
+    color: #edbb64;
+}
+.period-selec-1 div.period-content input.value{
+    width: 3.2rem;
+    height: 1rem;
+    display: block;
+    float: left;
+    line-height: 1rem;
+    text-align: center;
+    color: #edbb64;
+    border: 0;
+    box-sizing: border-box;
+}
+
+
+
+.period-selec-1 span.left{
+    width: 1rem;
+    height: 1rem;
+    float: left;
+    font-size: 0.6rem;
+    text-align: center;
+    line-height: 1rem;
+    color: #b5665f;
+}
+.period-selec-2{
+    box-sizing: border-box;
+    padding: 0.55rem 0rem 0.35rem 0.5rem;
+}
+.period-selec-2 ul{
+    width: 100%;
+    height: 100%;
+}
+.period-selec-2 ul li{
+    width: 2rem;
+    height: 1.2rem;
+    float: left;
+    text-align: center;
+    line-height: 1.3rem;
+    background: blue;
+    margin-right: 0.5rem;
+    font-size: 0.55rem;
+    border-radius: 0.15rem;
+    color: #edbb64;
+    background-color: #a6462e;
+}
+.chasing-bottom .recharge{
+    width: 100%;
+    height: 2rem;
+    box-shadow: 0px -1px 0px 0px #631915;
+}
+.chasing-bottom .recharge .coin {
+    width: 5rem;
+    height: 1rem;
+    float: left;
+    background: url(../img/index/coin-buy.png);
+    background-size: 100% 100%;
+    margin-top: 0.5rem;
+}
+.chasing-bottom .recharge .coin a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    line-height: 1rem;
+    border-top-right-radius: 1rem;
+    padding-left: 1rem;
+    box-sizing: border-box;
+    border-bottom-right-radius: 1rem;
+    text-decoration: none;
+    color: #edbb64;
+    font-size: 0.5rem;
+}
+
+.chasing-bottom .recharge .query {
+    width: 11rem;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+    padding-left: 0.5rem;
+    padding-top: 0.25rem;
+    padding-right: 0.4rem;
+}
+.chasing-bottom .recharge .query a {
+    display: block;
+    width: 100%;
+    height: 1.5rem;
+    text-decoration: none;
+    text-align: center;
+    background-color: #eab96a;
+    color: #a6462e;
+    font-size: 0.6rem;
+    font-weight: 550;
+    line-height: 1.5rem;
+    border-radius: 0.1rem;
+}
+
