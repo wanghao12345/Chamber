@@ -97,11 +97,32 @@ $(function(){
     	}
     	consumeCoin();
 	})
+	/*********---------投注按钮--------*********/
+	$('#sendBetting').on('click',function(){
+		if ($(this).html() != '至少选择一个密码') {//已经下注了
+			$('.bettingFrame').css('display','block');
+		} else {//没有下注
 
+		}
+	})
+	/*********---------投注成功弹窗 --------*********/
+	//关闭
+	$('.bettingFrame .bettingFrame-content .button .btn-2').on('click',function(){
+		$('.bettingFrame').css('display','none');
+	})
 
-
-
-
+	/*********---------规则说明--------*********/
+	//打开
+	$('#menu-rule-btn').on('click',function(){
+		$('.ruleFrame').css('display','block');
+	})
+	//关闭
+	$('#rule-close-btn-1').on('click',function(){
+		$('.ruleFrame').css('display','none');
+	})	
+	$('#rule-close-btn-2').on('click',function(){
+		$('.ruleFrame').css('display','none');
+	})	
 
 })
 

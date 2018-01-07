@@ -534,7 +534,7 @@
     z-index: 4;
 }
 .chasingFrame{
-    /*display: none;*/
+    display: none;
 }
 .chasingFrame .chasing-content{
     width: 100%;
@@ -568,10 +568,6 @@
     margin-left: 0.2rem;
     margin-right: 0.2rem;
 }
-
-
-
-
 /*充值*/
 .chasingFrame .chasing-content .chasing-bottom{
     width: 100%;
@@ -645,9 +641,6 @@
     border: 0;
     box-sizing: border-box;
 }
-
-
-
 .period-selec-1 span.left{
     width: 1rem;
     height: 1rem;
@@ -729,3 +722,196 @@
     border-radius: 0.1rem;
 }
 
+/*密码设定成功弹出框*/
+.bettingFrame{
+    display: none;
+}
+.bettingFrame-content{
+    width: 14rem;
+    height: 6rem;
+    background: #9a5341;
+    position: absolute;
+    top: 50%;
+    margin-top: -4rem;
+    left: 50%;
+    margin-left: -7rem;
+    border-radius: 0.5rem;
+}
+.bettingFrame-content .title{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;   
+}
+.bettingFrame-content .title span{
+    font-size: 0.8rem;
+    color: #ffd9ae;
+}
+.bettingFrame-content .content{
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;   
+}
+.bettingFrame-content .content p{
+    font-size: 0.6rem;
+    color: #db9478;
+}
+.bettingFrame-content .button{
+    width: 100%;
+    height: 3rem;
+    box-sizing: border-box;
+    padding: 1rem 0.7rem 0.5rem 0.7rem;
+    overflow: hidden;
+}
+.bettingFrame-content .button .btn{
+    width: 6rem;
+    height: 100%;
+    border: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 1rem;
+    font-size: 0.6rem;
+    border-radius: 0.2rem;
+}
+.bettingFrame-content .button .btn-1{
+    float: left;
+    background-color: #c35836;
+    color: #651900;
+}
+.bettingFrame-content .button .btn-2{
+    float: right;
+    background-color: #e0a855;
+    color: #651900;
+}
+.bettingFrame-content .button .btn a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #651900;
+    text-align: center;
+    line-height: 1.5rem;
+    font-size: 0.6rem;
+    border-radius: 0.2rem;
+    text-decoration: none;
+}
+
+/*规则说明*/
+.ruleFrame{
+    display: none;
+}
+.ruleFrame .ruleFrame-content{
+    width: 14rem;
+    height: 16.5rem;
+    background-color: #f6c96c;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -7rem;
+    margin-top: -10rem;
+    box-sizing: border-box;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    position: relative;
+    border-radius: 0.3rem;
+}
+.ruleFrame .ruleFrame-content .close{
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    right: -0.4rem;
+    top: -0.4rem;
+    text-align: center;
+    line-height: 0.8rem;
+    border-radius: 1rem;
+    color: #f6c96c;
+    background-color: #985441;
+    border: 2px solid #f6c96c;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+.ruleFrame .ruleFrame-content .content{
+    width: 100%;
+    height: 12rem;
+    background-color: #985441;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    box-sizing: border-box;
+    padding: 0.8rem 0.5rem;
+    overflow-y: auto;
+}
+.ruleFrame .ruleFrame-content .content .top-content{
+    overflow: hidden;
+}
+.ruleFrame .ruleFrame-content .content h4{
+    width: 3rem;
+    height: 0.8rem;
+    background: #96523f;
+    margin: 0 auto;
+    font-size: 0.5rem;
+    text-align: center;
+    line-height: 0.8rem;
+    border-radius: 1rem;
+    color: #dd9a70;  
+}
+.ruleFrame .ruleFrame-content .content p{
+    font-size: 0.5rem;
+    color: #facc98;
+    line-height: 0.7rem;    
+}
+.ruleFrame .ruleFrame-content .content .top{
+    width: 5.8rem;
+    height: 8rem;
+    background-color: #af674e;
+    border-radius: 0.2rem;
+    box-sizing: border-box;
+    padding: 0.3rem;
+}
+.ruleFrame .ruleFrame-content .content .top p{
+    margin-top: 1rem;
+}
+.ruleFrame .ruleFrame-content .content .left{
+    float: left;
+}
+.ruleFrame .ruleFrame-content .content .right{
+    float: right;
+}
+.ruleFrame .ruleFrame-content .content .bottom{
+    width: 100%;
+    /*height: 10rem;*/
+    padding-top: 0.5rem;
+    /*padding-bottom: 0.5rem;*/
+}
+.ruleFrame .ruleFrame-content .content .bottom p{
+    margin-top: 0.5rem;
+    line-height: 0.8rem;   
+}
+.ruleFrame .ruleFrame-content .button{
+    width: 100%;
+    height: 3rem;
+    background-color: #884535;
+    position: relative;
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+}
+.ruleFrame .ruleFrame-content .button button{
+    width: 11rem;
+    height: 1.8rem;
+    background-color: #d89648;
+    color: #832d10;
+    text-align: center;
+    border: 0;
+    padding: 0;
+    border-radius: 0.2rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -5.5rem;
+    bottom: 0.5rem;
+    font-size: 0.6rem;
+    font-weight: 600;
+}
+.ruleFrame .ruleFrame-content .button button a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    line-height: 1.8rem;
+}

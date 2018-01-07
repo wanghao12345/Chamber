@@ -32,10 +32,10 @@
 						<a href="#">更多</a>
 						<div class="menu">
 							<ul>
-								<li><a href="#">解密记录</a></li>
-								<li><a href="#">玩法介绍</a></li>
-								<li><a href="#">排行榜</a></li>
-								<li><a href="#">娱乐大厅</a></li>
+								<li><a href="template/record.html">解密记录</a></li>
+								<li><a id="menu-rule-btn">玩法介绍</a></li>
+								<li><a>排行榜</a></li>
+								<li><a>娱乐大厅</a></li>
 							</ul>								
 						</div>
 					</div>
@@ -176,7 +176,7 @@
 			<div class="bottomSelect">
 				<div class="select-top">
 					<div class="coin">
-						<a href="#">
+						<a>
 							1188						
 						</a>
 					</div>
@@ -192,21 +192,19 @@
 				<div class="select-bottom">
 					<div class="numberList" id="numberList">
 						<ul>
-							<li><a href="#" class="selc-coin active">200</a></li>
-							<li><a href="#" class="selc-coin">1000</a></li>
-							<li><a href="#" class="selc-coin">5000</a></li>
+							<li><a  class="selc-coin active">200</a></li>
+							<li><a  class="selc-coin">1000</a></li>
+							<li><a  class="selc-coin">5000</a></li>
 						</ul>
 					</div>
 					<div class="query">
 						<!-- <a>立即消耗<span id="sumcoin" style="margin: 0rem 0.1rem">0</span>嗨币</a> -->
-						<a>至少选择一个密码</a>
+						<a id="sendBetting">至少选择一个密码</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
-
 	<!-- 追投悬浮框 -->
 	<div class="mask chasingFrame">
 		<div class="chasing-content">
@@ -247,15 +245,72 @@
 						</a>
 					</div>
 					<div class="query">
-						<a>立即消耗<span id="sumcoin" style="margin: 0rem 0.1rem">0</span>嗨币</a>
+						<a id="sendBetting">立即消耗<span id="sumcoin" style="margin: 0rem 0.1rem">0</span>嗨币</a>
 					</div>
 				</div>
 
 			</div>			
 		</div>
 	</div>
+	<!-- 投注成功弹窗 -->
+	<div class="mask bettingFrame">
+		<div class="bettingFrame-content">
+			<div class="title"><!-- <img src="" alt="成功"> --><span>密码设定成功</span></div>
+			<div class="content"><p>预计<span>10:59</span>解密</p></div>
+			<div class="button">
+				<button class="btn btn-1"><a href="template/waitDecrypt.html">查看已设密码</a></button>
+				<button class="btn btn-2">继续解密</button>
+			</div>			
+		</div>
+	</div>
+	<!-- 规则说明 -->
+	<div class="mask ruleFrame">
+		<div class="ruleFrame-content">
+			<div class="close" id="rule-close-btn-1">×</div>
+			<div class="content">
+				<div class="top-content">
+					<div class="top left">
+						<h4>中奖秘籍</h4>
+						<p>
+							选择一个密码，拥有3次中奖机会，匹配即为中奖
+						</p>
+					</div>
+					<div class="top right">
+						<h4>大奖秘籍</h4>
+						<p>
+							3个密码与你的密码完全相同，既可瓜分大奖
+						</p>
+					</div>				
+				</div>
 
 
+				<div class="bottom">
+					<h4>详细规则</h4>
+					<p>
+						1.从10个密码中，选择密码参与当期密室。每期密室会开启3个密码，分别对应3种不同倍数的奖励，若您选择的密码与开启的3个密码中任意一个密码相同，即可获奖；
+					</p>
+					<p>
+						2.密室每小时整点开启1期（其中02:00~07:00仅为1期，于07:00开奖），每期密室开启前，您可以选择1个、多个、多倍密码进行游戏（单个密码需消耗200嗨币）。若您选择的密码越多，当期中奖率越高；若您选择的倍数越高，当期中奖额度越高；
+					</p>
+					<p>
+						3.嗨币大奖不断累加，当密室开启的3个密码完全相同，且与您选择的密码相同时，您即可获得嗨币大奖，奖励的嗨币数量按一定比例均分（您当期消耗的嗨币数/所有用户当期消耗的嗨币数），最高可达500万嗨币；
+					</p>
+					<p>
+						4.追期玩法，会自动为您使用相同的密码，托管参与接下来的多期密室开奖（会一次性扣除多期所需的嗨币）；
+					</p>
+					<p>
+						5.密室开启后，奖励的嗨币将在5分钟内到账；若因系统原因导致密室无法正常开启时，所消耗的嗨币将在2小时内返还；
+					</p>
+					<p>
+						6.密室寻宝及其活动，禁止任何形式的作弊刷奖，若有发现将取消派奖，对于已发放的奖励有权追回；
+					</p>
+				</div>
+			</div>
+			<div class="button">
+				<button><a id="rule-close-btn-2">开始寻宝</a></button>
+			</div>
+		</div>
+	</div>
 
 </body>
 </html>
