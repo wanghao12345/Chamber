@@ -154,6 +154,8 @@
 } 
  .door .door-in .door-kuang-1{
  	right: -0.55rem;
+
+    width: 5.8rem;
  }
  .door .door-in .door-kuang-3{
  	left: -0.5rem;
@@ -163,6 +165,7 @@
     width: 100%;
     height: 100%;
 }
+
 .door .door-in .door-in-content .door-backColor{
     width: 100%;
     height: 100%;
@@ -171,15 +174,6 @@
     background: url(../img/index/bg-door-award.png);
     background-size: 100% 100%;
 }
-
-
-
-
-
-
-
-
-
 .door .door-in .door-in-content .door-backColor .round{
     width: 2.5rem;
     height: 2.5rem;
@@ -827,36 +821,46 @@
 .ruleFrame .ruleFrame-content{
     width: 14rem;
     height: 16.5rem;
-    background-color: #f6c96c;
     position: absolute;
     left: 50%;
     top: 50%;
     margin-left: -7rem;
     margin-top: -10rem;
     box-sizing: border-box;
-    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    padding: 1.8rem 0.5rem 0.5rem 0.5rem;
     position: relative;
     border-radius: 0.3rem;
+    background: url(../img/rule/back.png);
+    background-size: 100% 100%;
 }
 .ruleFrame .ruleFrame-content .close{
     width: 1rem;
     height: 1rem;
     position: absolute;
-    right: -0.4rem;
-    top: -0.4rem;
+    right: -0.2rem;
+    top: 0.2rem;
     text-align: center;
     line-height: 0.8rem;
     border-radius: 1rem;
-    color: #f6c96c;
-    background-color: #985441;
     border: 2px solid #f6c96c;
     font-size: 0.9rem;
     font-weight: 700;
+    background: url(../img/rule/close.png);
+    background-size: 100% 100%;
+}
+.ruleFrame .ruleFrame-content .title{
+    position: absolute;
+    top: 0.4rem;
+    display: block;
+    width: 4rem;
+    left: 50%;
+    margin-left: -1.3rem;
+    color: #f5c76f;
+    font-size: 0.7rem;    
 }
 .ruleFrame .ruleFrame-content .content{
     width: 100%;
-    height: 12rem;
-    background-color: #985441;
+    height: 11rem;
     border-top-left-radius: 0.3rem;
     border-top-right-radius: 0.3rem;
     box-sizing: border-box;
@@ -867,15 +871,16 @@
     overflow: hidden;
 }
 .ruleFrame .ruleFrame-content .content h4{
-    width: 3rem;
-    height: 0.8rem;
-    background: #96523f;
+    width: 3.4rem;
+    height: 1.1rem;
     margin: 0 auto;
     font-size: 0.5rem;
     text-align: center;
-    line-height: 0.8rem;
+    line-height: 1.1rem;
     border-radius: 1rem;
-    color: #dd9a70;  
+    color: #dd9a70;
+    background: url(../img/rule/title.png);
+    background-size: 100% 100%;
 }
 .ruleFrame .ruleFrame-content .content p{
     font-size: 0.5rem;
@@ -885,13 +890,56 @@
 .ruleFrame .ruleFrame-content .content .top{
     width: 5.8rem;
     height: 8rem;
-    background-color: #af674e;
     border-radius: 0.2rem;
     box-sizing: border-box;
     padding: 0.3rem;
+    background: url(../img/rule/back1.png);
+    background-size: 100% 100%;
+}
+.ruleFrame .ruleFrame-content .content .top .Legend{
+    width: 100%;
+    height: 4rem;
+}
+.ruleFrame .ruleFrame-content .content .top .Legend .top1{
+    width: 100%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+}
+.ruleFrame .ruleFrame-content .content .top .Legend .bottom1{
+width: 100%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+}
+.ruleFrame .ruleFrame-content .content .top .Legend span{
+    width: 1.2rem;
+    height: 1.2rem;
+    display: block;
+    float: left;
+    color: #91493a;
+    line-height: 1.2rem;
+    text-align: center;
+    font-weight: 600;
+}
+.ruleFrame .ruleFrame-content .content .top .Legend span#middle{
+    position: absolute;
+    left: 50%;
+    margin-left: -0.6rem;
+    top: 50%;
+    margin-top: -0.75rem;
+}
+.ruleFrame .ruleFrame-content .content .top .Legend .top1 span{
+
+}
+.ruleFrame .ruleFrame-content .content .top .Legend .bottom1 span{
+
 }
 .ruleFrame .ruleFrame-content .content .top p{
-    margin-top: 1rem;
+    width: 100%;
+    height: 3.5rem;
+    box-sizing: border-box;
+    padding-top: 1rem;
 }
 .ruleFrame .ruleFrame-content .content .left{
     float: left;
@@ -920,7 +968,6 @@
 .ruleFrame .ruleFrame-content .button button{
     width: 11rem;
     height: 1.8rem;
-    background-color: #d89648;
     color: #832d10;
     text-align: center;
     border: 0;
@@ -932,6 +979,8 @@
     bottom: 0.5rem;
     font-size: 0.6rem;
     font-weight: 600;
+    background: url(../img/rule/btn.png);
+    background-size: 100% 100%;
 }
 .ruleFrame .ruleFrame-content .button button a{
     width: 100%;
@@ -939,3 +988,74 @@
     display: block;
     line-height: 1.8rem;
 }
+
+
+/*修改1*/
+ .door .door-in .door-kuang-1{
+    width: 5.5rem;
+ }
+.door .door-in .door-kuang-2{
+    width: 5.5rem;
+}
+ .door .door-in .door-kuang-3{
+    width: 5.5rem;
+    left: 0rem;
+ }
+.door .door-in .door-in-content{
+    width: 5.5rem;
+}
+.box-top .door-content {
+    padding: 2rem 0.7rem 2.5rem 0.15rem;
+}
+.door-in-1 .door-in-content {
+    box-sizing: border-box;
+    padding-top: 2.7rem;
+    padding-left: 0.8rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.door-in-2 .door-in-content {
+    box-sizing: border-box;
+    padding-top: 2.7rem;
+    padding-left: 0.7rem;
+    padding-right: 0.6rem;
+    padding-bottom: 0.5rem;
+}
+.door-in-3 .door-in-content {
+    box-sizing: border-box;
+    padding-top: 2.8rem;
+    padding-left: 0.6rem;
+    padding-right: 0.65rem;
+    padding-bottom: 0.5rem;
+}
+
+.door .door-in .door-in-content .door-backColor {
+    background: #edbb64;
+    position: relative;
+    background: url(../img/index/bg-door-award.png);
+    background-size: 100% 100%;
+    width: 4.2rem;
+    height: 7.84rem;
+}
+/*修改1*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
