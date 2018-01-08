@@ -516,12 +516,14 @@
     height: 1.5rem;
     text-decoration: none;
     text-align: center;
-    background-color: #eab96a;
+    /*background-color: #eab96a;*/
     color: #a6462e;
     font-size: 0.6rem;
     font-weight: 550;
     line-height: 1.5rem;
     border-radius: 0.1rem;
+    background: url(../img/chasing/query.png);
+    background-size: 100% 100%;
 }
 /*追投悬浮框*/
 .mask{
@@ -562,11 +564,12 @@
     color: #b5665f;
 }
 .chasingFrame .chasing-content .chasing-top .back-btn img{
-    width: 0.6rem;
+    width: 0.5rem;
+    height: 0.4rem;
     float: left;
-    margin-top: 0.2rem;
+    margin-top: 0.3rem;
     margin-left: 0.2rem;
-    margin-right: 0.2rem;
+    margin-right: 0.1rem;
 }
 /*充值*/
 .chasingFrame .chasing-content .chasing-bottom{
@@ -609,17 +612,26 @@
     width: 5rem;
     height: 1rem;
     float: left;
-    background: red;
+    background: url(../img/chasing/input.png);  
+    background-size: 100% 100%; 
 }
 .period-selec-1 div.period-content span.fang{
-    width: 0.9rem;
-    height: 0.9rem;
+    width: 0.8rem;
+    height: 0.8rem;
     display: block;
     float: left;
-    background: #ad472e;
-    margin-top: 0.05rem;
+    margin-top: 0.1rem;
     text-align: center;
     line-height: 0.9rem;
+}
+.period-selec-1 div.period-content span#reduce{
+    background: url(../img/chasing/reduce.png);
+    background-size: 100% 100%;
+    margin-left: 0.1rem;
+}
+.period-selec-1 div.period-content span#add{
+    background: url(../img/chasing/add.png);  
+    background-size: 100% 100%;
 }
 .period-selec-1 div.period-content span.value{
     width: 3.2rem;
@@ -632,7 +644,7 @@
 }
 .period-selec-1 div.period-content input.value{
     width: 3.2rem;
-    height: 1rem;
+    height: 0.8rem;
     display: block;
     float: left;
     line-height: 1rem;
@@ -640,6 +652,8 @@
     color: #edbb64;
     border: 0;
     box-sizing: border-box;
+    background: #712d2e;
+    margin-top: 0.1rem;
 }
 .period-selec-1 span.left{
     width: 1rem;
@@ -663,7 +677,7 @@
     height: 1.2rem;
     float: left;
     text-align: center;
-    line-height: 1.3rem;
+    line-height: 1.2rem;
     background: blue;
     margin-right: 0.5rem;
     font-size: 0.55rem;
@@ -728,20 +742,27 @@
 }
 .bettingFrame-content{
     width: 14rem;
-    height: 6rem;
-    background: #9a5341;
+    height: 8rem;
     position: absolute;
     top: 50%;
     margin-top: -4rem;
     left: 50%;
     margin-left: -7rem;
     border-radius: 0.5rem;
+    background: url(../img/betting/back);
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    padding: 1rem 0rem;
 }
 .bettingFrame-content .title{
     width: 100%;
     height: 2rem;
     line-height: 2rem;
     text-align: center;   
+}
+.bettingFrame-content .title img{
+    width: 1rem;
+    margin-right: 0.3rem;    
 }
 .bettingFrame-content .title span{
     font-size: 0.8rem;
@@ -761,28 +782,31 @@
     width: 100%;
     height: 3rem;
     box-sizing: border-box;
-    padding: 1rem 0.7rem 0.5rem 0.7rem;
+    padding: 1rem 0.9rem 0.3rem 0.9rem;
     overflow: hidden;
 }
 .bettingFrame-content .button .btn{
-    width: 6rem;
+    width: 5.8rem;
     height: 100%;
     border: 0;
     padding: 0;
     text-align: center;
-    line-height: 1rem;
+    line-height: 1.2rem;
     font-size: 0.6rem;
     border-radius: 0.2rem;
 }
 .bettingFrame-content .button .btn-1{
     float: left;
-    background-color: #c35836;
     color: #651900;
+    background: url(../img/betting/btn1.png);
+    background-size: 100% 100%;
 }
 .bettingFrame-content .button .btn-2{
     float: right;
     background-color: #e0a855;
     color: #651900;
+    background: url(../img/betting/btn2.png);
+    background-size: 100% 100%;
 }
 .bettingFrame-content .button .btn a{
     width: 100%;
@@ -790,7 +814,7 @@
     display: block;
     color: #651900;
     text-align: center;
-    line-height: 1.5rem;
+    line-height: 1.8rem;
     font-size: 0.6rem;
     border-radius: 0.2rem;
     text-decoration: none;
