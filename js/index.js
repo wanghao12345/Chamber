@@ -100,9 +100,24 @@ $(function(){
 	/*********---------投注按钮--------*********/
 	$('#sendBetting').on('click',function(){
 		if ($(this).html() != '至少选择一个密码') {//已经下注了
-			$('.bettingFrame').css('display','block');
-		} else {//没有下注
+			//判断金币够不够
+			var dollor = parseInt($('.bottomSelect a#dollar').html());
+			var cost = parseInt($('#numberList ul li a.active').html());
+			if (dollor<cost) {//跳往充值界面
+				// window.location.href = "www.baidu.com";
+			} else {//动画
 
+				
+				$('.bettingFrame').css('display','block');
+			}
+
+		} else {//没有下注
+			var index = Math.floor(Math.random()*10);
+			$('#selectList ul li:nth-child('+index+') .list-top').css('background','url(img/index/list-top-1.png)');
+			$('#selectList ul li:nth-child('+index+') .list-top').css('background-size','100% 100%');
+			var txt = $('#numberList ul li a.active').html();
+			$('#selectList ul li:nth-child('+index+') .list-bottom').html(txt);
+			$(this).html('立即消耗'+txt+'嗨币');
 		}
 	})
 	/*********---------投注成功弹窗 --------*********/

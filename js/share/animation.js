@@ -9,7 +9,6 @@ $(function(){
 
 
 })
-
 //开门动画
 function open(){
 	transform1();
@@ -82,3 +81,10 @@ function closeDoor() {
 	
 	});
 }
+
+/**************************------押注的动画------************************/
+//开始
+function startFly(){
+	
+}
+
