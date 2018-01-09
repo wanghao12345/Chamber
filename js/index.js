@@ -123,6 +123,18 @@ $(function(){
 	$('#rule-close-btn-2').on('click',function(){
 		$('.ruleFrame').css('display','none');
 	})	
+	/*********---------往期密码--------*********/
+	//打开
+	$('#pastcode-btn').on('click',function(){
+		$('.pastcodeFrame').css('display','block');
+	})
+	//关闭
+	$('#pastcode-close-btn-1').on('click',function(){
+		$('.pastcodeFrame').css('display','none');
+	})	
+	$('#pastcode-close-btn-2').on('click',function(){
+		$('.pastcodeFrame').css('display','none');
+	})	
 
 })
 

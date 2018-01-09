@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>密室寻宝</title>
+	<meta http-equiv="Cache-Control" content="no-cache" />    
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />    
+	<meta name="apple-mobile-web-app-capable" content="yes" />   
+	<meta content="black" name=" apple-mobile-web-app-status-bar-style"   />
+	<meta content="telephone=no" name="format-detection" />
+	<meta content="email=no" name="format-detection" />
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="applicable-device" content="mobile">
+	<link rel="stylesheet" type="text/css" href="../css/share/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/rank.css">
+	<script type="text/javascript" src="../js/share/rem.js"></script>
+	<script type="text/javascript" src="../js/share/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../js/loading/spin.min.js"></script>
+	<!-- <script type="text/javascript" src="../js/loading/loading.js"></script> -->
+	<script type="text/javascript" src="../js/rank.js"></script>
+</head>
+<body>
+	<div class="box">
+		<div class="top">
+			<div class="rule">
+				<div class="rule-content">规则</div>
+			</div>
+			<div class="myInfo">
+				<div class="info-content info1">
+					<div class="info1-content"></div>
+				</div>
+				<div class="info-content info2">
+					<div class="title2">累计投注</div>
+					<div class="content2"><span>200</span><img src="../img/rank/icon-bean.png"></div>
+				</div>
+				<div class="info-content info3">
+					<div class="title3">我的排名</div>
+					<div class="content3">2722</div>
+				</div>
+				<div class="info-content info4">
+					<div class="info4-content">
+						昨日排行
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="bottom-title">
+				<ul>
+					<li>排名</li>
+					<li></li>
+					<li>玩家</li>
+					<li>累计投注</li>
+				</ul>
+			</div>
+			<div class="bottom-content">
+				<div class="item">
+					<ul>
+						<li><img src="../img/rank/number1.png"></li>
+						<li><div class="head"></div></li>
+						<li>微信用户</li>
+						<li>24000000</li>
+					</ul>
+				</div>
+				<div class="item">
+					<ul>
+						<li><img src="../img/rank/number2.png"></li>
+						<li><div class="head"></div></li>
+						<li>微信用户</li>
+						<li>24000000</li>
+					</ul>
+				</div>
+				<div class="item">
+					<ul>
+						<li><img src="../img/rank/number3.png"></li>
+						<li><div class="head"></div></li>
+						<li>微信用户</li>
+						<li>24000000</li>
+					</ul>
+				</div>
+				<div class="item">
+					<ul>
+						<li><span>4</span></li>
+						<li><div class="head"></div></li>
+						<li>微信用户</li>
+						<li>24000000</li>
+					</ul>
+				</div>
+				<div class="item">
+					<ul>
+						<li><span>5</span></li>
+						<li><div class="head"></div></li>
+						<li>微信用户</li>
+						<li>24000000</li>
+					</ul>
+				</div>
+				<div class="item">
+					<ul>
+						<li><span>6</span></li>
+						<li><div class="head"></div></li>
+						<li>微信用户</li>
+						<li>24000000</li>
+					</ul>
+				</div>
+				<div class="item">
+					<ul>
+						<li><span>7</span></li>
+						<li><div class="head"></div></li>
+						<li>微信用户</li>
+						<li>24000000</li>
+					</ul>
+				</div>
+				<div class="item">
+					<ul>
+						<li><span>8</span></li>
+						<li><div class="head"></div></li>
+						<li>微信用户</li>
+						<li>24000000</li>
+					</ul>
+				</div>
+				<div class="item">
+					<ul>
+						<li><span>122</span></li>
+						<li><div class="head"></div></li>
+						<li>微信用户</li>
+						<li>24000000</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="bottom-btn">
+			<div class="bottom-btn-content">
+			<button><a href="../index.html">马上去竞猜</a></button>
+				
+			</div>
+		</div>
+	</div>
+		<!-- 规则说明 -->
+	<div class="mask ruleFrame">
+		<div class="ruleFrame-content">
+			<div class="close" id="rule-close-btn-1"></div>
+			<div class="title">规则说明</div>
+			<div class="content">
+				<div class="top-content">
+					<div class="top left">
+						<h4>中奖秘籍</h4>
+						<p>
+							选择一个密码，拥有3次中奖机会，匹配即为中奖
+						</p>
+						<div class="Legend" id="Legend1">
+							<img src="../img/rank/legend1.png" />
+						</div>
+					</div>
+					<div class="top right">
+						<h4>大奖秘籍</h4>
+						<p>
+							3个密码与你的密码完全相同，既可瓜分大奖
+						</p>
+						<div class="Legend" id="Legend2">
+							<img src="../img/rank/legend2.png" />
+						</div>
+					</div>				
+				</div>
+
+
+				<div class="bottom">
+					<h4>详细规则</h4>
+					<p>
+						1.从10个密码中，选择密码参与当期密室。每期密室会开启3个密码，分别对应3种不同倍数的奖励，若您选择的密码与开启的3个密码中任意一个密码相同，即可获奖；
+					</p>
+					<p>
+						2.密室每小时整点开启1期（其中02:00~07:00仅为1期，于07:00开奖），每期密室开启前，您可以选择1个、多个、多倍密码进行游戏（单个密码需消耗200嗨币）。若您选择的密码越多，当期中奖率越高；若您选择的倍数越高，当期中奖额度越高；
+					</p>
+					<p>
+						3.嗨币大奖不断累加，当密室开启的3个密码完全相同，且与您选择的密码相同时，您即可获得嗨币大奖，奖励的嗨币数量按一定比例均分（您当期消耗的嗨币数/所有用户当期消耗的嗨币数），最高可达500万嗨币；
+					</p>
+					<p>
+						4.追期玩法，会自动为您使用相同的密码，托管参与接下来的多期密室开奖（会一次性扣除多期所需的嗨币）；
+					</p>
+					<p>
+						5.密室开启后，奖励的嗨币将在5分钟内到账；若因系统原因导致密室无法正常开启时，所消耗的嗨币将在2小时内返还；
+					</p>
+					<p>
+						6.密室寻宝及其活动，禁止任何形式的作弊刷奖，若有发现将取消派奖，对于已发放的奖励有权追回；
+					</p>
+				</div>
+			</div>
+			<div class="button">
+				<button><a id="rule-close-btn-2" href="../index.html">开始寻宝</a></button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

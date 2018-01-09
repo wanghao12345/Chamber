@@ -34,7 +34,7 @@
 							<ul>
 								<li><a href="template/record.html">解密记录</a></li>
 								<li><a id="menu-rule-btn">玩法介绍</a></li>
-								<li><a>排行榜</a></li>
+								<li><a href="template/rank.html">排行榜</a></li>
 								<li><a>娱乐大厅</a></li>
 							</ul>								
 						</div>
@@ -123,7 +123,7 @@
 				<div class="deadline-content upcode">
 					<span class="title">上期密码</span>
 					<span class="shu"></span>
-					<span class="result">
+					<span class="result" id="pastcode-btn">
 						<i>0 9 0</i>
 						<img src="img/index/bottom-btn.png" alt="更多">
 					</span>
@@ -275,19 +275,8 @@
 						<p>
 							选择一个密码，拥有3次中奖机会，匹配即为中奖
 						</p>
-						<div class="Legend">
-							<div class="top1" style="position: relative;">
-								<span style="background: url(img/rule/mark.png);background-size: 100% 100%;float: left;margin-left: 0.5rem;">0</span>
-								<span style="background: url(img/rule/mark.png);background-size: 100% 100%;" id="middle">5</span>
-								<span style="background: url(img/rule/mark1.png);background-size: 100% 100%;float: right;margin-right: 0.5rem;">8</span>
-								<!-- <img src="img/rule/mark.png"/>
-								<img src="img/rule/mark.png"/>
-								<img src="img/rule/mark1.png"/> -->
-							</div>
-							<div class="bottom1" style="position: relative;">
-								<span id="middle" style="background: url(img/rule/mark1.png);background-size: 100% 100%;">8</span>
-								<!-- <img src="img/rule/mark1.png"/> -->
-							</div>
+						<div class="Legend" id="Legend1">
+							<img src="img/rank/legend1.png" />
 						</div>
 					</div>
 					<div class="top right">
@@ -295,19 +284,8 @@
 						<p>
 							3个密码与你的密码完全相同，既可瓜分大奖
 						</p>
-						<div class="Legend">
-							<div class="top1" style="position: relative;">
-								<span style="background: url(img/rule/mark1.png);background-size: 100% 100%;float: left;margin-left: 0.5rem;">8</span>
-								<span id="middle" style="background: url(img/rule/mark1.png);background-size: 100% 100%;">8</span>
-								<span style="background: url(img/rule/mark1.png);background-size: 100% 100%;float: right;margin-right: 0.5rem;">8</span>
-							<!-- 	<img src="img/rule/mark1.png"/>
-							<img src="img/rule/mark1.png"/>
-							<img src="img/rule/mark1.png"/> -->
-							</div>
-							<div class="bottom1" style="position: relative;">
-								<span id="middle" style="background: url(img/rule/mark1.png);background-size: 100% 100%;">8</span>
-								<!-- <img src="img/rule/mark1.png"/> -->
-							</div>							
+						<div class="Legend" id="Legend2">
+							<img src="img/rank/legend2.png" />
 						</div>
 					</div>				
 				</div>
@@ -340,6 +318,113 @@
 			</div>
 		</div>
 	</div>
+	<!-- 往期密码 -->
+	<div class="mask pastcode pastcodeFrame">
+		<div class="pastcode-content">
+			<div class="close" id="pastcode-close-btn-1"></div>
+			<div class="title">往期密码</div>
+			<div class="content">
+				<div class="title">
+					<ul>
+						<li>期号</li>
+						<li>白银</li>
+						<li>黄金</li>
+						<li>青铜</li>
+					</ul>
+				</div>
+				<div class="middle-content">
+					<div class="item">
+						<ul>
+							<li>18010618号密室</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+						</ul>						
+					</div>
+					<div class="item">
+						<ul>
+							<li>18010618号密室</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+						</ul>						
+					</div>
+					<div class="item">
+						<ul>
+							<li>18010618号密室</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+						</ul>						
+					</div>
+					<div class="item">
+						<ul>
+							<li>18010618号密室</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+						</ul>						
+					</div>
+					<div class="item">
+						<ul>
+							<li>18010618号密室</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+						</ul>						
+					</div>
+					<div class="item">
+						<ul>
+							<li>18010618号密室</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+						</ul>						
+					</div>	
+					<div class="item">
+						<ul>
+							<li>18010618号密室</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+						</ul>						
+					</div>
+					<div class="item">
+						<ul>
+							<li>18010618号密室</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+						</ul>						
+					</div>
+					<div class="item">
+						<ul>
+							<li>18010618号密室</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+						</ul>						
+					</div>
+					<div class="item">
+						<ul>
+							<li>18010618号密室</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+						</ul>						
+					</div>						
+									
+				</div>
+				<div class="bottom-tip">
+					<p>仅保存一天内的往期密码</p>
+				</div>
+				
+			</div>
+			<div class="button">
+				<button><a id="pastcode-close-btn-2">开始寻宝</a></button>
+			</div>
+		</div>
+	</div>	
 
 </body>
 </html>

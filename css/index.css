@@ -377,7 +377,7 @@
     width: 100%;
     height: 4rem;
     background-color: #712d2e;
-    box-shadow: 0px -5px 0px 0px #62201d;
+    box-shadow: 0px -1px 0px 0px #62201d;
 }
 .bottomSelect .select-top{
 	width: 100%;
@@ -900,6 +900,16 @@
     width: 100%;
     height: 4rem;
 }
+.ruleFrame .ruleFrame-content .content .top .Legend{
+    width: 100%;
+    height: 4rem;
+    box-sizing: border-box;
+    padding: 0.3rem;
+}
+.ruleFrame .ruleFrame-content .content .top .Legend img{
+    width: 100%;
+    height: 100%;
+}
 .ruleFrame .ruleFrame-content .content .top .Legend .top1{
     width: 100%;
     height: 1.5rem;
@@ -937,9 +947,9 @@ width: 100%;
 }
 .ruleFrame .ruleFrame-content .content .top p{
     width: 100%;
-    height: 3.5rem;
+    height: 2.7rem;
     box-sizing: border-box;
-    padding-top: 1rem;
+    padding-top: 0.4rem;
 }
 .ruleFrame .ruleFrame-content .content .left{
     float: left;
@@ -983,6 +993,189 @@ width: 100%;
     background-size: 100% 100%;
 }
 .ruleFrame .ruleFrame-content .button button a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    line-height: 1.8rem;
+}
+/*往期密码*/
+.pastcodeFrame{
+    display: none;
+}
+.pastcode .pastcode-content{
+    width: 14rem;
+    height: 18.5rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -7rem;
+    margin-top: -9rem;
+    box-sizing: border-box;
+    padding: 1.8rem 0.5rem 0.5rem 0.5rem;
+    position: relative;
+    border-radius: 0.3rem;
+    background: url(../img/rule/back.png);
+    background-size: 100% 100%;
+}
+.pastcode .pastcode-content .close{
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    right: -0.2rem;
+    top: 0.2rem;
+    text-align: center;
+    line-height: 0.8rem;
+    border-radius: 1rem;
+    border: 2px solid #f6c96c;
+    font-size: 0.9rem;
+    font-weight: 700;
+    background: url(../img/rule/close.png);
+    background-size: 100% 100%;
+}
+.pastcode .pastcode-content .title{
+    position: absolute;
+    top: 0.4rem;
+    display: block;
+    width: 4rem;
+    left: 50%;
+    margin-left: -1.3rem;
+    color: #f5c76f;
+    font-size: 0.7rem;    
+}
+.pastcode .pastcode-content .content{
+    width: 100%;
+    height: 13rem;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    box-sizing: border-box;
+    padding: 0.8rem 0.5rem;
+    overflow-y: auto;
+    position: relative;
+}
+.pastcode .pastcode-content .content .title{
+    width: 100%;
+    height: 2rem;
+    top: 0rem;
+    left: 50%;
+    margin-left: -6.5rem;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 0 0.5rem;
+    border-bottom: 1px solid #8a4633;
+    z-index: 2;
+    background: #91493a;
+}
+.pastcode .pastcode-content .content .title ul{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.pastcode .pastcode-content .content .title ul li{
+    height: 100%;
+    float: left;
+    line-height: 2rem;
+    text-align: center;
+    color: #d68c6a;
+    font-size: 0.5rem;
+}
+.pastcode .pastcode-content .content .title ul li:nth-child(1){
+    width: 55%;
+    text-align: left;
+}
+.pastcode .pastcode-content .content .title ul li:nth-child(2){
+    width: 15%;
+}
+.pastcode .pastcode-content .content .title ul li:nth-child(3){
+    width: 15%;
+}
+.pastcode .pastcode-content .content .title ul li:nth-child(4){
+    width: 15%;
+}
+.pastcode .pastcode-content .content .middle-content{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 1rem 0rem;
+    overflow-y: scroll;
+}
+.pastcode .pastcode-content .content .middle-content .item{
+    width: 100%;
+    height: 1.5rem;
+    border-bottom: 1px solid #8a4633
+}
+.pastcode .pastcode-content .content .middle-content .item ul{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.pastcode .pastcode-content .content .middle-content .item ul li{
+    height: 100%;
+    float: left;
+    line-height: 2rem;
+    text-align: center;
+    color: #ffe39e; 
+    line-height: 1.5rem;
+    font-size: 0.4rem;
+}
+.pastcode .pastcode-content .content .middle-content .item ul li:nth-child(1){
+    width: 55%;
+    text-align: left;
+}
+.pastcode .pastcode-content .content .middle-content .item ul li:nth-child(2){
+    width: 15%;  
+    font-size: 0.8rem;
+}
+.pastcode .pastcode-content .content .middle-content .item ul li:nth-child(3){
+    width: 15%; 
+    font-size: 0.8rem;  
+}
+.pastcode .pastcode-content .content .middle-content .item ul li:nth-child(4){
+    width: 15%;
+    font-size: 0.8rem;
+}
+.pastcode .pastcode-content .content .bottom-tip{
+    width: 100%;
+    height: 1.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    line-height: 1.5rem;
+    z-index: 2;
+    background: #91493a;
+}
+.pastcode .pastcode-content .content .bottom-tip p{
+    width: 100%;
+    text-align: center;
+    color: #d68c6a;
+    font-size: 0.5rem;
+}
+
+.pastcode .pastcode-content .button{
+    width: 100%;
+    height: 3rem;
+    background-color: #884535;
+    position: relative;
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+}
+.pastcode .pastcode-content .button button{
+    width: 11rem;
+    height: 1.8rem;
+    color: #832d10;
+    text-align: center;
+    border: 0;
+    padding: 0;
+    border-radius: 0.2rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -5.5rem;
+    bottom: 0.5rem;
+    font-size: 0.6rem;
+    font-weight: 600;
+    background: url(../img/rule/btn.png);
+    background-size: 100% 100%;
+}
+.pastcode .pastcode-content .button button a{
     width: 100%;
     height: 100%;
     display: block;
