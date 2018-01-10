@@ -100,8 +100,6 @@ LoginWebSocket.prototype={
 		this.socket.close();
 	}
 }
-
-
 var LoginType = function(){}
 LoginType.prototype = {
 	login:function(data){
@@ -172,9 +170,6 @@ LoginType.prototype = {
 		$('span#pastcode-btn').html(last_result_param[0]+" "+last_result_param[1]+" "+last_result_param[2]);
 	}
 }
-
-
-
 var StakeWebSocket = function(params){
 	this.params = params;	
 	this.init();
@@ -217,12 +212,13 @@ StakeWebSocket.prototype={
 		this.socket.close();
 	}
 }
-
 var StakeType = function(){}
 
 StakeType.prototype={
 	stake:function(data){
-		console.log(data);
+		if (data.i == -1) {
+			alert(data.d);
+		}
 	}
 }
 
