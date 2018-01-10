@@ -1,5 +1,11 @@
 $(function(){
-
+	//获取token
+	var token = GetQueryString('token');
+	//登录请求
+	var login_params = '{"path":"12000","d":{"tk":"a55972b482093de8b8eb6d08a24cb478"}}';
+	// var login_params = '{"path":"12000","d":{"tk":'+token+'}}';
+    var login_socket = new LoginWebSocket(login_params);
+    // login_socket.init();
 
 	/****************************------点击事件-----******************************/
 	//menu
@@ -106,8 +112,14 @@ $(function(){
 			if (dollor<cost) {//跳往充值界面
 				// window.location.href = "www.baidu.com";
 			} else {//动画
+				//押注请求
+				stakeRequest();
 
+
+
+				//动画
 				
+				//密码设定成功
 				$('.bettingFrame').css('display','block');
 			}
 
@@ -153,34 +165,6 @@ $(function(){
 
 })
 
-
-/***************----倒计时-----********************/
-//截止时间
-DJS();
-function DJS() {
-	var maxtime = 60*60 //一个小时，按秒计算，自己调整! 
-	var timer = setInterval(function(){
-		if(maxtime>=0){ 
-		minutes = Math.floor(maxtime/60); 
-		seconds = Math.floor(maxtime%60); 
-		// msg = "距离结束还有"+checkTime(minutes)+"分"+checkTime(seconds)+"秒"; 
-		$('#cutdown').html('00:'+checkTime(minutes)+':'+checkTime(seconds));
-		// console.log(msg);
-		--maxtime; 
-		} 
-		else{ 
-		clearInterval(timer); 
-			alert("时间到，结束!"); 
-		} 
-	},1000); 
-}
-function checkTime(time){
-	if (time>=0 && time <10) {
-		return '0'+time;
-	}else{
-		return time;
-	}
-}
 /***************----投注-----********************/
 //确认投注按钮框的变化
 function isBetting(){
@@ -198,6 +182,13 @@ function haveBetting(result){
 //无投注
 function noBetting(){
 	$('.bottomSelect .select-bottom .query a').html('至少选择一个密码');	
+}
+//押注请求
+function stakeRequest(){
+	//押注请求
+	var stake_params = '{"path": "12001","d": {"tk": "a55972b482093de8b8eb6d08a24cb478","data": [{"stake_param": "1","coin": "100"},{"stake_param": "7","coin": "700"}]}}';
+    var stake_socket = new StakeWebSocket(stake_params);
+    // stake_socket.init();	
 }
 
 /***************----追投-----********************/
@@ -267,4 +258,15 @@ function consumeCoin(){
 	$('.recharge .query a span#sumcoin').html(parseInt(result.sum)*num);
 	$('.bottomSelect .select-bottom .query a span#sumcoin').html(parseInt(result.sum)*num);
 }
+
+/******************----获取url参数-----******************/
+function GetQueryString(name){
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+}
+
+
+
+
 
