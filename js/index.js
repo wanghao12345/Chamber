@@ -1,10 +1,11 @@
 $(function(){
 	//获取token
-	var token = GetQueryString('token');
+	// var token = GetQueryString('token');
+	// GetToken();
 	//登录请求
-	var login_params = '{"path":"12000","d":{"tk":"a55972b482093de8b8eb6d08a24cb478"}}';
+	// var login_params = '{"path":"12000","d":{"tk":"e68e6c67136fed43d47d90ef958092ea"}}';
 	// var login_params = '{"path":"12000","d":{"tk":'+token+'}}';
-    var login_socket = new LoginWebSocket(login_params);
+    // var login_socket = new LoginWebSocket(login_params);
     // login_socket.init();
 
 	/****************************------点击事件-----******************************/
@@ -103,6 +104,44 @@ $(function(){
     	}
     	consumeCoin();
 	})
+	//追投按钮
+	$("#sendChasing").on('click',function(){
+		if ($(this).html() != '至少选择一个密码') {//已经下注了
+			//判断金币够不够
+			var dollor = parseInt($('.bottomSelect a#dollar').html());
+			var cost = parseInt($('#numberList ul li a.active').html());
+			if (dollor<cost) {//跳往充值界面
+				// window.location.href = "www.baidu.com";
+			} else {//动画
+				//押注请求
+				
+				//动画
+				
+				//密码设定成功
+				$('.bettingFrame').css('display','block');
+			}
+
+		} else {//没有下注
+			//投注密码按钮改变
+			var index = Math.floor(Math.random()*10);
+			$('#selectList ul li:nth-child('+index+') .list-top').css('background','url(img/index/list-top-1.png)');
+			$('#selectList ul li:nth-child('+index+') .list-top').css('background-size','100% 100%');
+			var txt = $('#numberList ul li a.active').html();
+			$('#selectList ul li:nth-child('+index+') .list-bottom').html(txt);
+			//本按钮文字改变
+			$(this).html('立即消耗'+txt+'嗨币');
+			//追投密码列表
+			$('div#programme').append('<i>'+index+'</i>');
+			//是否有追投方案
+			isGrammer();
+		}
+
+
+
+
+	})
+
+
 	/*********---------投注按钮--------*********/
 	$('#sendBetting').on('click',function(){
 		if ($(this).html() != '至少选择一个密码') {//已经下注了
@@ -114,8 +153,6 @@ $(function(){
 			} else {//动画
 				//押注请求
 				stakeRequest();
-
-
 
 				//动画
 				
@@ -153,6 +190,8 @@ $(function(){
 	/*********---------往期密码--------*********/
 	//打开
 	$('#pastcode-btn').on('click',function(){
+		//请求往期密码
+
 		$('.pastcodeFrame').css('display','block');
 	})
 	//关闭
@@ -185,9 +224,21 @@ function noBetting(){
 }
 //押注请求
 function stakeRequest(){
+	//获取投注数据
+	var data = [];
+	for (var i = 1; i <= 10; i++) {
+		var p = {};
+		p.stake_param= $('#selectList ul li:nth-child('+i+') .list-top').html()
+		p.coin = $('#selectList ul li:nth-child('+i+') .list-bottom').html();
+		if (p.coin != "0") {
+			data.push(p)
+		}
+	}
 	//押注请求
-	var stake_params = '{"path": "12001","d": {"tk": "a55972b482093de8b8eb6d08a24cb478","data": [{"stake_param": "1","coin": "100"},{"stake_param": "7","coin": "700"}]}}';
-    var stake_socket = new StakeWebSocket(stake_params);
+	//var stake_params = '{"path": "12001","d": {"tk": "a55972b482093de8b8eb6d08a24cb478","data": [{"stake_param": "1","coin": "100"},{"stake_param": "7","coin": "700"}]}}';
+	var dataJSON = JSON.stringify(data);
+	var stake_params = '{"path": "12001","d": {"tk": "e68e6c67136fed43d47d90ef958092ea","data": '+dataJSON+'}}';
+	sendSocket(stake_params);
     // stake_socket.init();	
 }
 
@@ -258,15 +309,36 @@ function consumeCoin(){
 	$('.recharge .query a span#sumcoin').html(parseInt(result.sum)*num);
 	$('.bottomSelect .select-bottom .query a span#sumcoin').html(parseInt(result.sum)*num);
 }
-
-/******************----获取url参数-----******************/
-function GetQueryString(name){
-     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
-     var r = window.location.search.substr(1).match(reg);
-     if(r!=null)return  unescape(r[2]); return null;
+//追投请求
+function chasingRequest(){
+	//获取投注数据
+	var data = [];
+	for (var i = 1; i <= 10; i++) {
+		var p = {};
+		p.stake_param= $('#selectList ul li:nth-child('+i+') .list-top').html()
+		p.coin = $('#selectList ul li:nth-child('+i+') .list-bottom').html();
+		if (p.coin != "0") {
+			data.push(p)
+		}
+	}
+	//追多少期
+	num = $('input#period-value').val();
+	//押注请求
+	var dataJSON = JSON.stringify(data);
+	var chasing_params = '{"path": "12002","num":'+num+',d": {"tk": "e68e6c67136fed43d47d90ef958092ea","data": '+dataJSON+'}}';
+	sendSocket(stake_params);
 }
 
 
+/******************----获取url参数-----******************/
+/*function GetQueryString(name){
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+}*/
+/******************----请求往期密码-----******************/
+function pastcode(){
 
+}
 
 
