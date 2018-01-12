@@ -9,45 +9,31 @@ $(function(){
 	//投注记录
 	$(".tab .tab1 span").on('click',function(){
 		$(".content ul").css("display","none");
-		$("#bett").css("display","block");
+		$("#bett-record").css("display","block");
 	})
 	//追投记录
 	$(".tab .tab2 span").on('click',function(){
 		$(".content ul").css("display","none");
-		$("#catch").css("display","block");
+		$("#catch-record").css("display","block");
 	})	
+
+	//投注记录数据请求
+	/*var time = window.setInterval(function(){
+		StakeRecordRequest();
+	},2000)*/
+
 
 })
 
-
-//投注记录数据请求
-function askForData1(){
-	//显示区域
-	$(".content").empty();
-	$.ajax({
-	        url: "",
-	        type: "get",
-	        data: {},
-	        dataType: "json",
-	        success: function(data) {
-
-	        
-	    	}
-	})
+/******************----投注记录数据请求-----******************/
+function StakeRecordRequest(){
+	var StakeRecord_params = '{"path": "12004","d": {"tk": "'+token+'"}}';
+	sendSocket(StakeRecord_params);
 }
 //追投记录数据请求
-function askForData2(){
-	//显示区域
-	$(".content").empty();
-	$.ajax({
-	        url: "",
-	        type: "get",
-	        data: {},
-	        dataType: "json",
-	        success: function(data) {
-
-	        
-	        }
-	})	
+function ChasingRecordRequest(){
+	
 }
+
+
 

@@ -2,11 +2,6 @@ $(function(){
 	//获取token
 	// var token = GetQueryString('token');
 	// GetToken();
-	//登录请求
-	// var login_params = '{"path":"12000","d":{"tk":"e68e6c67136fed43d47d90ef958092ea"}}';
-	// var login_params = '{"path":"12000","d":{"tk":'+token+'}}';
-    // var login_socket = new LoginWebSocket(login_params);
-    // login_socket.init();
 
 	/****************************------点击事件-----******************************/
 	//menu
@@ -114,7 +109,7 @@ $(function(){
 				// window.location.href = "www.baidu.com";
 			} else {//动画
 				//押注请求
-				
+				chasingRequest();
 				//动画
 				
 				//密码设定成功
@@ -175,9 +170,13 @@ $(function(){
 		$('.bettingFrame').css('display','none');
 	})
 
+
 	/*********---------规则说明--------*********/
 	//打开
 	$('#menu-rule-btn').on('click',function(){
+		$('.ruleFrame').css('display','block');
+	})
+	$('#rank-openrule-btn').on('click',function(){
 		$('.ruleFrame').css('display','block');
 	})
 	//关闭
@@ -187,11 +186,59 @@ $(function(){
 	$('#rule-close-btn-2').on('click',function(){
 		$('.ruleFrame').css('display','none');
 	})	
+
+	/*********---------排行榜--------*********/
+	$('#menu-rank-btn').on('click',function(){
+		RankYesterdayRequest();
+		$('.rankFrame').css('display','block');
+	})
+	$('#rank-goback-btn').on('click',function(){
+		$('.rankFrame').css('display','none');
+	})
+	//昨日今日切换
+	$('#rank-tag-btn').on('click',function(){
+		var id = $(this).attr('value');
+		if (id == "yesterday") {
+			RankTodayRequest();
+			$(this).attr('value','today');
+			$(this).html('今日排行');
+		} else if (id == "today") {
+			RankYesterdayRequest();
+			$(this).attr('value','yesterday');
+			$(this).html('昨日排行');
+		} 
+	})
+
+
+	/*********---------解密记录--------*********/
+	$('#menu-record-btn').on('click',function(){
+		StakeRecordRequest();
+		$('.recordFrame').css('display','block');
+	})
+	$('#rank-goback-btn').on('click',function(){
+		$('.recordFrame').css('display','none');
+	})
+	// tab
+	$("#record-tab .tab-btn span").on('click',function(){
+		//tab
+		$("#record-tab .tab-btn span").removeClass('active');
+		$(this).addClass('active');
+	})
+	//投注记录
+	$("#record-tab .tab1 span").on('click',function(){
+		$("#record-content ul").css("display","none");
+		$("#record-content #bett-record").css("display","block");
+	})
+	//追投记录
+	$("#record-tab .tab2 span").on('click',function(){
+		$("#record-content ul").css("display","none");
+		$("#record-content #catch-record").css("display","block");
+	})	
 	/*********---------往期密码--------*********/
 	//打开
 	$('#pastcode-btn').on('click',function(){
 		//请求往期密码
-
+		pastcodeRequest();
 		$('.pastcodeFrame').css('display','block');
 	})
 	//关闭
@@ -237,7 +284,7 @@ function stakeRequest(){
 	//押注请求
 	//var stake_params = '{"path": "12001","d": {"tk": "a55972b482093de8b8eb6d08a24cb478","data": [{"stake_param": "1","coin": "100"},{"stake_param": "7","coin": "700"}]}}';
 	var dataJSON = JSON.stringify(data);
-	var stake_params = '{"path": "12001","d": {"tk": "e68e6c67136fed43d47d90ef958092ea","data": '+dataJSON+'}}';
+	var stake_params = '{"path": "12001","d": {"tk": "'+token+'","data": '+dataJSON+'}}';
 	sendSocket(stake_params);
     // stake_socket.init();	
 }
@@ -325,9 +372,38 @@ function chasingRequest(){
 	num = $('input#period-value').val();
 	//押注请求
 	var dataJSON = JSON.stringify(data);
-	var chasing_params = '{"path": "12002","num":'+num+',d": {"tk": "e68e6c67136fed43d47d90ef958092ea","data": '+dataJSON+'}}';
-	sendSocket(stake_params);
+	var chasing_params = '{"path": "12002","num":"'+num+'","d": {"tk": "'+token+'","data": '+dataJSON+'}}';
+	sendSocket(chasing_params);
 }
+/******************----请求往期密码-----******************/
+function pastcodeRequest(){
+	var pastcode_params = '{"path":"12003","d":{"tk":"'+token+'"}}';
+	sendSocket(pastcode_params);
+
+}
+/******************----排行榜-----******************/
+function RankTodayRequest(){
+	var RankToday_params = '{"path": "12006","d": {"tk": "'+token+'","type":"today"}}';
+	sendSocket(RankToday_params);
+}
+function RankYesterdayRequest(){
+	var RankYesterday_params = '{"path": "12006","d": {"tk": "'+token+'","type":"yesterday"}}';
+	sendSocket(RankYesterday_params);
+}
+
+/******************----投注记录数据请求-----******************/
+function StakeRecordRequest(){
+	var StakeRecord_params = '{"path": "12004","d": {"tk": "'+token+'"}}';
+	sendSocket(StakeRecord_params);
+}
+//追投记录数据请求
+function ChasingRecordRequest(){
+	
+}
+
+
+
+
 
 
 /******************----获取url参数-----******************/
@@ -336,9 +412,6 @@ function chasingRequest(){
      var r = window.location.search.substr(1).match(reg);
      if(r!=null)return  unescape(r[2]); return null;
 }*/
-/******************----请求往期密码-----******************/
-function pastcode(){
 
-}
 
 

@@ -14,6 +14,8 @@
 	<meta name="applicable-device" content="mobile">
 	<link rel="stylesheet" type="text/css" href="css/share/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/rank.css">
+	<link rel="stylesheet" type="text/css" href="css/record.css">
 	<script type="text/javascript" src="js/share/rem.js"></script>
 	<script type="text/javascript" src="js/share/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/share/animation.js"></script>
@@ -33,9 +35,9 @@
 						<a href="#">更多</a>
 						<div class="menu">
 							<ul>
-								<li><a href="template/record.html">解密记录</a></li>
+								<li><a id="menu-record-btn">解密记录</a></li>
 								<li><a id="menu-rule-btn">玩法介绍</a></li>
-								<li><a href="template/rank.html">排行榜</a></li>
+								<li><a id="menu-rank-btn">排行榜</a></li>
 								<li><a>娱乐大厅</a></li>
 							</ul>								
 						</div>
@@ -239,7 +241,7 @@
 				</div>
 				<div class="recharge">
 					<div class="coin">
-						<a>
+						<a id="dollar">
 							1188						
 						</a>
 					</div>
@@ -331,7 +333,8 @@
 						<li>青铜</li>
 					</ul>
 				</div>
-				<div class="middle-content">
+				<div class="middle-content" id="pastcode-item">
+				<!-- 
 					<div class="item">
 						<ul>
 							<li>18010618号密室</li>
@@ -340,78 +343,7 @@
 							<li>5</li>
 						</ul>						
 					</div>
-					<div class="item">
-						<ul>
-							<li>18010618号密室</li>
-							<li>3</li>
-							<li>4</li>
-							<li>5</li>
-						</ul>						
-					</div>
-					<div class="item">
-						<ul>
-							<li>18010618号密室</li>
-							<li>3</li>
-							<li>4</li>
-							<li>5</li>
-						</ul>						
-					</div>
-					<div class="item">
-						<ul>
-							<li>18010618号密室</li>
-							<li>3</li>
-							<li>4</li>
-							<li>5</li>
-						</ul>						
-					</div>
-					<div class="item">
-						<ul>
-							<li>18010618号密室</li>
-							<li>3</li>
-							<li>4</li>
-							<li>5</li>
-						</ul>						
-					</div>
-					<div class="item">
-						<ul>
-							<li>18010618号密室</li>
-							<li>3</li>
-							<li>4</li>
-							<li>5</li>
-						</ul>						
-					</div>	
-					<div class="item">
-						<ul>
-							<li>18010618号密室</li>
-							<li>3</li>
-							<li>4</li>
-							<li>5</li>
-						</ul>						
-					</div>
-					<div class="item">
-						<ul>
-							<li>18010618号密室</li>
-							<li>3</li>
-							<li>4</li>
-							<li>5</li>
-						</ul>						
-					</div>
-					<div class="item">
-						<ul>
-							<li>18010618号密室</li>
-							<li>3</li>
-							<li>4</li>
-							<li>5</li>
-						</ul>						
-					</div>
-					<div class="item">
-						<ul>
-							<li>18010618号密室</li>
-							<li>3</li>
-							<li>4</li>
-							<li>5</li>
-						</ul>						
-					</div>						
+				-->					
 									
 				</div>
 				<div class="bottom-tip">
@@ -424,6 +356,243 @@
 			</div>
 		</div>
 	</div>	
+	<!-- 排行榜 -->
+	<div class="rankFrame">
+		<div class="top">
+			<div class="rule">
+				<div class="rule-content" id="rank-openrule-btn">规则</div>
+			</div>
+			<div class="myInfo">
+				<div class="info-content info1">
+					<div class="info1-content"><img src="" id="user_image" /></div>
+				</div>
+				<div class="info-content info2">
+					<div class="title2">累计投注</div>
+					<div class="content2"><span id="self-cost-coin">200</span><img src="img/rank/icon-bean.png"></div>
+				</div>
+				<div class="info-content info3">
+					<div class="title3">我的排名</div>
+					<div class="content3" id="self-rank">2722</div>
+				</div>
+				<div class="info-content info4">
+					<div class="info4-content" id="rank-tag-btn" value="yesterday">
+						昨日排行
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="bottom-title">
+				<ul>
+					<li>排名</li>
+					<li></li>
+					<li>玩家</li>
+					<li>累计投注</li>
+				</ul>
+			</div>
+			<div class="bottom-content" id="rank-content">
+				<div class="item">
+					<ul>
+						<li><img src="img/rank/number1.png"></li>
+						<li><div class="head"></div></li>
+						<li>微信用户</li>
+						<li>24000000</li>
+					</ul>
+				</div>
+				<div class="item">
+					<ul>
+						<li><img src="img/rank/number2.png"></li>
+						<li><div class="head"></div></li>
+						<li>微信用户</li>
+						<li>24000000</li>
+					</ul>
+				</div>
+				<div class="item">
+					<ul>
+						<li><img src="img/rank/number3.png"></li>
+						<li><div class="head"></div></li>
+						<li>微信用户</li>
+						<li>24000000</li>
+					</ul>
+				</div>
+				<div class="item">
+					<ul>
+						<li><span>4</span></li>
+						<li><div class="head"></div></li>
+						<li>微信用户</li>
+						<li>24000000</li>
+					</ul>
+				</div>
+				<div class="item">
+					<ul>
+						<li><span>5</span></li>
+						<li><div class="head"></div></li>
+						<li>微信用户</li>
+						<li>24000000</li>
+					</ul>
+				</div>
+				<div class="item">
+					<ul>
+						<li><span>6</span></li>
+						<li><div class="head"></div></li>
+						<li>微信用户</li>
+						<li>24000000</li>
+					</ul>
+				</div>
+				<div class="item">
+					<ul>
+						<li><span>7</span></li>
+						<li><div class="head"></div></li>
+						<li>微信用户</li>
+						<li>24000000</li>
+					</ul>
+				</div>
+				<div class="item">
+					<ul>
+						<li><span>8</span></li>
+						<li><div class="head"></div></li>
+						<li>微信用户</li>
+						<li>24000000</li>
+					</ul>
+				</div>
+				<div class="item">
+					<ul>
+						<li><span>122</span></li>
+						<li><div class="head"></div></li>
+						<li>微信用户</li>
+						<li>24000000</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="bottom-btn">
+			<div class="bottom-btn-content">
+			<!-- <button><a href="../index.html">马上去竞猜</a></button> -->
+			<button><a id="rank-goback-btn">马上去竞猜</a></button>
+				
+			</div>
+		</div>
+	</div>
+	<!-- 解密记录 -->
+	<div class="recordFrame">
+		<div class="tab" id="record-tab">
+			<div class="tab-btn tab1"><span class="active">投注记录</span></div>
+			<i class="shu"></i>
+			<div class="tab-btn tab2"><span>追投记录</span></div>
+		</div>
+		<div class="content" id="record-content">
+			<!-- 投注记录 -->
+			<ul id="bett-record">
+				<li>
+					<a href="#">
+						<div class="left">
+							<p>
+								<span class="p_left">第18010306号密室</span><i class="p_left" id="chase">追投</i>
+								<span class="p_right">等待解密</span>
+							</p>
+							<p>
+								<span class="p_left">2018-01-02 10:04</span>
+								<span class="p_right">消耗200金币</span>
+							</p>
+						</div>
+						<div class="right">
+							>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="left">
+							<p>
+								<span class="p_left">第18010306号密室</span><i class="p_left" id="chase">追投</i>
+								<span class="p_right" id="coin">+1200金豆</span>
+							</p>
+							<p>
+								<span class="p_left">2018-01-02 10:04</span>
+								<span class="p_right">消耗200金币</span>
+							</p>
+						</div>
+						<div class="right">
+							>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="left">
+							<p>
+								<span class="p_left">第18010306号密室</span><i class="p_left" id="chase">追投</i>
+								<span class="p_right">等待解密</span>
+							</p>
+							<p>
+								<span class="p_left">2018-01-02 10:04</span>
+								<span class="p_right">消耗200金币</span>
+							</p>
+						</div>
+						<div class="right">
+							>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="left">
+							<p>
+								<span class="p_left">第18010306号密室</span><i class="p_left" id="chase">追投</i>
+								<span class="p_right">等待解密</span>
+							</p>
+							<p>
+								<span class="p_left">2018-01-02 10:04</span>
+								<span class="p_right">消耗200金币</span>
+							</p>
+						</div>
+						<div class="right">
+							>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="left">
+							<p>
+								<span class="p_left">第18010306号密室</span><i class="p_left" id="chase">追投</i>
+								<span class="p_right">等待解密</span>
+							</p>
+							<p>
+								<span class="p_left">2018-01-02 10:04</span>
+								<span class="p_right">消耗200金币</span>
+							</p>
+						</div>
+						<div class="right">
+							>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<!-- 追投记录 -->
+			<ul id="catch-record">
+				<li>
+					<a href="#">
+						<div class="left">
+							<p>
+								<span class="p_left">剩1期/共2期</span>
+								<span class="p_right">等待开奖</span>
+							</p>
+							<p>
+								<span class="p_left">2018-01-02 10:04</span>
+								<span class="p_right">共投200金币</span>
+							</p>
+						</div>
+						<div class="right">
+							>
+						</div>
+					</a>
+				</li>
+			</ul>
+
+
+		</div>
+	</div>
 
 </body>
 </html>

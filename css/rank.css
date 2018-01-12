@@ -1,20 +1,24 @@
-.box{
-	width: 100%;
-	height: 100%;
-	position: relative;
+.rankFrame{
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
 }
-.box .top{
+.rankFrame .top{
 	width: 100%;
 	height: 40%;
 	background: url(../img/rank/back.png);
 	background-size: 100% 100%;
 	position: relative;
 }
-.box .top .rule{
+.rankFrame .top .rule{
 	width: 100%;
 	height: 2.3rem;
 }
-.box .top .rule-content{
+.rankFrame .top .rule-content{
     width: 2rem;
     height: 100%;
     background: url(../img/rank/xiala.png);
@@ -27,7 +31,7 @@
     font-size: 0.7rem;
 }
 
-.box .top .myInfo{
+.rankFrame .top .myInfo{
     width: 100%;
     height: 4.5rem;
     position: absolute;
@@ -35,15 +39,15 @@
     left: 0;
 }
 
-.box .top .myInfo .info-content{
+.rankFrame .top .myInfo .info-content{
 	width: 25%;
 	height: 100%;
 	float: left;
 }
-.box .top .myInfo .info1{
+.rankFrame .top .myInfo .info1{
 	position: relative;
 }
-.box .top .myInfo .info1 .info1-content{
+.rankFrame .top .myInfo .info1 .info1-content{
     width: 3rem;
     height: 3rem;
     border-radius: 3rem;
@@ -55,23 +59,23 @@
     margin-top: -1.5rem;
     border: 2px solid #673c36;
 }
-.box .top .myInfo .info1 .info1-content img{
+.rankFrame .top .myInfo .info1 .info1-content img{
     width: 100%;
     height: 100%;
     display: block;
     border-radius: 3rem;
 }
-.box .top .myInfo .info2{
+.rankFrame .top .myInfo .info2{
 	
 }
-.box .top .myInfo .info2 .title2{
+.rankFrame .top .myInfo .info2 .title2{
 	width: 100%;
 	height: 2rem;
 	line-height: 3rem;
 	text-align: center;
 	color: white;
 }
-.box .top .myInfo .info2 .content2{
+.rankFrame .top .myInfo .info2 .content2{
 	width: 100%;
 	height: 2rem;
 	line-height: 1rem;
@@ -79,29 +83,29 @@
 	text-align: center;	
 	overflow: hidden;
 }
-.box .top .myInfo .info2 .content2 span{
+.rankFrame .top .myInfo .info2 .content2 span{
     display: block;
     float: left;
     width: 2.2rem;
     text-align: right;
 }
-.box .top .myInfo .info2 .content2 img{
+.rankFrame .top .myInfo .info2 .content2 img{
     width: 1rem;
     display: block;
     float: left;
     margin-left: 0.2rem;
 }
-.box .top .myInfo .info3{
+.rankFrame .top .myInfo .info3{
 
 }
-.box .top .myInfo .info3 .title3{
+.rankFrame .top .myInfo .info3 .title3{
 	width: 100%;
 	height: 2rem;
 	line-height: 3rem;
 	text-align: center;
 	color: white;	
 }
-.box .top .myInfo .info3 .content3{
+.rankFrame .top .myInfo .info3 .content3{
 	width: 100%;
 	height: 2rem;
 	line-height: 1rem;
@@ -109,10 +113,10 @@
 	text-align: center;
 
 }
-.box .top .myInfo .info4{
+.rankFrame .top .myInfo .info4{
 	position: relative;
 }
-.box .top .myInfo .info4 .info4-content{
+.rankFrame .top .myInfo .info4 .info4-content{
     width: 2rem;
     height: 2.5rem;
     position: absolute;
@@ -129,12 +133,12 @@
 }
 
 
-.box .bottom{
+.rankFrame .bottom{
 	width: 100%;
 	height: 60%;
 	position: relative;
 }
-.box .bottom .bottom-title{
+.rankFrame .bottom .bottom-title{
     width: 100%;
     height: 1.4rem;
     background: url(../img/rank/back1.png);
@@ -144,32 +148,32 @@
     left: 0;
     z-index: 2;
 }
-.box .bottom .bottom-title ul{
+.rankFrame .bottom .bottom-title ul{
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
 }
-.box .bottom .bottom-title ul li{
+.rankFrame .bottom .bottom-title ul li{
     height: 100%;
     float: left;
     text-align: center;
     line-height: 1.4rem;
     color: #70514e;
 }
-.box .bottom .bottom-title ul li:nth-child(1){
+.rankFrame .bottom .bottom-title ul li:nth-child(1){
 	width: 15%;
 }
-.box .bottom .bottom-title ul li:nth-child(2){
+.rankFrame .bottom .bottom-title ul li:nth-child(2){
 	width: 15%;
 }
-.box .bottom .bottom-title ul li:nth-child(3){
+.rankFrame .bottom .bottom-title ul li:nth-child(3){
 	width: 30%;
 }
-.box .bottom .bottom-title ul li:nth-child(4){
+.rankFrame .bottom .bottom-title ul li:nth-child(4){
 	width: 40%;
 }
 
-.box .bottom .bottom-content{
+.rankFrame .bottom .bottom-content{
 	width: 100%;
 	height: 100%;
 	background-color: #361d20;
@@ -178,32 +182,32 @@
 	overflow-y: scroll;
 }
 
-.box .bottom .bottom-content .item{
+.rankFrame .bottom .bottom-content .item{
 	width: 100%;
 	height: 3rem;
 	border-bottom: 1px solid #341c1a;
 }
-.box .bottom .bottom-content .item ul{
+.rankFrame .bottom .bottom-content .item ul{
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
 }
-.box .bottom .bottom-content .item ul li{
+.rankFrame .bottom .bottom-content .item ul li{
     height: 100%;
     float: left;
     text-align: center;
     line-height: 3rem;
     color: #cc9b84;
 }
-.box .bottom .bottom-content .item ul li:nth-child(1){
+.rankFrame .bottom .bottom-content .item ul li:nth-child(1){
 	width: 15%;	
 	position: relative;
 }
-.box .bottom .bottom-content .item ul li:nth-child(1) img{
+.rankFrame .bottom .bottom-content .item ul li:nth-child(1) img{
     width: 1.2rem;
     margin-top: 0.7rem;
 }
-.box .bottom .bottom-content .item ul li:nth-child(1) span{
+.rankFrame .bottom .bottom-content .item ul li:nth-child(1) span{
 	width: 1.2rem;
 	height: 1.2rem;
 	position: absolute;
@@ -218,11 +222,11 @@
 	text-align: center;
 	color: #5c3a32;
 }
-.box .bottom .bottom-content .item ul li:nth-child(2){
+.rankFrame .bottom .bottom-content .item ul li:nth-child(2){
 	width: 15%;
 	position: relative;
 }
-.box .bottom .bottom-content .item ul li:nth-child(2) div.head{
+.rankFrame .bottom .bottom-content .item ul li:nth-child(2) div.head{
 	width: 2rem;
 	height: 2rem;
 	position: absolute;
@@ -233,15 +237,21 @@
 	border-radius: 2rem;
 	background-color: white;
 }
-.box .bottom .bottom-content .item ul li:nth-child(3){
+.rankFrame .bottom .bottom-content .item ul li:nth-child(2) div.head img{
+    width: 2rem;
+    height: 2rem;
+    display: block;
+    border-radius: 2rem;  
+}
+.rankFrame .bottom .bottom-content .item ul li:nth-child(3){
 	width: 30%;	
 }
-.box .bottom .bottom-content .item ul li:nth-child(4){
+.rankFrame .bottom .bottom-content .item ul li:nth-child(4){
 	width: 40%;	
 }
 
 
-.box .bottom-btn{
+.rankFrame .bottom-btn{
 	position: absolute;
 	width: 100%;
 	height: 3rem;
@@ -249,12 +259,12 @@
 	bottom: 0;
 	left: 0;
 }
-.box .bottom-btn .bottom-btn-content{
+.rankFrame .bottom-btn .bottom-btn-content{
 	width: 100%;
 	height: 100%;
 	position: relative;
 }
-.box .bottom-btn .bottom-btn-content button{
+.rankFrame .bottom-btn .bottom-btn-content button{
     position: absolute;
     width: 8.4rem;
     height: 2rem;
@@ -266,7 +276,7 @@
     background-size: 100% 100%;
     border: 0;
 }
-.box .bottom-btn .bottom-btn-content button a{
+.rankFrame .bottom-btn .bottom-btn-content button a{
 	width: 100%;
 	height: 100%;
 	display: block;
@@ -276,7 +286,7 @@
 	text-decoration: none;
 }
 /*规则说明*/
-.mask {
+/* .mask {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -367,14 +377,14 @@
     background-size: 100% 100%;
 }
 .ruleFrame .ruleFrame-content .content .top .Legend{
-	width: 100%;
+    width: 100%;
     height: 4rem;
     box-sizing: border-box;
     padding: 0.3rem;
 }
 .ruleFrame .ruleFrame-content .content .top .Legend img{
-	width: 100%;
-	height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -428,9 +438,9 @@ width: 100%;
 }
 .ruleFrame .ruleFrame-content .content .bottom{
     width: 100%;
-    /*height: 10rem;*/
+    height: 10rem;
     padding-top: 0.5rem;
-    /*padding-bottom: 0.5rem;*/
+    padding-bottom: 0.5rem;
 }
 .ruleFrame .ruleFrame-content .content .bottom p{
     margin-top: 0.5rem;
@@ -468,7 +478,7 @@ width: 100%;
     line-height: 1.8rem;
     color: #832d10;
     text-decoration: none;
-}
+} */
 
 
 
