@@ -226,14 +226,18 @@ $(function(){
 	})
 	//投注记录
 	$("#record-tab .tab1 span").on('click',function(){
-		$("#record-content ul").css("display","none");
-		$("#record-content #bett-record").css("display","block");
+/*		$("#record-content ul").css("display","none");
+		$("#record-content #bett-record").css("display","block");*/
+		StakeRecordRequest();
 	})
 	//追投记录
 	$("#record-tab .tab2 span").on('click',function(){
-		$("#record-content ul").css("display","none");
-		$("#record-content #catch-record").css("display","block");
+/*		$("#record-content ul").css("display","none");
+		$("#record-content #catch-record").css("display","block");*/
+		ChasingRecordRequest();
 	})	
+
+
 	/*********---------往期密码--------*********/
 	//打开
 	$('#pastcode-btn').on('click',function(){
@@ -398,7 +402,8 @@ function StakeRecordRequest(){
 }
 //追投记录数据请求
 function ChasingRecordRequest(){
-	
+	var ChasingRecord_params = '{"path": "12005","d": {"tk": "'+token+'"}}';
+	sendSocket(ChasingRecord_params);	
 }
 
 

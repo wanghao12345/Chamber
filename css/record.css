@@ -94,11 +94,11 @@
 	font-size: 0.6rem;
 }
 .recordFrame .content ul#bett-record li .left p:first-child i#chase{
-	border: 1px solid #fbdab2;
+    border: 1px solid #fbdab2;
     width: 1.7rem;
     height: 0.7rem;
     display: block;
-    line-height: 0.69rem;
+    line-height: 0.6rem;
     text-align: center;
     border-radius: 1rem;
     font-size: 0.2rem;
@@ -106,9 +106,10 @@
     margin-left: 0.3rem;
 }
 .recordFrame .content ul#bett-record li .left p:first-child span#coin{
-	background-color: rgba(0,0,0,0.3);
-    padding: 0 0.5rem;
+    background-color: rgba(0,0,0,0.3);
+    padding: 0rem 0.5rem;
     border-radius: 1rem;
+    font-size: 0.5rem;
 }
 .recordFrame .content ul#bett-record li .left p:last-child{
 	color: #d28362;
@@ -123,18 +124,20 @@
 }
 
 .recordFrame .content ul#bett-record li .right{
-	width: 1.5rem;
-	height: 100%;
-	float: left;
-	line-height: 2rem;
-	text-align: center;
-	color: #fbdab2;
+    width: 1.5rem;
+    height: 100%;
+    float: left;
+    line-height: 2.5rem;
+    text-align: center;
+    color: #fbdab2;
+}
+.recordFrame .content ul#bett-record li .right img{
+    width: 0.9rem;
 }
 /*追投记录*/
 .recordFrame .content ul#catch-record{
 	width: 100%;
 	background-color: #8e4f3e;
-	display: none;
 
 }
 .recordFrame .content ul#catch-record li{
@@ -169,7 +172,7 @@
     width: 1.7rem;
     height: 0.7rem;
     display: block;
-    line-height: 0.69rem;
+    line-height: 0.6rem;
     text-align: center;
     border-radius: 1rem;
     font-size: 0.2rem;
@@ -197,10 +200,12 @@
 	width: 1.5rem;
 	height: 100%;
 	float: left;
-	line-height: 2rem;
+	line-height: 2.5rem;
 	text-align: center;
 	color: #fbdab2;
 }
-
+.recordFrame .content ul#catch-record li .right img{
+    width: 0.9rem;
+}
 
 
