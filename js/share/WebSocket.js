@@ -249,6 +249,7 @@ function StakeRecordType(data){
 function ChasingRecordType(data){
     $('#record-content').html('');
     var item = data.d.data;
+    var rest = 0;
     var content = '<ul id="catch-record">';
     for (var i = 0; i < item.length; i++) {
         content += '<li><a href="#">';
