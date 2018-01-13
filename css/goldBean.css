@@ -1,0 +1,289 @@
+/*往期密码*/
+.goldBeanFrame{
+    display: none;
+}
+.goldBean .goldBean-content{
+    width: 14rem;
+    height: 18.5rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -7rem;
+    margin-top: -9rem;
+    box-sizing: border-box;
+    padding: 1.8rem 0.5rem 0.5rem 0.5rem;
+    position: relative;
+    border-radius: 0.3rem;
+    background: url(../img/rule/back.png);
+    background-size: 100% 100%;
+}
+.goldBean .goldBean-content .close{
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    right: -0.2rem;
+    top: 0.2rem;
+    text-align: center;
+    line-height: 0.8rem;
+    border-radius: 1rem;
+    border: 2px solid #f6c96c;
+    font-size: 0.9rem;
+    font-weight: 700;
+    background: url(../img/rule/close.png);
+    background-size: 100% 100%;
+}
+.goldBean .goldBean-content .title{
+    position: absolute;
+    top: 0.2rem;
+    display: block;
+    width: 9rem;
+    height: 1.3rem;
+    left: 50%;
+    margin-left: -4.5rem;
+    color: #f5c76f;
+    font-size: 0.7rem;   
+}
+.goldBean .goldBean-content .title .tab{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.goldBean .goldBean-content .title .tab .tab-btn{
+    width: 4rem;
+    height: 100%;
+    background: #e7a350;
+    text-align: center;
+    line-height: 1.3rem;
+    border-radius: 5px;
+    color: #cc793b;
+    font-size: 0.6rem;
+}
+.goldBean .goldBean-content .title .tab .active{
+    background: #f3573f; 
+    color: #ffe39e; 
+}
+.goldBean .goldBean-content .title .tab .tab-btn1{
+    float: left;
+
+}
+.goldBean .goldBean-content .title .tab .tab-btn2{
+    float: right;   
+}
+
+
+
+
+
+
+.goldBean .goldBean-content .content{
+    width: 100%;
+    height: 13rem;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    box-sizing: border-box;
+    padding: 0.8rem 0.5rem;
+    overflow-y: auto;
+    position: relative;
+}
+.goldBean .goldBean-content .content .title{
+    width: 100%;
+    height: 2rem;
+    top: 0rem;
+    left: 50%;
+    margin-left: -6.5rem;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 0 0.5rem;
+    border-bottom: 1px solid #8a4633;
+    z-index: 2;
+    background: #91493a;
+}
+.goldBean .goldBean-content .content .title ul{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.goldBean .goldBean-content .content .title ul li{
+    height: 100%;
+    float: left;
+    line-height: 2rem;
+    text-align: center;
+    color: #d68c6a;
+    font-size: 0.6rem;
+    width: 7%;
+}
+.goldBean .goldBean-content .content .title ul li:nth-child(1){
+    width: 30%;
+    text-align: left;
+}
+.goldBean .goldBean-content .content .title ul li:nth-child(2){
+    /*width: 15%;*/
+}
+.goldBean .goldBean-content .content .title ul li:nth-child(3){
+    /*width: 15%;*/
+}
+.goldBean .goldBean-content .content .title ul li:nth-child(4){
+    /*width: 15%;*/
+}
+.goldBean .goldBean-content .content .middle-content{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 1rem 0rem;
+    overflow-y: scroll;
+}
+.goldBean .goldBean-content .content .middle-content .item{
+    width: 100%;
+    height: 1.5rem;
+    border-bottom: 1px solid #8a4633
+}
+.goldBean .goldBean-content .content .middle-content .item ul{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.goldBean .goldBean-content .content .middle-content .item ul li{
+    height: 100%;
+    float: left;
+    line-height: 2rem;
+    text-align: center;
+    color: #ffe39e; 
+    line-height: 1.5rem;
+    font-size: 0.5rem;
+    width: 7%;
+}
+.goldBean .goldBean-content .content .middle-content .item ul li span{
+    width: 1rem;
+    height: 1rem;
+    display: block;
+    background: rgba(0,0,0,0.5);
+    border-radius: 1rem;
+    line-height: 1rem;
+    margin-top: 0.3rem;
+    text-align: center;   
+}
+.goldBean .goldBean-content .content .middle-content .item ul li:nth-child(1){
+    width: 30%;
+    text-align: left;
+}
+.goldBean .goldBean-content .content .middle-content .item ul li:nth-child(2){
+    /*width: 15%;  */
+    /*font-size: 0.8rem;*/
+}
+.goldBean .goldBean-content .content .middle-content .item ul li:nth-child(3){
+    /*width: 15%; */
+    /*font-size: 0.8rem;  */
+}
+.goldBean .goldBean-content .content .middle-content .item ul li:nth-child(4){
+    /*width: 15%;*/
+    /*font-size: 0.8rem;*/
+}
+.goldBean .goldBean-content .content .bottom-tip{
+    width: 100%;
+    height: 1.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    line-height: 1.5rem;
+    z-index: 2;
+    background: #91493a;
+}
+.goldBean .goldBean-content .content .bottom-tip p{
+    width: 100%;
+    text-align: center;
+    color: #d68c6a;
+    font-size: 0.5rem;
+}
+
+.goldBean .goldBean-content .button{
+    width: 100%;
+    height: 3rem;
+    background-color: #884535;
+    position: relative;
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+}
+.goldBean .goldBean-content .button button{
+    width: 11rem;
+    height: 1.8rem;
+    color: #832d10;
+    text-align: center;
+    border: 0;
+    padding: 0;
+    border-radius: 0.2rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -5.5rem;
+    bottom: 0.5rem;
+    font-size: 0.6rem;
+    font-weight: 600;
+    background: url(../img/rule/btn.png);
+    background-size: 100% 100%;
+}
+.goldBean .goldBean-content .button button a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    line-height: 1.8rem;
+}
+
+/*大奖名单*/
+.grandPrixList .item{
+    width: 100%;
+    height: 3rem;
+    border-bottom: 1px solid #8a4633;
+    overflow: hidden;
+    font-size: 0.5rem;
+    line-height: 3rem;
+    color: #ffe39e;
+    font-size: 0.6rem;
+}
+.grandPrixList .item .item-img{
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+.grandPrixList .item .item-img span{
+    width: 2rem;
+    height: 2rem;
+    display: block;
+    background: white;
+    margin-top: 0.5rem;
+    border-radius: 0.2rem;
+}
+.grandPrixList .item .item-img span img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.2rem;
+}
+.grandPrixList .item .item-title{
+    width: 40%;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+    padding-left: 0.5rem;
+}
+.grandPrixList .item .item-coin{
+    width: 40%;
+    height: 100%;
+    float: left;
+    text-align: right;
+}
+.grandPrixList .item .item-coin p:first-child{
+    width: 100%;
+    height: 1rem;
+    margin-top: 1rem;
+    line-height: 1rem;
+}
+.grandPrixList .item .item-coin p:first-child img{
+    width: 0.8rem;
+    float: right;
+    margin-left: 0.2rem;
+    margin-top: 0.05rem;
+}
+.grandPrixList .item .item-coin p:last-child{
+    width: 100%;
+    height: 1rem;
+    line-height: 0.5rem;
+    font-size: 0.5rem; 
+}

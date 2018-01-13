@@ -16,8 +16,11 @@
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<link rel="stylesheet" type="text/css" href="css/rank.css">
 	<link rel="stylesheet" type="text/css" href="css/record.css">
+	<link rel="stylesheet" type="text/css" href="css/goldBean.css">
 	<script type="text/javascript" src="js/share/rem.js"></script>
 	<script type="text/javascript" src="js/share/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/loading/spin.min.js"></script>
+	<script type="text/javascript" src="js/loading/loading.js"></script>
 	<script type="text/javascript" src="js/share/animation.js"></script>
 	<script type="text/javascript" src="js/share/WebSocket.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
@@ -25,6 +28,7 @@
 <body>
 	<div class="box">
 		<div class="box-top">
+			<div class="gold-bean" id="gold-bean" style="position: absolute;width: 4.5rem;height: 2.6rem;top: 0.5rem;left: 0.5rem;z-index: 3"></div>
 			<div class="back back1">
 				<div class="back1-content">
 					<div class="back1-left">
@@ -44,7 +48,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="back back2"></div>
+			<div class="back back2">
+				<div class="back2-content"></div>
+			</div>
 			<div class="door-content">
 				<div class="door door1">
 					<div class="door-in door-in-1">
@@ -625,6 +631,105 @@
 			</ul>
 
 
+		</div>
+	</div>
+	<!-- 投注记录详情 -->
+	<div class="stakeRecordDetail">
+		<div class="stakeRecordDetail-content">
+			<div class="top">
+				<div class="top-title">寻宝成功</div>
+				<div class="top-content">
+					<div class="top-period">
+						<span>1801111期</span>
+						<span><i>+120嗨币</i><img src="img/index/icon-bean.png" alt="嗨币"></span>
+					</div>
+					<ul>
+						<li><label>消耗嗨币：</label><span>200嗨币</span></li>
+						<li><label>密码内容：</label><span>"3":1倍</span></li>
+						<li><label>密码设定：</label><span>共1组密码</span></li>
+						<li><label>密码编号：</label><span>P180107787387878348278478</span></li>
+						<li><label>探墓时间：</label><span>2018-01-07 17:20</span></li>
+						<li><label>解密时间：</label><span>2018-01-07 17:59</span></li>
+						<li style="height: 4.5rem"><label style="display: block;float: left;">密码内容：</label>
+							<div style="display: block;float: left;">
+								<span>白银密室 <i>7</i></span>
+								<br/>
+								<span>黄金密室 <i>7</i></span>
+								<br/>
+								<span>青铜密室 <i>1</i></span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="bottom">
+				<button class="btn btn-1" id="stakeRecordDetail-btn"><a>继续解密</a></button>
+			</div>	
+		</div>		
+	</div>
+	<!-- 金豆大奖 -->
+	<div class="mask goldBean goldBeanFrame">
+		<div class="goldBean-content">
+			<div class="close" id="goldBean-close-btn-1"></div>
+			<div class="title">
+				<div class="tab">
+					<div class="tab-btn tab-btn1 active">大奖密码</div>
+					<div class="tab-btn tab-btn2">大奖名单</div>
+				</div>
+			</div>
+			<div class="main-content">
+				
+			</div>
+			<!-- <div class="content grandPrixpassword">
+				<div class="title">
+					<ul>
+						<li>期号</li>
+						<li>0</li>
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+						<li>6</li>
+						<li>7</li>
+						<li>8</li>
+						<li>9</li>
+					</ul>
+				</div>
+				<div class="middle-content" id="pastcode-item">
+					<div class="item">
+						<ul>
+							<li>18010618</li>
+							<li><span>0</span></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>						
+					</div>										
+				</div>
+				<div class="bottom-tip">
+					<p>代表三个密室同时开出对的密码</p>
+				</div>				
+			</div> -->
+			<!-- <div class="content grandPrixList">
+					<div class="item">
+						<div class="item-img"><span></span></div>
+						<div class="item-title">微信用户</div>
+						<div class="item-coin">
+							<p>931600嗨币<img src="img/index/icon-bean.png" alt="嗨币"></p>
+							<p>01-08 14:59</p>
+						</div>
+					</div>
+				</div> -->	
+			<div class="button">
+				<button><a id="goldBean-close-btn-2">继续解密</a></button>
+			</div>	
 		</div>
 	</div>
 

@@ -107,13 +107,9 @@ $(function(){
 			var cost = parseInt($('#numberList ul li a.active').html());
 			if (dollor<cost) {//跳往充值界面
 				// window.location.href = "www.baidu.com";
-			} else {//动画
+			} else {
 				//押注请求
 				chasingRequest();
-				//动画
-				
-				//密码设定成功
-				$('.bettingFrame').css('display','block');
 			}
 
 		} else {//没有下注
@@ -130,10 +126,6 @@ $(function(){
 			//是否有追投方案
 			isGrammer();
 		}
-
-
-
-
 	})
 
 
@@ -145,16 +137,10 @@ $(function(){
 			var cost = parseInt($('#numberList ul li a.active').html());
 			if (dollor<cost) {//跳往充值界面
 				// window.location.href = "www.baidu.com";
-			} else {//动画
+			} else {
 				//押注请求
 				stakeRequest();
-
-				//动画
-				
-				//密码设定成功
-				$('.bettingFrame').css('display','block');
 			}
-
 		} else {//没有下注
 			var index = Math.floor(Math.random()*10);
 			$('#selectList ul li:nth-child('+index+') .list-top').css('background','url(img/index/list-top-1.png)');
@@ -169,7 +155,35 @@ $(function(){
 	$('.bettingFrame .bettingFrame-content .button .btn-2').on('click',function(){
 		$('.bettingFrame').css('display','none');
 	})
+	/*********---------金豆大奖 --------*********/
+	//tab
+	$('.goldBean-content .tab-btn').on('click',function(){
+		$('.goldBean-content .tab-btn').removeClass('active');
+		$(this).addClass('active');
+	})
+	//大奖密码
+	$('.goldBean-content .tab-btn1').on('click',function(){
+		addLoading();
+		grandPrixpasswordRequest();
+	})
+	//大奖名单
+	$('.goldBean-content .tab-btn2').on('click',function(){
+		addLoading();
+		grandPrixListRequest();
+	})
 
+	$('#gold-bean').on('click',function(){
+		addLoading();
+		grandPrixpasswordRequest();
+		$('.goldBeanFrame').css('display','block');
+	})
+	//关闭
+	$('#goldBean-close-btn-1').on('click',function(){
+		$('.goldBeanFrame').css('display','none');
+	})
+	$('#goldBean-close-btn-2').on('click',function(){
+		$('.goldBeanFrame').css('display','none');
+	})
 
 	/*********---------规则说明--------*********/
 	//打开
@@ -189,6 +203,7 @@ $(function(){
 
 	/*********---------排行榜--------*********/
 	$('#menu-rank-btn').on('click',function(){
+		addLoading();
 		RankYesterdayRequest();
 		$('.rankFrame').css('display','block');
 	})
@@ -199,10 +214,12 @@ $(function(){
 	$('#rank-tag-btn').on('click',function(){
 		var id = $(this).attr('value');
 		if (id == "yesterday") {
+			addLoading();
 			RankTodayRequest();
 			$(this).attr('value','today');
 			$(this).html('今日排行');
 		} else if (id == "today") {
+			addLoading();
 			RankYesterdayRequest();
 			$(this).attr('value','yesterday');
 			$(this).html('昨日排行');
@@ -212,6 +229,7 @@ $(function(){
 
 	/*********---------解密记录--------*********/
 	$('#menu-record-btn').on('click',function(){
+		addLoading();
 		StakeRecordRequest();
 		$('.recordFrame').css('display','block');
 	})
@@ -226,22 +244,32 @@ $(function(){
 	})
 	//投注记录
 	$("#record-tab .tab1 span").on('click',function(){
-/*		$("#record-content ul").css("display","none");
-		$("#record-content #bett-record").css("display","block");*/
+		addLoading();
 		StakeRecordRequest();
 	})
 	//追投记录
 	$("#record-tab .tab2 span").on('click',function(){
-/*		$("#record-content ul").css("display","none");
-		$("#record-content #catch-record").css("display","block");*/
+		addLoading();
 		ChasingRecordRequest();
 	})	
+	/*********---------投注记录详情--------*********/
+	$('.recordFrame').on('click','ul#bett-record li',function(){
+		addLoading();
+		StakeRecordDetailRequest(this);
+		$('.stakeRecordDetail').css('display','block');
+		$('.recordFrame').css('display','none');
+	})
+	$('.stakeRecordDetail').on('click','#stakeRecordDetail-btn',function(){
+		$('.recordFrame').css('display','none');
+		$('.stakeRecordDetail').css('display','none');
+	})
 
 
 	/*********---------往期密码--------*********/
 	//打开
 	$('#pastcode-btn').on('click',function(){
 		//请求往期密码
+		addLoading();
 		pastcodeRequest();
 		$('.pastcodeFrame').css('display','block');
 	})
@@ -405,11 +433,23 @@ function ChasingRecordRequest(){
 	var ChasingRecord_params = '{"path": "12005","d": {"tk": "'+token+'"}}';
 	sendSocket(ChasingRecord_params);	
 }
-
-
-
-
-
+/******************----投注记录详细数据请求-----******************/
+function StakeRecordDetailRequest(_this){
+	// var _this = this;
+	var index = $(_this).children('a').children('.right').children('span.index').html();
+	var ran = $(_this).children('a').children('.right').children('span.ran').html();
+	var StakeRecordDetail_params = '{"path": "12007","d": {"tk": "'+token+'","index":"'+index+'","ran":"'+ran+'"}}';
+	sendSocket(StakeRecordDetail_params);	
+}
+/******************----金豆大奖-----******************/
+function  grandPrixpasswordRequest(){
+	var grandPrixpassword_params = '{"path": "12010","d": {"tk": "'+token+'"}}';
+	sendSocket(grandPrixpassword_params);
+}
+function  grandPrixListRequest(){
+	var grandPrixList_params = '{"path": "12011","d": {"tk": "'+token+'"}}';
+	sendSocket(grandPrixList_params);
+}
 
 /******************----获取url参数-----******************/
 /*function GetQueryString(name){

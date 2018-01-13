@@ -1,6 +1,7 @@
 // var login_params = '{"path":"12000","d":{"tk":"f211d4d20a6ee4821bf33eb98017d8c1"}}';
 // http://www.xiaoyaoji.cn/share/1KMHocCKwE/1L6RofYqzX
 //实例化WebSocket对象，指定要连接的服务器地址与端口
+// addLoading();
 socket = new WebSocket("ws://ateam.ticp.io:55151");
 token = "";
 //打开事件
@@ -33,6 +34,18 @@ socket.onmessage = function(msg){
         break;
         case 12006:
             RankType(data);
+        break;
+        case 12007:
+            StakeRecordDetailType(data);
+        break;
+        case 12010:
+            grandPrixpasswordType(data);
+        break;
+        case 12011:
+            grandPrixListType(data);
+        break;
+        case 12012:
+            
         break;
     }
 };
@@ -117,6 +130,7 @@ function loginType(data){
         case 7: //数字0到9，分别有几期没有出 
             break;      
         case 8: //返回用户在这一期有没有押注
+            login_userIsStake(data)
             break;                      
     }    
 }
@@ -143,7 +157,11 @@ function login_periodComeOut(data){
 }
 //返回用户在这一期有没有押注
 function login_userIsStake(data){
-
+    //关闭loading
+    var time = setTimeout(function(){
+        clearLoading();
+        openAndCloseDoor();
+    },2000);
 }
 
 //返回奖金池，押注倒计时
@@ -165,6 +183,9 @@ function stakeType(data){
         var dollar = parseInt($('a#dollar').html());
         var cost = $('span#sumcoin').html();
         $('a#dollar').html(dollar-cost);
+        //动画
+        $('.bettingFrame').css('display','block');
+        startFly();
     }
 }
 /******************----追投接口-----******************/
@@ -174,6 +195,9 @@ function chasingType(data){
         var dollar = parseInt($('a#dollar').html());
         var cost = $('span#sumcoin').html();
         $('a#dollar').html(dollar-cost);
+        // 动画
+        $('.bettingFrame').css('display','block');
+        startFly();
     }
 }
 /******************----往期密码接口-----******************/
@@ -189,6 +213,10 @@ function pastcodeType(data){
         content +="</ul></div>"
         $('div#pastcode-item').append(content);   
     }
+    //清除loading
+    var time = window.setTimeout(function(){
+        clearLoading();
+    },1000)
 }
 /******************----排行榜-----******************/
 function RankType(data){
@@ -211,7 +239,12 @@ function RankType(data){
             content +="<li>"+data.d.data[i].coin+"</li>";
         }
         content +="</ul></div>";
-        $('#rank-content').append(content);    }
+        $('#rank-content').append(content);    
+    }
+    //清除loading
+    var time = setTimeout(function(){
+        clearLoading();
+    },1000);
 }
 /******************----投注记录数据请求-----******************/
 function StakeRecordType(data){
@@ -239,11 +272,15 @@ function StakeRecordType(data){
         content +='<span class="p_left">'+item[i].created_at+'</span>';
         content +='<span class="p_right">消耗'+item[i].coin+'嗨币</span>';
         content +='</p></div>';
-        content +='<div class="right"><img src="img/record/right.png" alt="向右" /></div>';
+        content +='<div class="right"><img src="img/record/right.png" alt="向右" /><span class="index" style="display:none">'+item[i].index+'</span><span class="ran" style="display:none">'+item[i].ran+'</span></div>';
         content +='</a></li>';
     }
     content +='</ul>';
     $('#record-content').append(content);
+    //清除loading
+    var time = setTimeout(function(){
+        clearLoading();
+    },1000);
 }
 /******************----追投记录数据请求-----******************/
 function ChasingRecordType(data){
@@ -270,12 +307,106 @@ function ChasingRecordType(data){
         content += '<p><span class="p_left">'+item[i].created_at+'</span>';
         content += '<span class="p_right">消耗'+item[i].coin+'嗨币</span></p>';
         content += '</div>';
-        content += '<div class="right"><img src="img/record/right.png" alt="向右" /></div>';
+        content += '<div class="right"><img src="img/record/right.png" alt="向右" /><span class="index" style="display:none">'+item[i].index+'</span><span class="ran" style="display:none">'+item[i].ran+'</span></div>';
         content +='</a></li>';
     }
     content +='</ul>';
     $('#record-content').append(content);
+    //消除loading
+    var time = setTimeout(function(){
+        clearLoading();
+    },1000);
+}
+/******************----投注记录详情数据请求-----******************/
+function StakeRecordDetailType(data){
+    var item = data.d.data[0];
+    if (item.flag == 0) {//等待开奖
+        $('.stakeRecordDetail .top-title').html('等待开奖'); 
+    } else {//已开奖（寻宝成功/寻宝失败）
+        if (item.get_coin == 0) {
+            $('.stakeRecordDetail .top-title').html('寻宝失败');      
+        }else{
+            $('.stakeRecordDetail .top-title').html('寻宝成功');
+        }
+    }
+    $('.stakeRecordDetail .top-content .top-period span:nth-child(1)').html(item.index+'期');
+    $('.stakeRecordDetail .top-content .top-period span:nth-child(2) i').html('+'+item.get_coin+'嗨币');
+
+    $('.stakeRecordDetail .top-content ul li:nth-child(1) span').html(item.coin+'嗨币');
+    $('.stakeRecordDetail .top-content ul li:nth-child(2) span').html(item.content);
+    $('.stakeRecordDetail .top-content ul li:nth-child(3) span').html('共'+item.num+'组密码');
+    $('.stakeRecordDetail .top-content ul li:nth-child(4) span').html('');
+    $('.stakeRecordDetail .top-content ul li:nth-child(5) span').html(item.created_at);
+    $('.stakeRecordDetail .top-content ul li:nth-child(6) span').html(item.updated_at);
+
+    if (item.flag == 0 || data.d.result_param.length== 0 ) {
+        $('.stakeRecordDetail .top-content ul li:nth-child(7) div').css('display','none');
+    }else if (item.flag != 0 && data.d.result_param.length!= 0){
+        $('.stakeRecordDetail .top-content ul li:nth-child(7) div').css('display','block');
+        $('.stakeRecordDetail .top-content ul li:nth-child(7) div span i').html(data.d.result_param[0][0]);
+        $('.stakeRecordDetail .top-content ul li:nth-child(8) div span i').html(data.d.result_param[1][0]);
+        $('.stakeRecordDetail .top-content ul li:nth-child(9) div span i').html(data.d.result_param[2][0]);        
+    }   
+    //清除loading
+    var time = window.setTimeout(function(){
+        clearLoading();
+    },1000)
+
 }
 
+/******************----金豆大奖-----******************/
+function grandPrixpasswordType(data){
+    $('.goldBeanFrame .main-content').html('');
+    var item = data.d;
+    var content = '<div class="content grandPrixpassword">';
+    content +='<div class="title">';
+    content +='<ul><li>期号</li><li>0</li><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li></ul>';
+    content +='</div>';
+    content +='<div class="middle-content" id="pastcode-item">';
+    for (var i = 0; i < item.length; i++) {
+        content += '<div class="item">';
+        content += '<ul>';
+        content += '<li>'+item[i].index+'</li>';
+        for (var j = 0; j < 10; j++) {
+            if (j==parseInt(item[i].param)) {
+                content += '<li><span>'+item[i].param+'</span></li>';
+            }else{
+                content +='<li></li>';
+            }
+        }
 
-
+        content += '</ul>';  
+        content += '</div>';  
+    }
+    content += '</div>';  
+    content += '<div class="bottom-tip">';  
+    content += '<p>代表三个密室同时开出对的密码</p>';  
+    content += '</div>';  
+    content += '</div>';  
+    $('.goldBeanFrame .main-content').append(content);
+    //清除loading
+    var time = window.setTimeout(function(){
+        clearLoading();
+    },1000)
+}
+function grandPrixListType(data){
+    $('.goldBeanFrame .main-content').html('');
+    var item = data.d.data;
+    var content = '<div class="content grandPrixList">';
+    for (var i = 0; i < item.length; i++) {
+        content += '<div class="item">';
+        content +='<div class="item-img"><span><img src="'+item[i].icon+'" alt="头像" /></span></div>'
+        content +='<div class="item-title">'+item[i].nickname+'</div>';
+        content +='<div class="item-coin">';
+        content +='<p>'+item[i].grandprix_sum+'嗨币<img src="img/index/icon-bean.png" alt="嗨币"></p>';
+        content +='<p>'+item[i].updated_at+'</p>';
+        content +='</div>';
+        content +='</div>';
+    }
+    content +='</div>';
+    $('.goldBeanFrame .main-content').append(content);
+    //清除loading
+    var time = window.setTimeout(function(){
+        clearLoading();
+    },1000)
+}

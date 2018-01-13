@@ -13,6 +13,7 @@
 	background-color: #9b634c;
 	overflow: hidden;
 	position: relative;
+    z-index: 5;
 }
 .recordFrame .tab .shu{
 	position: absolute;
@@ -55,10 +56,10 @@
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	box-sizing: border-box;
+	/*box-sizing: border-box;*/
 	padding-top: 2.2rem;
 	background-color: #6c3b34;
-	z-index: -1;
+	z-index: 4;
 }
 /*投注记录*/
 .recordFrame .content ul#bett-record{
@@ -98,10 +99,10 @@
     width: 1.7rem;
     height: 0.7rem;
     display: block;
-    line-height: 0.6rem;
+    line-height: 0.65rem;
     text-align: center;
     border-radius: 1rem;
-    font-size: 0.2rem;
+    font-size: 0.5rem;
     margin-top: 0.1rem;
     margin-left: 0.3rem;
 }
@@ -208,4 +209,123 @@
     width: 0.9rem;
 }
 
+/*投注记录详情*/
+.stakeRecordDetail {
+    width: 100%;
+    height: 100%;
+    background-color: #6b3d32;
+    box-sizing: border-box;
+    padding: 2rem 0.5rem;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+.stakeRecordDetail .stakeRecordDetail-content{
+    width: 100%;
+    height: 23rem;
+}
+.stakeRecordDetail .stakeRecordDetail-content .top{
+    width: 100%;
+    height: 20rem;
+    background: url(../img/waitDecrypt/back.png);
+    background-size: 100% 100%;
+    position: relative;
+}
+.stakeRecordDetail .stakeRecordDetail-content .top .top-title{
+    width: 9rem;
+    height: 3rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -4.5rem;
+    top: -1.25rem;
+    text-align: center;
+    line-height: 2.2rem;
+    font-size: 0.9rem;
+    color: #ffe4b9;
+    background: url(../img/waitDecrypt/title.png);
+    background-size: 100% 100%;
+}
+.stakeRecordDetail .stakeRecordDetail-content .top .top-content{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 2rem 0.5rem 2rem 2rem;
+}
+.stakeRecordDetail .stakeRecordDetail-content .top .top-content .top-period{
+    width: 11rem;
+    height: 1.4rem;
+    background: #934e3d;
+    border-radius: 2rem;
+    line-height: 1.4rem;
+    font-size: 0.6rem;
+    box-sizing: border-box;
+    padding: 0 0.5rem;
+    color: #e8976f;
+    margin-bottom: 0.5rem;
+}
+.stakeRecordDetail .stakeRecordDetail-content .top .top-content .top-period span:first-child{
+    float: left;
+    padding-right: 0.5rem;
+    border-right: 1px solid #af684c;
+}
+.stakeRecordDetail .stakeRecordDetail-content .top .top-content .top-period span:last-child{
+    float: right;
+    color: #f3dba9;
+}
+.stakeRecordDetail .stakeRecordDetail-content .top .top-content .top-period img{
+    width: 1rem;
+    float: right;
+    margin-top: 0.2rem;
+    margin-left: 0.2rem;
+}
+.stakeRecordDetail .stakeRecordDetail-content .top .top-content ul{
+    width: 100%;
+    height: 100%;
+}
+.stakeRecordDetail .stakeRecordDetail-content .top .top-content ul li{
+    width: 100%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 0.6rem;
+    color: #e8976f;
+    overflow: hidden;
+}
+.stakeRecordDetail .stakeRecordDetail-content .top .top-content ul li label{
+    display: block;
+    float: left;
+    width: 3.2rem;   
+}
+.stakeRecordDetail .stakeRecordDetail-content .top .top-content ul li span{
+    color: #f3dba9;
+}
+.stakeRecordDetail .stakeRecordDetail-content .bottom{
+    width: 100%;
+    height: 4rem;
+    box-sizing: border-box;
+    padding: 0.7rem 3.5rem 1rem 3.5rem;
+
+}
+.stakeRecordDetail .stakeRecordDetail-content .bottom .btn{
+    width: 8rem;
+    height: 2rem;
+    color: #7e2210;
+    border: 0;
+    padding: 0;
+    border-radius: 0.2rem;
+}
+.stakeRecordDetail .stakeRecordDetail-content .bottom .btn-1{
+    background-color: #dd6b43;
+    background: url(../img/waitDecrypt/btn1.png);
+    background-size: 100% 100%;
+}
+.stakeRecordDetail .stakeRecordDetail-content .bottom .btn-1 a{
+    text-decoration: none;
+    color: #7e2210;
+}
+.stakeRecordDetail .stakeRecordDetail-content .bottom .btn-2{
+    float: right;   
+    background-color: #ebba6b;
+}
 

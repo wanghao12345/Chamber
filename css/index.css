@@ -106,10 +106,11 @@
 
 
 .box-top .back2{
-	height: 30%;
-	background: url(../img/index/back-2.png);
-	background-size: 100% 100%;
+    height: 30%;
+    background: url(../img/index/back-2.png);
+    background-size: 100% 100%;
 }
+
 .box-top .door-content{
     width: 100%;
     height: 100%;
@@ -271,6 +272,7 @@
     padding: 0rem 0.3rem;
     box-sizing: border-box;
     padding-top: 0.3rem;
+    position: relative;
 
 }
 .deadLine .deadline-content{
@@ -358,6 +360,7 @@
     line-height: 1.7rem;
     color: #edbb64;
     font-weight: 600;
+    position: relative;
 }
 .selectList ul li .list-bottom{
     width: 90%;
@@ -408,6 +411,7 @@
     border-bottom-right-radius: 1rem;
     text-decoration: none;
     color: #edbb64;
+    font-size: 0.6rem;
 }
 
 
@@ -1206,14 +1210,14 @@ width: 100%;
 .door-in-1 .door-in-content {
     box-sizing: border-box;
     padding-top: 2.7rem;
-    padding-left: 0.8rem;
-    padding-right: 0.5rem;
+    padding-left: 0.76rem;
+    padding-right: 0.4rem;
     padding-bottom: 0.5rem;
 }
 .door-in-2 .door-in-content {
     box-sizing: border-box;
     padding-top: 2.7rem;
-    padding-left: 0.7rem;
+    padding-left: 0.66rem;
     padding-right: 0.6rem;
     padding-bottom: 0.5rem;
 }
@@ -1230,12 +1234,26 @@ width: 100%;
     position: relative;
     background: url(../img/index/bg-door-award.png);
     background-size: 100% 100%;
-    width: 4.2rem;
+    width: 4.23rem;
     height: 7.84rem;
 }
 /*修改1*/
 
-
+/*投注动画*/
+.flyCode{
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
+    top: 0;
+    background: url(../img/index/fly.png);
+    background-size: 100% 100%;
+    color: #edbb64;
+    text-align: center;
+    line-height: 2rem;
+    left: 7rem;
+    top: 20rem;
+    z-index: 2;
+}
 
 
 
