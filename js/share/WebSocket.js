@@ -204,6 +204,10 @@ function chasingType(data){
 function pastcodeType(data){
 
     $('div#pastcode-item').html('');
+    //清除loading
+    var time = window.setTimeout(function(){
+        clearLoading();
+    },1000)
     for (var i = 0; i < data.d.length; i++) {
         var content = "<div class=item><ul>";
         content += "<li>"+data.d[i].index+"号密室</li>";
@@ -213,10 +217,7 @@ function pastcodeType(data){
         content +="</ul></div>"
         $('div#pastcode-item').append(content);   
     }
-    //清除loading
-    var time = window.setTimeout(function(){
-        clearLoading();
-    },1000)
+
 }
 /******************----排行榜-----******************/
 function RankType(data){
@@ -225,6 +226,10 @@ function RankType(data){
 
 
     $('#rank-content').html('');
+        //清除loading
+    var time = setTimeout(function(){
+        clearLoading();
+    },1000);
     for (var i = 0; i < data.d.data.length; i++) {
         var content = "<div class=item><ul>"
         if (data.d.data[i].ranking<=3) {
@@ -241,15 +246,16 @@ function RankType(data){
         content +="</ul></div>";
         $('#rank-content').append(content);    
     }
-    //清除loading
-    var time = setTimeout(function(){
-        clearLoading();
-    },1000);
+
 }
 /******************----投注记录数据请求-----******************/
 function StakeRecordType(data){
     var item = data.d.data;
     $('#record-content').html('');
+    //清除loading
+    var time = setTimeout(function(){
+        clearLoading();
+    },1000);
     var content = "<ul id=bett-record>"
     for (var i = 0; i < item.length; i++) {
         content +='<li><a>';
@@ -277,14 +283,15 @@ function StakeRecordType(data){
     }
     content +='</ul>';
     $('#record-content').append(content);
-    //清除loading
-    var time = setTimeout(function(){
-        clearLoading();
-    },1000);
+
 }
 /******************----追投记录数据请求-----******************/
 function ChasingRecordType(data){
     $('#record-content').html('');
+        //消除loading
+    var time = setTimeout(function(){
+        clearLoading();
+    },1000);
     var item = data.d.data;
     var rest = 0;
     var content = '<ul id="catch-record">';
@@ -312,13 +319,14 @@ function ChasingRecordType(data){
     }
     content +='</ul>';
     $('#record-content').append(content);
-    //消除loading
-    var time = setTimeout(function(){
-        clearLoading();
-    },1000);
+
 }
 /******************----投注记录详情数据请求-----******************/
 function StakeRecordDetailType(data){
+        //清除loading
+    var time = window.setTimeout(function(){
+        clearLoading();
+    },1000)
     var item = data.d.data[0];
     if (item.flag == 0) {//等待开奖
         $('.stakeRecordDetail .top-title').html('等待开奖'); 
@@ -347,16 +355,17 @@ function StakeRecordDetailType(data){
         $('.stakeRecordDetail .top-content ul li:nth-child(8) div span i').html(data.d.result_param[1][0]);
         $('.stakeRecordDetail .top-content ul li:nth-child(9) div span i').html(data.d.result_param[2][0]);        
     }   
-    //清除loading
-    var time = window.setTimeout(function(){
-        clearLoading();
-    },1000)
+
 
 }
 
 /******************----金豆大奖-----******************/
 function grandPrixpasswordType(data){
     $('.goldBeanFrame .main-content').html('');
+    //清除loading
+    var time = window.setTimeout(function(){
+        clearLoading();
+    },1000)
     var item = data.d;
     var content = '<div class="content grandPrixpassword">';
     content +='<div class="title">';
@@ -384,13 +393,13 @@ function grandPrixpasswordType(data){
     content += '</div>';  
     content += '</div>';  
     $('.goldBeanFrame .main-content').append(content);
+}
+function grandPrixListType(data){
+    $('.goldBeanFrame .main-content').html('');
     //清除loading
     var time = window.setTimeout(function(){
         clearLoading();
     },1000)
-}
-function grandPrixListType(data){
-    $('.goldBeanFrame .main-content').html('');
     var item = data.d.data;
     var content = '<div class="content grandPrixList">';
     for (var i = 0; i < item.length; i++) {
@@ -405,8 +414,4 @@ function grandPrixListType(data){
     }
     content +='</div>';
     $('.goldBeanFrame .main-content').append(content);
-    //清除loading
-    var time = window.setTimeout(function(){
-        clearLoading();
-    },1000)
 }
