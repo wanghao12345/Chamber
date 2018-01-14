@@ -2,8 +2,8 @@
 function openAndCloseDoor(){
 	openDoorAnimation();
 	var t = window.setTimeout(function(){
-		closeDoorAnimation();			
-	},3000);	
+		closeDoorAnimation();	
+	},3000);
 }
 
 //开门动画
@@ -153,5 +153,87 @@ function codeFlyDoor(){
 	var time1 = window.setTimeout(function(){
 		$('.flyCode').remove();
 	},2000);
-
 }
+/**************************------提示框------************************/
+//插入小提示框
+function addMinTip(index,num){
+	var top = "1rem";
+	var left = "-0.6rem";
+	switch(index){
+		case 0:
+			top = "1rem";
+			left = "-0.6rem";
+		break;
+		case 1:
+			top = "1rem";
+			left = "2.4rem";
+		break;
+		case 2:
+			top = "1rem";
+			left = "5.4rem";
+		break;
+		case 3:
+			top = "1rem";
+			left = "8.4rem";
+		break;
+		case 4:
+			top = "1rem";
+			left = "11.4rem";
+		break;
+		case 5:
+			top = "4.2rem";
+			left = "-0.6rem";
+		break;
+		case 6:
+			top = "4.2rem";
+			left = "2.4rem";
+		break;
+		case 7:
+			top = "4.2rem";
+			left = "5.4rem";
+		break;
+		case 8:
+			top = "4.2rem";
+			left = "8.4rem";
+		break;
+		case 9:
+			top = "4.2rem";
+			left = "11.4rem";
+		break;
+	}
+	var content = '<div class="tooltips" style="top:'+top+';left:'+left+'">';
+	content += '<div class="tooltips-content">"'+index+'"已有'+num+'期未出';
+	content += '<div class="arrow arrow-border"></div>';
+	content += '<div class="arrow arrow-bg"></div>';
+	content += '</div>';
+	content += '</div>';
+	$('.selectList ul li:nth-child('+(index+1)+')').append(content);	
+}
+//清除小提示框
+function removeMinTip(){
+	$('.selectList ul li .tooltips').remove();
+}
+
+//插入大提示框
+function maxTip(content,line_hight){
+    addMaxTip(content,line_hight); 
+    var time = setTimeout(function(){
+        removeMaxTip();
+    },2000); 	
+}
+
+//插入大提示框
+function addMaxTip(content,line_hight){
+	$('body').append('<div class="maxtooltip" style="'+line_hight+'">'+content+'</div>');
+}
+//清除大提示框
+function removeMaxTip(){
+	$('.maxtooltip').remove();
+}
+
+
+
+
+
+
+

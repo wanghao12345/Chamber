@@ -128,6 +128,7 @@ function loginType(data){
             login_numberPeriodsAndMoney(data);
             break;
         case 7: //数字0到9，分别有几期没有出 
+            login_periodComeOut(data);
             break;      
         case 8: //返回用户在这一期有没有押注
             login_userIsStake(data)
@@ -153,7 +154,12 @@ function login_numberPeriodsAndMoney(data){
 }
 //数字0到9，分别有几期没有出 
 function login_periodComeOut(data){
-
+    var arr = data.d;
+    var time1 = window.setInterval(function(){
+        removeMinTip();
+        var num1 = Math.round(Math.random()*9);
+        addMinTip(num1,arr[num1]);
+    },5000);   
 }
 //返回用户在这一期有没有押注
 function login_userIsStake(data){
@@ -162,8 +168,15 @@ function login_userIsStake(data){
         clearLoading();
         openAndCloseDoor();
     },2000);
-}
 
+    var time1 = setTimeout(function(){
+        addMaxTip('选择下方密码开启密室，就有机会赢取千万大奖！','0.8rem');
+    },4000);  
+    var time2 = setTimeout(function(){
+        removeMaxTip();
+    },7000); 
+
+}
 //返回奖金池，押注倒计时
 function login_stakeCountDown(data){
     //倒计时(秒)
@@ -176,6 +189,8 @@ function login_stakeCountDown(data){
     $('div#last_result_param3').html(last_result_param[2]);
     $('span#pastcode-btn i').html(last_result_param[0]+" "+last_result_param[1]+" "+last_result_param[2]);   
 }
+
+
 /******************----投注接口-----******************/
 function stakeType(data){
     if (data.i == 12001) {
@@ -186,6 +201,8 @@ function stakeType(data){
         //动画
         $('.bettingFrame').css('display','block');
         startFly();
+    }else{
+        maxTip('投注失败！','1.4rem');
     }
 }
 /******************----追投接口-----******************/
@@ -198,6 +215,8 @@ function chasingType(data){
         // 动画
         $('.bettingFrame').css('display','block');
         startFly();
+    }else{
+        maxTip('追投失败！','1.4rem');
     }
 }
 /******************----往期密码接口-----******************/
@@ -323,7 +342,7 @@ function ChasingRecordType(data){
 }
 /******************----投注记录详情数据请求-----******************/
 function StakeRecordDetailType(data){
-        //清除loading
+    //清除loading
     var time = window.setTimeout(function(){
         clearLoading();
     },1000)
@@ -355,8 +374,6 @@ function StakeRecordDetailType(data){
         $('.stakeRecordDetail .top-content ul li:nth-child(8) div span i').html(data.d.result_param[1][0]);
         $('.stakeRecordDetail .top-content ul li:nth-child(9) div span i').html(data.d.result_param[2][0]);        
     }   
-
-
 }
 
 /******************----金豆大奖-----******************/

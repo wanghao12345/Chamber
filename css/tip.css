@@ -1,0 +1,63 @@
+/*小提示框*/
+.tooltips{
+    position: absolute;
+    top: 17rem;
+    left: -0.6rem;
+    z-index: 2;
+}
+.tooltips-content{
+    position: relative;
+    width: 5rem;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    color: #eebf74;
+    border: 1px solid #eebf74;
+    border-radius: 4px;
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+    font-size: 0.5rem;
+}
+.arrow{
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    line-height: 0px;
+    border-width: 0.27rem 0.2rem 0;
+    border-style: solid dashed dashed dashed;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+.arrow-border{
+    color: #eebf74;
+    bottom: -0.28rem;
+    right: 45%;
+}
+.arrow-bg{
+    bottom: -0.2rem;
+    right: 45%;
+    opacity: 0.8;
+    color: black;
+}
+/*大提示框*/
+.maxtooltip{
+	width: 8rem;
+    height: 2.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 0rem;
+    margin-left: -4rem;
+    z-index: 1;
+    background: rgba(0,0,0,0.75);
+    font-size: 0.5rem;
+    box-sizing: border-box;
+    padding: 0.5rem 0.5rem;
+    text-align: center;
+    border-radius: 0.2rem;
+    color: #a9844a;
+    line-height: 0.8rem;
+}
+
+
+
+

@@ -14,7 +14,7 @@
     padding: 1.8rem 0.5rem 0.5rem 0.5rem;
     position: relative;
     border-radius: 0.3rem;
-    background: url(../img/rule/back.png);
+    background: url(../img/gold/back.png);
     background-size: 100% 100%;
 }
 .goldBean .goldBean-content .close{
@@ -36,12 +36,14 @@
     position: absolute;
     top: 0.2rem;
     display: block;
-    width: 9rem;
+    width: 8rem;
     height: 1.3rem;
     left: 50%;
-    margin-left: -4.5rem;
+    margin-left: -4rem;
     color: #f5c76f;
-    font-size: 0.7rem;   
+    font-size: 0.7rem;
+    box-sizing: border-box;
+    padding: 0 0.3rem;
 }
 .goldBean .goldBean-content .title .tab{
     width: 100%;
@@ -49,7 +51,7 @@
     overflow: hidden;
 }
 .goldBean .goldBean-content .title .tab .tab-btn{
-    width: 4rem;
+    width: 3.5rem;
     height: 100%;
     background: #e7a350;
     text-align: center;
@@ -57,10 +59,14 @@
     border-radius: 5px;
     color: #cc793b;
     font-size: 0.6rem;
+    background: url('../img/gold/tab1-btn.png');
+    background-size: 100% 100%;
 }
 .goldBean .goldBean-content .title .tab .active{
     background: #f3573f; 
     color: #ffe39e; 
+    background: url('../img/gold/tab2-btn.png');
+    background-size: 100% 100%;
 }
 .goldBean .goldBean-content .title .tab .tab-btn1{
     float: left;
