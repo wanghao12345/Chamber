@@ -1,0 +1,66 @@
+.box-top .horseLamp{
+    height: 1.7rem;
+    background: rgba(0,0,0,0.5);
+    float: left;
+    margin-left: 0.3rem;
+    margin-top: 0.2rem;
+    border-radius: 0.2rem;
+    position: absolute;
+    top: 0.5rem;
+    z-index: 3;
+    left: 5rem;
+}
+.box-top .container {
+    width: 7rem;
+    float: left;
+    display: inline-block;
+    overflow: hidden;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: 1px solid #524c4c;
+}
+ 
+.marquee-sibling {
+  padding: 0;
+  background: #3BB0D6;
+  width: 20%;
+  height: 45px;
+  line-height: 42px;
+  font-size: 12px;
+  font-weight: normal;
+  color: #ffffff;
+  text-align: center;
+  float: left;
+  left: 0;
+  z-index: 2000;
+}
+ 
+.marquee,
+*[class^="marquee"] {
+  display: inline-block;
+  white-space: nowrap;
+  position: absolute;
+}
+ 
+.marquee { margin-left: 25%; }
+ 
+.marquee-content-items {
+  display: inline-block;
+  padding: 5px;
+  margin: 0;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+ 
+.marquee-content-items li {
+  display: inline-block;
+  line-height: 1.2rem;
+  color: #a7a7a7;
+  font-size: 0.6rem;
+}
+ 
+.marquee-content-items li:after {
+  content: "|";
+  margin: 0 1em;
+}

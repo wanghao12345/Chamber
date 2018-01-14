@@ -1,3 +1,9 @@
+html,body{
+    min-width: 16rem;
+    min-height: 28.4rem;
+}
+
+
 .box{
 	width: 100%;
 	height: 100%;
@@ -11,7 +17,6 @@
     position: relative;
     min-height: 17rem;
 }
-
 .box-top .back{
 	width: 100%;
 }
@@ -100,14 +105,9 @@
     margin-top: -1.8rem;
     border-bottom: 1px solid #904937;
 }
-
-
-
-
-
 .box-top .back2{
     height: 30%;
-    background: url(../img/index/back-2.png);
+    background: url(../img/index/back-2-1.png);
     background-size: 100% 100%;
 }
 
@@ -260,8 +260,7 @@
 /*下面部分*/
 .box-bottom{
     width: 100%;
-    height: 43.5%;
-    margin-top: -1rem;
+    height: 40%;
     background-color: #682628;
     overflow: hidden;
     position: relative;
@@ -336,7 +335,7 @@
 
 .selectList{
     width: 100%;
-    height: 7rem;
+    height: 6rem;
     background-color: #682628;
     box-sizing: border-box;
     padding: 0rem 0.5rem;
@@ -351,7 +350,7 @@
     height: 50%;
     float: left;
     box-sizing: border-box;
-    padding: 0.4rem 0.2rem 0.8rem 0.2rem;
+    padding: 0.3rem 0.3rem 0.8rem 0.3rem;
 }
 .selectList ul li .list-top{
     width: 100%;

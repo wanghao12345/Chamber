@@ -264,6 +264,8 @@
     padding: 0 0.5rem;
     color: #e8976f;
     margin-bottom: 0.5rem;
+    background: url(../img/record/titledetailback.png);
+    background-size: 100% 100%;
 }
 .stakeRecordDetail .stakeRecordDetail-content .top .top-content .top-period span:first-child{
     float: left;
@@ -328,4 +330,48 @@
     float: right;   
     background-color: #ebba6b;
 }
+/*无记录*/
+.noRecordFrame{
+    width: 12rem;
+    height: 6rem;
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    margin-top: -4rem;
+    left: 50%;
+    margin-left: -6rem;
+}
+.noRecordFrame .img{
+    width: 100%;
+    height: 3rem;
+    text-align: center;
+    line-height: 3rem;
+}
+.noRecordFrame .img img{
+    width: 6rem;
+}
+.noRecordFrame p{
+    width: 100%;
+    height: 1rem;
+    text-align: center;
+    font-size: 0.6rem;
+    color: #ebbb6f;    
+}
+.noRecordFrame .back-btn{
+    width: 100%;
+    height: 2rem;    
+}
+.noRecordFrame .back-btn button{
+    width: 10rem;
+    height: 1.5rem;
+    border: 0;
+    margin-left: 1rem;
+    font-size: 0.6rem;
+    border-radius: 0.2rem;
+    color: #832d10;
+    margin-top: 0.5rem;
+    background: url(../img/rule/btn.png);
+}
+
+
 

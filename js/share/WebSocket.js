@@ -45,7 +45,7 @@ socket.onmessage = function(msg){
             grandPrixListType(data);
         break;
         case 12012:
-            
+            horseLampType(data);
         break;
     }
 };
@@ -98,6 +98,7 @@ function DJS(countTime) {
         else{ 
         clearInterval(timer); 
             // alert("时间到，结束!"); 
+            openAndCloseDoor();
             DJS(3600);
         } 
     },1000); 
@@ -175,7 +176,9 @@ function login_userIsStake(data){
     var time2 = setTimeout(function(){
         removeMaxTip();
     },7000); 
-
+    //开启跑马灯
+    var horseLamp_params = '{"path": "12012","d": {"tk": "'+token+'"}}';
+    sendSocket(horseLamp_params);
 }
 //返回奖金池，押注倒计时
 function login_stakeCountDown(data){
@@ -189,7 +192,16 @@ function login_stakeCountDown(data){
     $('div#last_result_param3').html(last_result_param[2]);
     $('span#pastcode-btn i').html(last_result_param[0]+" "+last_result_param[1]+" "+last_result_param[2]);   
 }
-
+/******************----跑马灯-----******************/
+function horseLampType(data){
+    $('.marquee-content-items').html('');
+    var item = data.d.data;
+    var content = '';
+    for (var i = 0; i < item.length; i++) {
+        content += '<li>'+item.title+'</li>'
+    }
+        $('.marquee-content-items').append(content);
+}
 
 /******************----投注接口-----******************/
 function stakeType(data){
@@ -275,33 +287,40 @@ function StakeRecordType(data){
     var time = setTimeout(function(){
         clearLoading();
     },1000);
-    var content = "<ul id=bett-record>"
-    for (var i = 0; i < item.length; i++) {
-        content +='<li><a>';
-        content +='<div class="left"><p>';
-        content +='<span class="p_left">第'+item[i].index+'号密室</span>';
-        if (item[i].stake_type != '0') {//追投
-            content +='<i class="p_left" id="chase">追投</i>';
-        } 
-        if (item[i].flag == 0) {//未开奖
-            content +='<span class="p_right">等待解密</span>';
-        }else if (item[i].flag == 1) {//已开奖
-            if (item[i].get_coin == 0) {//未猜中
-                content +='<span class="p_right">未猜中</span>';
-            } else {//已猜中
-                content +='<span class="p_right" id="coin">+'+item[i].get_coin+'嗨币</span>';
+    if (item.length != 0) {
+        var content = "<ul id=bett-record>"
+        for (var i = 0; i < item.length; i++) {
+            content +='<li><a>';
+            content +='<div class="left"><p>';
+            content +='<span class="p_left">第'+item[i].index+'号密室</span>';
+            if (item[i].stake_type != '0') {//追投
+                content +='<i class="p_left" id="chase">追投</i>';
+            } 
+            if (item[i].flag == 0) {//未开奖
+                content +='<span class="p_right">等待解密</span>';
+            }else if (item[i].flag == 1) {//已开奖
+                if (item[i].get_coin == 0) {//未猜中
+                    content +='<span class="p_right">未猜中</span>';
+                } else {//已猜中
+                    content +='<span class="p_right" id="coin">+'+item[i].get_coin+'嗨币</span>';
+                }
             }
+            content +='</p>';
+            content +='<p>';
+            content +='<span class="p_left">'+item[i].created_at+'</span>';
+            content +='<span class="p_right">消耗'+item[i].coin+'嗨币</span>';
+            content +='</p></div>';
+            content +='<div class="right"><img src="img/record/right.png" alt="向右" /><span class="index" style="display:none">'+item[i].index+'</span><span class="ran" style="display:none">'+item[i].ran+'</span></div>';
+            content +='</a></li>';
         }
-        content +='</p>';
-        content +='<p>';
-        content +='<span class="p_left">'+item[i].created_at+'</span>';
-        content +='<span class="p_right">消耗'+item[i].coin+'嗨币</span>';
-        content +='</p></div>';
-        content +='<div class="right"><img src="img/record/right.png" alt="向右" /><span class="index" style="display:none">'+item[i].index+'</span><span class="ran" style="display:none">'+item[i].ran+'</span></div>';
-        content +='</a></li>';
+        content +='</ul>';
+        $('#record-content').append(content);
+    } else {
+        var content1 = addNoRecordData();
+         $('#record-content').append(content1);
     }
-    content +='</ul>';
-    $('#record-content').append(content);
+
+
 
 }
 /******************----追投记录数据请求-----******************/
@@ -312,32 +331,39 @@ function ChasingRecordType(data){
         clearLoading();
     },1000);
     var item = data.d.data;
-    var rest = 0;
-    var content = '<ul id="catch-record">';
-    for (var i = 0; i < item.length; i++) {
-        content += '<li><a href="#">';
-        content +='<div class="left">';
-        if (item[i].flag==0) {
-            content += '<p><span class="p_left">等待开奖</span>';
-        } else {        
-            content += '<p><span class="p_left">已完成</span>';
+
+    if (item.length != 0) {
+        var rest = 0;
+        var content = '<ul id="catch-record">';
+        for (var i = 0; i < item.length; i++) {
+            content += '<li><a href="#">';
+            content +='<div class="left">';
+            if (item[i].flag==0) {
+                content += '<p><span class="p_left">等待开奖</span>';
+            } else {        
+                content += '<p><span class="p_left">已完成</span>';
+            }
+            if (item[i].status == 1) {
+                content += '<i class="p_left" id="chase">已撤单</i>';
+            }
+            if (item[i].grandprix == 0) {
+                content += '<span class="p_right">未中奖</span></p>';
+            }else{
+                content += '<span class="p_right">中奖'+item[i].grandprix+'嗨币</span></p>';
+            }
+            content += '<p><span class="p_left">'+item[i].created_at+'</span>';
+            content += '<span class="p_right">消耗'+item[i].coin+'嗨币</span></p>';
+            content += '</div>';
+            content += '<div class="right"><img src="img/record/right.png" alt="向右" /><span class="index" style="display:none">'+item[i].index+'</span><span class="ran" style="display:none">'+item[i].ran+'</span></div>';
+            content +='</a></li>';
         }
-        if (item[i].status == 1) {
-            content += '<i class="p_left" id="chase">已撤单</i>';
-        }
-        if (item[i].grandprix == 0) {
-            content += '<span class="p_right">未中奖</span></p>';
-        }else{
-            content += '<span class="p_right">中奖'+item[i].grandprix+'嗨币</span></p>';
-        }
-        content += '<p><span class="p_left">'+item[i].created_at+'</span>';
-        content += '<span class="p_right">消耗'+item[i].coin+'嗨币</span></p>';
-        content += '</div>';
-        content += '<div class="right"><img src="img/record/right.png" alt="向右" /><span class="index" style="display:none">'+item[i].index+'</span><span class="ran" style="display:none">'+item[i].ran+'</span></div>';
-        content +='</a></li>';
+        content +='</ul>';
+        $('#record-content').append(content);
+    } else {
+        var content1 = addNoRecordData();
+         $('#record-content').append(content1);        
     }
-    content +='</ul>';
-    $('#record-content').append(content);
+
 
 }
 /******************----投注记录详情数据请求-----******************/

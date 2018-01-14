@@ -161,43 +161,43 @@ function addMinTip(index,num){
 	var left = "-0.6rem";
 	switch(index){
 		case 0:
-			top = "1rem";
+			top = "0.8rem";
 			left = "-0.6rem";
 		break;
 		case 1:
-			top = "1rem";
+			top = "0.8rem";
 			left = "2.4rem";
 		break;
 		case 2:
-			top = "1rem";
+			top = "0.8rem";
 			left = "5.4rem";
 		break;
 		case 3:
-			top = "1rem";
+			top = "0.8rem";
 			left = "8.4rem";
 		break;
 		case 4:
-			top = "1rem";
+			top = "0.8rem";
 			left = "11.4rem";
 		break;
 		case 5:
-			top = "4.2rem";
+			top = "3.6rem";
 			left = "-0.6rem";
 		break;
 		case 6:
-			top = "4.2rem";
+			top = "3.6rem";
 			left = "2.4rem";
 		break;
 		case 7:
-			top = "4.2rem";
+			top = "3.6rem";
 			left = "5.4rem";
 		break;
 		case 8:
-			top = "4.2rem";
+			top = "3.6rem";
 			left = "8.4rem";
 		break;
 		case 9:
-			top = "4.2rem";
+			top = "3.6rem";
 			left = "11.4rem";
 		break;
 	}
@@ -230,9 +230,15 @@ function addMaxTip(content,line_hight){
 function removeMaxTip(){
 	$('.maxtooltip').remove();
 }
-
-
-
+/**************************------无记录页面------************************/
+function addNoRecordData(){
+	var content = '<div class="noRecordFrame">';
+	content +='<div class="img"><img src="img/record/nodata.png" alt="无数据"></div>';
+	content +='<p>暂无解密，快来抢夺宝藏吧</p>';
+	content +='<div class="back-btn"><button id="noRecord-back-btn">去解密</button></div>';
+	content +='</div>';
+	return content;
+}
 
 
 

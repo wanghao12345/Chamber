@@ -2,6 +2,8 @@ $(function(){
 	//获取token
 	// var token = GetQueryString('token');
 	// GetToken();
+	//跑马灯
+	createMarquee({});
 
 	/****************************------点击事件-----******************************/
 	//menu
@@ -128,11 +130,10 @@ $(function(){
 		}
 	})
 
-	/*********---------提示框--------*********/
-
-
-
-
+	/*********---------无记录--------*********/
+	$('.recordFrame').on('click','#noRecord-back-btn',function(){
+		$('.recordFrame').css('display','none');
+	})
 	/*********---------投注按钮--------*********/
 	$('#sendBetting').on('click',function(){
 		if ($(this).html() != '至少选择一个密码') {//已经下注了
@@ -210,8 +211,10 @@ $(function(){
 		addLoading();
 		RankYesterdayRequest();
 		$('.rankFrame').css('display','block');
+		$('.box').css('display','none');
 	})
 	$('#rank-goback-btn').on('click',function(){
+		$('.box').css('display','block');
 		$('.rankFrame').css('display','none');
 	})
 	//昨日今日切换
