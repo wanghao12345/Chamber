@@ -276,6 +276,15 @@ $(function(){
 		$('.recordFrame').css('display','none');
 		$('.stakeRecordDetail').css('display','none');
 	})
+	/*********---------追投记录详情--------*********/
+
+	$('.recordFrame').on('click','ul#catch-record li',function(){		
+		$('.chasingRecordDetail').css('display','block');
+		$('.recordFrame').css('display','none');
+	})
+
+
+
 
 
 	/*********---------往期密码--------*********/

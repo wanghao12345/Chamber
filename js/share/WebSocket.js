@@ -341,18 +341,24 @@ function ChasingRecordType(data){
             content += '<li><a href="#">';
             content +='<div class="left">';
             if (item[i].flag==0) {
-                content += '<p><span class="p_left">等待开奖</span>';
+                content += '<p><span class="p_left">第'+item[i].index+'号密室</span>';
             } else {        
                 content += '<p><span class="p_left">已完成</span>';
             }
             if (item[i].status == 1) {
                 content += '<i class="p_left" id="chase">已撤单</i>';
             }
-            if (item[i].grandprix == 0) {
-                content += '<span class="p_right">未中奖</span></p>';
-            }else{
-                content += '<span class="p_right">中奖'+item[i].grandprix+'嗨币</span></p>';
+
+            if (item[i].flag == 0) {//未开奖
+                content += '<span class="p_right">等待开奖</span></p>';
+            }else{//已开奖
+                if (item[i].grandprix == 0) {//未中奖
+                    content += '<span class="p_right">未中奖</span></p>';
+                } else {//中奖
+                    content += '<span class="p_right">中奖'+item[i].grandprix+'嗨币</span></p>';
+                }
             }
+
             content += '<p><span class="p_left">'+item[i].created_at+'</span>';
             content += '<span class="p_right">消耗'+item[i].coin+'嗨币</span></p>';
             content += '</div>';
