@@ -45,7 +45,7 @@ socket.onmessage = function(msg){
             grandPrixListType(data);
         break;
         case 12012:
-            horseLampType(data);
+            // horseLampType(data);
         break;
     }
 };
@@ -177,8 +177,8 @@ function login_userIsStake(data){
         removeMaxTip();
     },7000); 
     //开启跑马灯
-    var horseLamp_params = '{"path": "12012","d": {"tk": "'+token+'"}}';
-    sendSocket(horseLamp_params);
+/*    var horseLamp_params = '{"path": "12012","d": {"tk": "'+token+'"}}';
+    sendSocket(horseLamp_params);*/
 }
 //返回奖金池，押注倒计时
 function login_stakeCountDown(data){

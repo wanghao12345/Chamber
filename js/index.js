@@ -3,7 +3,13 @@ $(function(){
 	// var token = GetQueryString('token');
 	// GetToken();
 	//跑马灯
-	createMarquee({});
+	// createMarquee({});
+	/*******************----参数设置-----**********************/	
+	//充值路径
+	var Recharge_Path = "";
+	//娱乐大厅路径
+	var Entertainment_Hall = "";
+	$('#entertainmentHall').attr('href',Entertainment_Hall);
 
 	/****************************------点击事件-----******************************/
 	//menu
@@ -108,7 +114,7 @@ $(function(){
 			var dollor = parseInt($('.bottomSelect a#dollar').html());
 			var cost = parseInt($('#numberList ul li a.active').html());
 			if (dollor<cost) {//跳往充值界面
-				// window.location.href = "www.baidu.com";
+				window.location.href = Recharge_Path;
 			} else {
 				//押注请求
 				chasingRequest();
@@ -141,7 +147,7 @@ $(function(){
 			var dollor = parseInt($('.bottomSelect a#dollar').html());
 			var cost = parseInt($('#numberList ul li a.active').html());
 			if (dollor<cost) {//跳往充值界面
-				// window.location.href = "www.baidu.com";
+				window.location.href = Recharge_Path;
 			} else {
 				//押注请求
 				stakeRequest();
@@ -211,10 +217,10 @@ $(function(){
 		addLoading();
 		RankYesterdayRequest();
 		$('.rankFrame').css('display','block');
-		$('.box').css('display','none');
+		// $('.box').css('display','none');
 	})
 	$('#rank-goback-btn').on('click',function(){
-		$('.box').css('display','block');
+		// $('.box').css('display','block');
 		$('.rankFrame').css('display','none');
 	})
 	//昨日今日切换
