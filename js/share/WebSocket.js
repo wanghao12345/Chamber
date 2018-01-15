@@ -185,6 +185,8 @@ function login_stakeCountDown(data){
     //倒计时(秒)
     var countdown = data.d.countdown;
     DJS(countdown);
+    //奖金池
+    $('#GoldPool').html(data.d.bonus_pool);
     //上一期的结果
     var last_result_param = data.d.last_result_param.split(',');
     $('div#last_result_param1').html(last_result_param[0]);
@@ -388,17 +390,31 @@ function StakeRecordDetailType(data){
     $('.stakeRecordDetail .top-content ul li:nth-child(1) span').html(item.coin+'嗨币');
     $('.stakeRecordDetail .top-content ul li:nth-child(2) span').html(item.content);
     $('.stakeRecordDetail .top-content ul li:nth-child(3) span').html('共'+item.num+'组密码');
-    $('.stakeRecordDetail .top-content ul li:nth-child(4) span').html('');
-    $('.stakeRecordDetail .top-content ul li:nth-child(5) span').html(item.created_at);
-    $('.stakeRecordDetail .top-content ul li:nth-child(6) span').html(item.updated_at);
+    $('.stakeRecordDetail .top-content ul li:nth-child(4) span').html(item.created_at);
+    $('.stakeRecordDetail .top-content ul li:nth-child(5) span').html(item.updated_at);
 
     if (item.flag == 0 || data.d.result_param.length== 0 ) {
-        $('.stakeRecordDetail .top-content ul li:nth-child(7) div').css('display','none');
+        $('.stakeRecordDetail .top-content ul li:nth-child(6)').css('display','none');
     }else if (item.flag != 0 && data.d.result_param.length!= 0){
-        $('.stakeRecordDetail .top-content ul li:nth-child(7) div').css('display','block');
-        $('.stakeRecordDetail .top-content ul li:nth-child(7) div span i').html(data.d.result_param[0][0]);
-        $('.stakeRecordDetail .top-content ul li:nth-child(8) div span i').html(data.d.result_param[1][0]);
-        $('.stakeRecordDetail .top-content ul li:nth-child(9) div span i').html(data.d.result_param[2][0]);        
+        $('.stakeRecordDetail .top-content ul li:nth-child(6)').css('display','block');
+
+        $('.stakeRecordDetail .top-content ul li:nth-child(6) div span:nth-child(1) i').html(data.d.result_param[0][0]);
+        var img_url1 = data.d.result_param[0][1]==0?'img/record/cha.png':'img/record/gou.png';
+        var win_price1 = data.d.result_param[0][1]==0? ' ': '+'+data.d.result_param[0][1];
+        $('img#isWinPrize1').attr('src',img_url1);
+        $('label#isWinPrize1-content').html(win_price1);
+
+        $('.stakeRecordDetail .top-content ul li:nth-child(6) div span:nth-child(2) i').html(data.d.result_param[1][0]);
+        var img_url2 = data.d.result_param[1][1]==0?'img/record/cha.png':'img/record/gou.png';
+        var win_price2 = data.d.result_param[1][1]==0? ' ': '+'+data.d.result_param[1][1];
+        $('img#isWinPrize2').attr('src',img_url2);
+        $('label#isWinPrize2-content').html(win_price2);
+
+        $('.stakeRecordDetail .top-content ul li:nth-child(6) div span:nth-child(3) i').html(data.d.result_param[2][0]);        
+        var img_url3 = data.d.result_param[2][1]==0?'img/record/cha.png':'img/record/gou.png';
+        var win_price3 = data.d.result_param[2][1]==0? ' ': '+'+data.d.result_param[2][1];
+        $('img#isWinPrize3').attr('src',img_url3);
+        $('label#isWinPrize3-content').html(win_price3);
     }   
 }
 

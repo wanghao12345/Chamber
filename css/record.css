@@ -301,6 +301,23 @@
 }
 .stakeRecordDetail .stakeRecordDetail-content .top .top-content ul li span{
     color: #f3dba9;
+    overflow: hidden;
+}
+.stakeRecordDetail .stakeRecordDetail-content .top .top-content ul li span i{
+    float: left;
+}
+.stakeRecordDetail .stakeRecordDetail-content .top .top-content ul li span img{
+    width: 1rem;
+    margin-left: 0.3rem;
+    float: left;
+    margin-top: 0.4rem;
+}
+.stakeRecordDetail .stakeRecordDetail-content .top .top-content ul li span label{
+    float: left;
+}
+.stakeRecordDetail .stakeRecordDetail-content .top .top-content ul li span label:last-child{
+    color: #6cc33a;
+    margin-left: 0.2rem;
 }
 .stakeRecordDetail .stakeRecordDetail-content .bottom{
     width: 100%;
