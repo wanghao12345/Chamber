@@ -384,8 +384,12 @@ $(function(){
 	$('.chasingRecordDetail button#btn-2').on('click',function(){
 		document.location.reload();
 	})
-
-
+	/*********---------查看当前投注密码详情--------*********/
+	$('.bettingFrame #viewSetPassword').on('click',function(){
+		viewSetPasswordRequest();
+		$('.bettingFrame').css('display','none');
+		$('.stakeRecordDetail').css('display','block');
+	})
 
 
 
@@ -575,9 +579,11 @@ function  grandPrixListRequest(){
 	sendSocket(grandPrixList_params);
 }
 
-/******************----追投记录详情-----******************/
+/******************----查看当前投注详情记录-----******************/
 
-
+function viewSetPasswordRequest(){
+	
+}
 
 
 

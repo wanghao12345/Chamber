@@ -17,6 +17,9 @@ socket.onmessage = function(msg){
         case 1: case 2: case 3: case 4: case 5: case 6: case 7: case 8: //登录
             loginType(data);
         break;
+        case 13:
+            isGetRedBagType(data);
+        break;
         case 12001://投注
             stakeType(data);
         break;
@@ -531,6 +534,28 @@ function RevocationChasingType(data){
 
     }
 }
+/******************----查看当前投注详情记录-----******************/
 
+function viewSetPasswordType(data){
+    var item = data.d;
+    $('.stakeRecordDetail param1').html('等待开奖');
+    $('.stakeRecordDetail param2').html(item.index+'期');
+    $('.stakeRecordDetail param3').html('+0嗨币');
+    $('.stakeRecordDetail param4').html(item.coin+'嗨币');
+    $('.stakeRecordDetail param5').html(item.content);
+    $('.stakeRecordDetail param6').html('共'+item.num+'组密码');
+    $('.stakeRecordDetail param7').html(item.created_at);
+    $('.stakeRecordDetail param8').html(item.updated_at);
+    $('.stakeRecordDetail isParam').css('display','none');
 
+}
+/******************----是否获得红包碎片-----******************/
+function isGetRedBagType(data){
+    if (data.d.errcode == 0) {
+        maxTip('恭喜您获得了红包碎片','1.4rem');
+    } 
+    if (data.d.errcode == -1) {
+        maxTip('本次开奖您没有获得红包碎片','1.4rem');
+    }
+}
 
