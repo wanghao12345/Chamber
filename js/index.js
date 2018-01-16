@@ -582,7 +582,8 @@ function  grandPrixListRequest(){
 /******************----查看当前投注详情记录-----******************/
 
 function viewSetPasswordRequest(){
-	
+	var viewSetPassword_params = '{"path": "12013","d": {"tk": "'+token+'"}}';
+	sendSocket(viewSetPassword_params);	
 }
 
 

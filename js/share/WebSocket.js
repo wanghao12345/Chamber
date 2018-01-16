@@ -53,6 +53,9 @@ socket.onmessage = function(msg){
         case 12012:
             // horseLampType(data);
         break;
+        case 12013:
+            viewSetPasswordType(data);
+        break;
     }
 };
 //关闭事件
@@ -537,16 +540,16 @@ function RevocationChasingType(data){
 /******************----查看当前投注详情记录-----******************/
 
 function viewSetPasswordType(data){
-    var item = data.d;
-    $('.stakeRecordDetail param1').html('等待开奖');
-    $('.stakeRecordDetail param2').html(item.index+'期');
-    $('.stakeRecordDetail param3').html('+0嗨币');
-    $('.stakeRecordDetail param4').html(item.coin+'嗨币');
-    $('.stakeRecordDetail param5').html(item.content);
-    $('.stakeRecordDetail param6').html('共'+item.num+'组密码');
-    $('.stakeRecordDetail param7').html(item.created_at);
-    $('.stakeRecordDetail param8').html(item.updated_at);
-    $('.stakeRecordDetail isParam').css('display','none');
+    var item = data.d.data[0];
+    $('.stakeRecordDetail #param1').html('等待开奖');
+    $('.stakeRecordDetail #param2').html(item.index+'期');
+    $('.stakeRecordDetail #param3').html('+0嗨币');
+    $('.stakeRecordDetail #param4').html(item.coin+'嗨币');
+    $('.stakeRecordDetail #param5').html(item.content);
+    $('.stakeRecordDetail #param6').html('共'+item.num+'组密码');
+    $('.stakeRecordDetail #param7').html(item.created_at);
+    $('.stakeRecordDetail #param8').html(item.updated_at);
+    $('.stakeRecordDetail #isParam').css('display','none');
 
 }
 /******************----是否获得红包碎片-----******************/
