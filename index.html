@@ -655,19 +655,19 @@
 		<div class="stakeRecordDetail">
 			<div class="stakeRecordDetail-content">
 				<div class="top">
-					<div class="top-title">寻宝成功</div>
+					<div class="top-title" id="param1">寻宝成功</div>
 					<div class="top-content">
 						<div class="top-period">
-							<span>1801111期</span>
-							<span><i>+120嗨币</i><img src="img/index/icon-bean.png" alt="嗨币"></span>
+							<span id="param2">1801111期</span>
+							<span><i id="param3">+120嗨币</i><img src="img/index/icon-bean.png" alt="嗨币"></span>
 						</div>
 						<ul>
-							<li><label>消耗嗨币：</label><span>200嗨币</span></li>
-							<li><label>密码内容：</label><span>"3":1倍</span></li>
-							<li><label>密码设定：</label><span>共1组密码</span></li>
-							<li><label>探墓时间：</label><span>2018-01-07 17:20</span></li>
-							<li><label>解密时间：</label><span>2018-01-07 17:59</span></li>
-							<li style="height: 4.5rem"><label style="display: block;float: left;">密码内容：</label>
+							<li><label>消耗嗨币：</label><span id="param4">200嗨币</span></li>
+							<li><label>密码内容：</label><span id="param5">"3":1倍</span></li>
+							<li><label>密码设定：</label><span id="param6">共1组密码</span></li>
+							<li><label>探墓时间：</label><span id="param7">2018-01-07 17:20</span></li>
+							<li><label>解密时间：</label><span id="param8">2018-01-07 17:59</span></li>
+							<li id="isParam" style="height: 4.5rem"><label style="display: block;float: left;">密码内容：</label>
 								<div style="display: block;float: left;">
 									<span><label>白银密室</label> <i>7</i><img id="isWinPrize1" src="img/record/cha.png"><label id="isWinPrize1-content"></label></span>
 									<br/>
@@ -751,30 +751,34 @@
 		</div>
 		<!-- 追投记录详情 -->
 		<div class="chasingRecordDetail">
+			<span style="display:none" id="stake_type"></span>
+            <span style="display:none" id="ran"></span>
+		
+
 			<div class="top-content">
 				<div class="top-title left">
 					<p>消耗嗨币</p>
-					<p><span>200</span><span><img src="img/index/icon-bean.png" alt="嗨币"></span></p>
+					<p><span id="param1">200</span><span><img src="img/index/icon-bean.png" alt="嗨币"></span></p>
 				</div>
 				<div class="top-title right">
 					<p>中奖嗨币</p>
-					<p><span>0</span><span><img src="img/index/icon-bean.png" alt="嗨币"></span></p>
+					<p><span id="param2">0</span><span><img src="img/index/icon-bean.png" alt="嗨币"></span></p>
 				</div>
 				<div class="bottom">
 					<ul>
-						<li>密码内容：<span>"1":1倍</span></li>
-						<li>密码设定：<span>共1个密码</span></li>
-						<li>探墓时间：<span>2018-01-12 18:29</span></li>
-						<li>解密时间：<span>2018-01-12 18:29</span></li>
+						<li>密码内容：<span id="param3">"1":1倍</span></li>
+						<li>密码设定：<span id="param4">共1个密码</span></li>
+						<li>探墓时间：<span id="param5">2018-01-12 18:29</span></li>
+						<li>解密时间：<span id="param6">2018-01-12 18:29</span></li>
 					</ul>
 				</div>
 			</div>
 			<div class="bottom-list">
-				<div class="item">
+				<div class="item" id="item">
 					<div class="item-content-left">
 						<div class="item-left">
-							<span>第18011214期</span>
-							<span>200嗨币</span>
+							<span id="param7">第18011214期</span>
+							<span id="param8">200嗨币</span>
 						</div>
 						<div class="item-right">
 							<span>等待开奖</span>

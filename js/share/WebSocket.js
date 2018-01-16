@@ -38,6 +38,9 @@ socket.onmessage = function(msg){
         case 12007:
             StakeRecordDetailType(data);
         break;
+        case 12008:
+            RevocationChasingType(data);
+        break;
         case 12010:
             grandPrixpasswordType(data);
         break;
@@ -158,9 +161,15 @@ function login_periodComeOut(data){
     var arr = data.d;
     var time1 = window.setInterval(function(){
         removeMinTip();
-        var num1 = Math.round(Math.random()*9);
-        addMinTip(num1,arr[num1]);
-    },5000);   
+
+        var time2 = window.setTimeout(function(){
+            var num1 = Math.round(Math.random()*9);
+            addMinTip(num1,arr[num1]);            
+        },4000);
+
+
+
+    },7000);   
 }
 //返回用户在这一期有没有押注
 function login_userIsStake(data){
@@ -339,6 +348,19 @@ function ChasingRecordType(data){
         var content = '<ul id="catch-record">';
         for (var i = 0; i < item.length; i++) {
             content += '<li><a href="#">';
+
+            content +='<span style="display:none" id="grandprix">'+item[i].grandprix+'</span>';
+            content +='<span style="display:none" id="qihao">'+item[i].index+'</span>';
+            content +='<span style="display:none" id="cost_coin">'+item[i].coin+'</span>';
+            content +='<span style="display:none" id="content">'+item[i].content+'</span>';
+            content +='<span style="display:none" id="passwordSetting">'+item[i].num+'</span>';
+            content +='<span style="display:none" id="creat_at">'+item[i].created_at+'</span>';
+            content +='<span style="display:none" id="updated_at">'+item[i].updated_at+'</span>';
+
+            content +='<span style="display:none" id="stake_type">'+item[i].stake_type+'</span>';
+            content +='<span style="display:none" id="ran">'+item[i].ran+'</span>';
+
+
             content +='<div class="left">';
             if (item[i].flag==0) {
                 content += '<p><span class="p_left">第'+item[i].index+'号密室</span>';
@@ -480,3 +502,19 @@ function grandPrixListType(data){
     content +='</div>';
     $('.goldBeanFrame .main-content').append(content);
 }
+// 撤销追投
+function RevocationChasingType(data){
+    if (data.d.errcode == 0) {//正确
+        document.location.reload();
+    } else {
+        maxTip('撤销失败！','1.4rem');
+
+        var time = window.setTimeout(function(){
+            document.location.reload();
+        },1000)
+
+    }
+}
+
+
+

@@ -263,14 +263,14 @@
     border-radius: 0.2rem;
 }
 .grandPrixList .item .item-title{
-    width: 40%;
+    width: 30%;
     height: 100%;
     float: left;
     box-sizing: border-box;
     padding-left: 0.5rem;
 }
 .grandPrixList .item .item-coin{
-    width: 40%;
+    width: 50%;
     height: 100%;
     float: left;
     text-align: right;
