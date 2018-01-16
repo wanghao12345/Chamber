@@ -34,20 +34,6 @@
 			<div class="gold-bean" id="gold-bean" style="position: absolute;width: 4.5rem;height: 2.6rem;top: 0.5rem;left: 0.5rem;z-index: 3">
 				
 			</div>
-			<!-- <div class="container horseLamp">
-				<div class="marquee-sibling" style="display: none;">
-					I am here to iritate you
-				</div>
-				<div class="marquee">
-					<ul class="marquee-content-items">
-						<li>Item 1</li>
-						<li>Item 2</li>
-						<li>Item 3</li>
-						<li>Item 4</li>
-						<li>Item 5</li>
-					</ul>
-				</div>
-			</div> -->
 			<div class="back back1">
 				<div class="back1-content">
 					<div class="back1-left">
@@ -230,574 +216,575 @@
 				</div>
 			</div>
 		</div>
-		<!-- 追投悬浮框 -->
-		<div class="mask chasingFrame">
-			<div class="chasing-content">
-				<div class="chasing-top">
-					<div class="back-btn" id="chasing-back">
-						<img src="img/chasing/bottom-btn.png" alt="返回">
-						返回
-					</div>
+	</div>
+	<!-- 追投悬浮框 -->
+	<div class="mask chasingFrame">
+		<div class="chasing-content">
+			<div class="chasing-top">
+				<div class="back-btn" id="chasing-back">
+					<img src="img/chasing/bottom-btn.png" alt="返回">
+					返回
 				</div>
-				<div class="chasing-bottom">
-					<div class="chasing-period">
-						<div class="programme" id="programme">追选方案 <i>0</i> <i>1</i></div>
-						<div class="period-selec period-selec-1">
-							<span class="left">追</span>
-							<div class="period-content">
-								<!-- <img src="" id="remove" alt="减号" /> -->
-								<span class="fang" id="reduce"></span>
-								<!-- <span class="value" id="period-value">1</span> -->
-								<input type="text" class="value" id="period-value" value="1" />
-								<span class="fang" id="add"></span>
-								<!-- <img src="" id="add" alt="加号" /> -->
-							</div>
-							<span class="left">期</span>	
+			</div>
+			<div class="chasing-bottom">
+				<div class="chasing-period">
+					<div class="programme" id="programme">追选方案 <i>0</i> <i>1</i></div>
+					<div class="period-selec period-selec-1">
+						<span class="left">追</span>
+						<div class="period-content">
+							<!-- <img src="" id="remove" alt="减号" /> -->
+							<span class="fang" id="reduce"></span>
+							<!-- <span class="value" id="period-value">1</span> -->
+							<input type="text" class="value" id="period-value" value="1" />
+							<span class="fang" id="add"></span>
+							<!-- <img src="" id="add" alt="加号" /> -->
 						</div>
-						<div class="period-selec period-selec-2" id="period-selec-2">
-							<ul>
-								<li>×<i>5</i></li>
-								<li>×<i>20</i></li>
-								<li>×<i>50</i></li>
-							</ul>
-						</div>
-
+						<span class="left">期</span>	
 					</div>
-					<div class="recharge">
-						<div class="coin">
-							<a id="dollar">
-								1188						
-							</a>
-						</div>
-						<div class="query">
-							<a id="sendChasing">立即消耗<span id="sumcoin" style="margin: 0rem 0.1rem">0</span>嗨币</a>
-						</div>
+					<div class="period-selec period-selec-2" id="period-selec-2">
+						<ul>
+							<li>×<i>5</i></li>
+							<li>×<i>20</i></li>
+							<li>×<i>50</i></li>
+						</ul>
 					</div>
 
-				</div>			
-			</div>
-		</div>
-		<!-- 投注成功弹窗 -->
-		<div class="mask bettingFrame">
-			<div class="bettingFrame-content">
-				<div class="title"><img src="img/betting/true.png" alt="成功"><span>密码设定成功</span></div>
-				<div class="content"><p>预计<span>10:59</span>解密</p></div>
-				<div class="button">
-					<button class="btn btn-1"><a id="viewSetPassword">查看已设密码</a></button>
-					<button class="btn btn-2">继续解密</button>
-				</div>			
-			</div>
-		</div>
-		<!-- 规则说明 -->
-		<div class="mask ruleFrame">
-			<div class="ruleFrame-content">
-				<div class="close" id="rule-close-btn-1"></div>
-				<div class="title">规则说明</div>
-				<div class="content">
-					<div class="top-content">
-						<div class="top left">
-							<h4>中奖秘籍</h4>
-							<p>
-								选择一个密码，拥有3次中奖机会，匹配即为中奖
-							</p>
-							<div class="Legend" id="Legend1">
-								<img src="img/rank/legend1.png" />
-							</div>
-						</div>
-						<div class="top right">
-							<h4>大奖秘籍</h4>
-							<p>
-								3个密码与你的密码完全相同，既可瓜分大奖
-							</p>
-							<div class="Legend" id="Legend2">
-								<img src="img/rank/legend2.png" />
-							</div>
-						</div>				
+				</div>
+				<div class="recharge">
+					<div class="coin">
+						<a id="dollar">
+							1188						
+						</a>
 					</div>
+					<div class="query">
+						<a id="sendChasing">立即消耗<span id="sumcoin" style="margin: 0rem 0.1rem">0</span>嗨币</a>
+					</div>
+				</div>
 
-
-					<div class="bottom">
-						<h4>详细规则</h4>
-						<p>
-							1.从10个密码中，选择密码参与当期密室。每期密室会开启3个密码，分别对应3种不同倍数的奖励，若您选择的密码与开启的3个密码中任意一个密码相同，即可获奖；
-						</p>
-						<p>
-							2.密室每小时整点开启1期（其中02:00~07:00仅为1期，于07:00开奖），每期密室开启前，您可以选择1个、多个、多倍密码进行游戏（单个密码需消耗200嗨币）。若您选择的密码越多，当期中奖率越高；若您选择的倍数越高，当期中奖额度越高；
-						</p>
-						<p>
-							3.嗨币大奖不断累加，当密室开启的3个密码完全相同，且与您选择的密码相同时，您即可获得嗨币大奖，奖励的嗨币数量按一定比例均分（您当期消耗的嗨币数/所有用户当期消耗的嗨币数），最高可达500万嗨币；
-						</p>
-						<p>
-							4.追期玩法，会自动为您使用相同的密码，托管参与接下来的多期密室开奖（会一次性扣除多期所需的嗨币）；
-						</p>
-						<p>
-							5.密室开启后，奖励的嗨币将在5分钟内到账；若因系统原因导致密室无法正常开启时，所消耗的嗨币将在2小时内返还；
-						</p>
-						<p>
-							6.密室寻宝及其活动，禁止任何形式的作弊刷奖，若有发现将取消派奖，对于已发放的奖励有权追回；
-						</p>
-					</div>
-				</div>
-				<div class="button">
-					<button><a id="rule-close-btn-2">开始寻宝</a></button>
-				</div>
-			</div>
+			</div>			
 		</div>
-		<!-- 往期密码 -->
-		<div class="mask pastcode pastcodeFrame">
-			<div class="pastcode-content">
-				<div class="close" id="pastcode-close-btn-1"></div>
-				<div class="title">往期密码</div>
-				<div class="content">
-					<div class="title">
-						<ul>
-							<li>期号</li>
-							<li>白银</li>
-							<li>黄金</li>
-							<li>青铜</li>
-						</ul>
-					</div>
-					<div class="middle-content" id="pastcode-item">
-					<!-- 
-						<div class="item">
-							<ul>
-								<li>18010618号密室</li>
-								<li>3</li>
-								<li>4</li>
-								<li>5</li>
-							</ul>						
-						</div>
-					-->					
-										
-					</div>
-					<div class="bottom-tip">
-						<p>仅保存一天内的往期密码</p>
-					</div>
-					
-				</div>
-				<div class="button">
-					<button><a id="pastcode-close-btn-2">开始寻宝</a></button>
-				</div>
-			</div>
-		</div>	
-		<!-- 排行榜 -->
-		<div class="rankFrame">
-			<div class="top">
-				<div class="rule">
-					<div class="rule-content" id="rank-openrule-btn">规则</div>
-				</div>
-				<div class="myInfo">
-					<div class="info-content info1">
-						<div class="info1-content"><img src="" id="user_image" /></div>
-					</div>
-					<div class="info-content info2">
-						<div class="title2">累计投注</div>
-						<div class="content2"><span id="self-cost-coin">200</span><img src="img/rank/icon-bean.png"></div>
-					</div>
-					<div class="info-content info3">
-						<div class="title3">我的排名</div>
-						<div class="content3" id="self-rank">2722</div>
-					</div>
-					<div class="info-content info4">
-						<div class="info4-content" id="rank-tag-btn" value="yesterday">
-							昨日排行
+	</div>
+	<!-- 投注成功弹窗 -->
+	<div class="mask bettingFrame">
+		<div class="bettingFrame-content">
+			<div class="title"><img src="img/betting/true.png" alt="成功"><span>密码设定成功</span></div>
+			<div class="content"><p>预计<span>10:59</span>解密</p></div>
+			<div class="button">
+				<button class="btn btn-1"><a id="viewSetPassword">查看已设密码</a></button>
+				<button class="btn btn-2">继续解密</button>
+			</div>			
+		</div>
+	</div>
+	<!-- 规则说明 -->
+	<div class="mask ruleFrame">
+		<div class="ruleFrame-content">
+			<div class="close" id="rule-close-btn-1"></div>
+			<div class="title">规则说明</div>
+			<div class="content">
+				<div class="top-content">
+					<div class="top left">
+						<h4>中奖秘籍</h4>
+						<p>
+							选择一个密码，拥有3次中奖机会，匹配即为中奖
+						</p>
+						<div class="Legend" id="Legend1">
+							<img src="img/rank/legend1.png" />
 						</div>
 					</div>
-				</div>
-			</div>
-			<div class="bottom">
-				<div class="bottom-title">
-					<ul>
-						<li>排名</li>
-						<li></li>
-						<li>玩家</li>
-						<li>累计投注</li>
-					</ul>
-				</div>
-				<div class="bottom-content" id="rank-content">
-					<div class="item">
-						<ul>
-							<li><img src="img/rank/number1.png"></li>
-							<li><div class="head"></div></li>
-							<li>微信用户</li>
-							<li>24000000</li>
-						</ul>
-					</div>
-					<div class="item">
-						<ul>
-							<li><img src="img/rank/number2.png"></li>
-							<li><div class="head"></div></li>
-							<li>微信用户</li>
-							<li>24000000</li>
-						</ul>
-					</div>
-					<div class="item">
-						<ul>
-							<li><img src="img/rank/number3.png"></li>
-							<li><div class="head"></div></li>
-							<li>微信用户</li>
-							<li>24000000</li>
-						</ul>
-					</div>
-					<div class="item">
-						<ul>
-							<li><span>4</span></li>
-							<li><div class="head"></div></li>
-							<li>微信用户</li>
-							<li>24000000</li>
-						</ul>
-					</div>
-					<div class="item">
-						<ul>
-							<li><span>5</span></li>
-							<li><div class="head"></div></li>
-							<li>微信用户</li>
-							<li>24000000</li>
-						</ul>
-					</div>
-					<div class="item">
-						<ul>
-							<li><span>6</span></li>
-							<li><div class="head"></div></li>
-							<li>微信用户</li>
-							<li>24000000</li>
-						</ul>
-					</div>
-					<div class="item">
-						<ul>
-							<li><span>7</span></li>
-							<li><div class="head"></div></li>
-							<li>微信用户</li>
-							<li>24000000</li>
-						</ul>
-					</div>
-					<div class="item">
-						<ul>
-							<li><span>8</span></li>
-							<li><div class="head"></div></li>
-							<li>微信用户</li>
-							<li>24000000</li>
-						</ul>
-					</div>
-					<div class="item">
-						<ul>
-							<li><span>122</span></li>
-							<li><div class="head"></div></li>
-							<li>微信用户</li>
-							<li>24000000</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="bottom-btn">
-				<div class="bottom-btn-content">
-				<!-- <button><a href="../index.html">马上去竞猜</a></button> -->
-				<button><a id="rank-goback-btn">马上去竞猜</a></button>
-					
-				</div>
-			</div>
-		</div>
-		<!-- 解密记录 -->
-		<div class="recordFrame">
-			<div class="tab" id="record-tab">
-				<div class="tab-btn tab1"><span class="active">投注记录</span></div>
-				<i class="shu"></i>
-				<div class="tab-btn tab2"><span>追投记录</span></div>
-			</div>
-			<div class="content" id="record-content">
-				<!-- 投注记录 -->
-				<ul id="bett-record">
-					<li>
-						<a href="#">
-							<div class="left">
-								<p>
-									<span class="p_left">第18010306号密室</span><i class="p_left" id="chase">追投</i>
-									<span class="p_right">等待解密</span>
-								</p>
-								<p>
-									<span class="p_left">2018-01-02 10:04</span>
-									<span class="p_right">消耗200金币</span>
-								</p>
-							</div>
-							<div class="right">
-								>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<div class="left">
-								<p>
-									<span class="p_left">第18010306号密室</span><i class="p_left" id="chase">追投</i>
-									<span class="p_right" id="coin">+1200金豆</span>
-								</p>
-								<p>
-									<span class="p_left">2018-01-02 10:04</span>
-									<span class="p_right">消耗200金币</span>
-								</p>
-							</div>
-							<div class="right">
-								>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<div class="left">
-								<p>
-									<span class="p_left">第18010306号密室</span><i class="p_left" id="chase">追投</i>
-									<span class="p_right">等待解密</span>
-								</p>
-								<p>
-									<span class="p_left">2018-01-02 10:04</span>
-									<span class="p_right">消耗200金币</span>
-								</p>
-							</div>
-							<div class="right">
-								>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<div class="left">
-								<p>
-									<span class="p_left">第18010306号密室</span><i class="p_left" id="chase">追投</i>
-									<span class="p_right">等待解密</span>
-								</p>
-								<p>
-									<span class="p_left">2018-01-02 10:04</span>
-									<span class="p_right">消耗200金币</span>
-								</p>
-							</div>
-							<div class="right">
-								>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<div class="left">
-								<p>
-									<span class="p_left">第18010306号密室</span><i class="p_left" id="chase">追投</i>
-									<span class="p_right">等待解密</span>
-								</p>
-								<p>
-									<span class="p_left">2018-01-02 10:04</span>
-									<span class="p_right">消耗200金币</span>
-								</p>
-							</div>
-							<div class="right">
-								>
-							</div>
-						</a>
-					</li>
-				</ul>
-				<!-- 追投记录 -->
-				<ul id="catch-record">
-					<li>
-						<a href="#">
-							<div class="left">
-								<p>
-									<span class="p_left">剩1期/共2期</span>
-									<span class="p_right">等待开奖</span>
-								</p>
-								<p>
-									<span class="p_left">2018-01-02 10:04</span>
-									<span class="p_right">共投200嗨币</span>
-								</p>
-							</div>
-							<div class="right">
-								>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<div class="left">
-								<p>
-									<span class="p_left">已完成</span>
-									<span class="p_right">中奖1480嗨币</span>
-								</p>
-								<p>
-									<span class="p_left">2018-01-02 10:04</span>
-									<span class="p_right">消耗200嗨币</span>
-								</p>
-							</div>
-							<div class="right">
-								>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<div class="left">
-								<p>
-									<span class="p_left">已完成</span><i class="p_left" id="chase">已撤单</i>
-									<span class="p_right">中奖1480嗨币</span>
-								</p>
-								<p>
-									<span class="p_left">2018-01-02 10:04</span>
-									<span class="p_right">消耗200金币</span>
-								</p>
-							</div>
-							<div class="right">
-								>
-							</div>
-						</a>
-					</li>
-				</ul>
-
-
-			</div>
-		</div>
-		<!-- 投注记录详情 -->
-		<div class="stakeRecordDetail">
-			<div class="stakeRecordDetail-content">
-				<div class="top">
-					<div class="top-title" id="param1">寻宝成功</div>
-					<div class="top-content">
-						<div class="top-period">
-							<span id="param2">1801111期</span>
-							<span><i id="param3">+120嗨币</i><img src="img/index/icon-bean.png" alt="嗨币"></span>
+					<div class="top right">
+						<h4>大奖秘籍</h4>
+						<p>
+							3个密码与你的密码完全相同，既可瓜分大奖
+						</p>
+						<div class="Legend" id="Legend2">
+							<img src="img/rank/legend2.png" />
 						</div>
-						<ul>
-							<li><label>消耗嗨币：</label><span id="param4">200嗨币</span></li>
-							<li><label>密码内容：</label><span id="param5">"3":1倍</span></li>
-							<li><label>密码设定：</label><span id="param6">共1组密码</span></li>
-							<li><label>探墓时间：</label><span id="param7">2018-01-07 17:20</span></li>
-							<li><label>解密时间：</label><span id="param8">2018-01-07 17:59</span></li>
-							<li id="isParam" style="height: 4.5rem"><label style="display: block;float: left;">密码内容：</label>
-								<div style="display: block;float: left;">
-									<span><label>白银密室</label> <i>7</i><img id="isWinPrize1" src="img/record/cha.png"><label id="isWinPrize1-content"></label></span>
-									<br/>
-									<span><label>黄金密室</label> <i>7</i><img id="isWinPrize2" src="img/record/cha.png"><label id="isWinPrize2-content"></label></span>
-									<br/>
-									<span><label>青铜密室</label> <i>1</i><img id="isWinPrize3" src="img/record/cha.png"><label id="isWinPrize3-content"></label></span>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="bottom">
-					<button class="btn btn-1" id="stakeRecordDetail-btn"><a>继续解密</a></button>
-				</div>	
-			</div>		
-		</div>
-		<!-- 金豆大奖 -->
-		<div class="mask goldBean goldBeanFrame">
-			<div class="goldBean-content">
-				<div class="close" id="goldBean-close-btn-1"></div>
-				<div class="title">
-					<div class="tab">
-						<div class="tab-btn tab-btn1 active">大奖密码</div>
-						<div class="tab-btn tab-btn2">大奖名单</div>
-					</div>
-				</div>
-				<div class="main-content">
-					
-				</div>
-				<!-- <div class="content grandPrixpassword">
-					<div class="title">
-						<ul>
-							<li>期号</li>
-							<li>0</li>
-							<li>1</li>
-							<li>2</li>
-							<li>3</li>
-							<li>4</li>
-							<li>5</li>
-							<li>6</li>
-							<li>7</li>
-							<li>8</li>
-							<li>9</li>
-						</ul>
-					</div>
-					<div class="middle-content" id="pastcode-item">
-						<div class="item">
-							<ul>
-								<li>18010618</li>
-								<li><span>0</span></li>
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
-							</ul>						
-						</div>										
-					</div>
-					<div class="bottom-tip">
-						<p>代表三个密室同时开出对的密码</p>
 					</div>				
-				</div> -->
-				<!-- <div class="content grandPrixList">
-						<div class="item">
-							<div class="item-img"><span></span></div>
-							<div class="item-title">微信用户</div>
-							<div class="item-coin">
-								<p>931600嗨币<img src="img/index/icon-bean.png" alt="嗨币"></p>
-								<p>01-08 14:59</p>
-							</div>
-						</div>
-					</div> -->	
-				<div class="button">
-					<button><a id="goldBean-close-btn-2">继续解密</a></button>
-				</div>	
-			</div>
-		</div>
-		<!-- 追投记录详情 -->
-		<div class="chasingRecordDetail">
-			<span style="display:none" id="stake_type"></span>
-            <span style="display:none" id="ran"></span>
-		
+				</div>
 
-			<div class="top-content">
-				<div class="top-title left">
-					<p>消耗嗨币</p>
-					<p><span id="param1">200</span><span><img src="img/index/icon-bean.png" alt="嗨币"></span></p>
-				</div>
-				<div class="top-title right">
-					<p>中奖嗨币</p>
-					<p><span id="param2">0</span><span><img src="img/index/icon-bean.png" alt="嗨币"></span></p>
-				</div>
+
 				<div class="bottom">
-					<ul>
-						<li>密码内容：<span id="param3">"1":1倍</span></li>
-						<li>密码设定：<span id="param4">共1个密码</span></li>
-						<li>探墓时间：<span id="param5">2018-01-12 18:29</span></li>
-						<li>解密时间：<span id="param6">2018-01-12 18:29</span></li>
-					</ul>
-				</div>
-			</div>
-			<div class="bottom-list">
-				<div class="item" id="item">
-					<div class="item-content-left">
-						<div class="item-left">
-							<span id="param7">第18011214期</span>
-							<span id="param8">200嗨币</span>
-						</div>
-						<div class="item-right">
-							<span>等待开奖</span>
-						</div>						
-					</div>
-					<div class="item-content-right">
-						<img src="img/record/right.png" alt="向右">
-					</div>
-					
+					<h4>详细规则</h4>
+					<p>
+						1.从10个密码中，选择密码参与当期密室。每期密室会开启3个密码，分别对应3种不同倍数的奖励，若您选择的密码与开启的3个密码中任意一个密码相同，即可获奖；
+					</p>
+					<p>
+						2.密室每小时整点开启1期（其中02:00~07:00仅为1期，于07:00开奖），每期密室开启前，您可以选择1个、多个、多倍密码进行游戏（单个密码需消耗200嗨币）。若您选择的密码越多，当期中奖率越高；若您选择的倍数越高，当期中奖额度越高；
+					</p>
+					<p>
+						3.嗨币大奖不断累加，当密室开启的3个密码完全相同，且与您选择的密码相同时，您即可获得嗨币大奖，奖励的嗨币数量按一定比例均分（您当期消耗的嗨币数/所有用户当期消耗的嗨币数），最高可达500万嗨币；
+					</p>
+					<p>
+						4.追期玩法，会自动为您使用相同的密码，托管参与接下来的多期密室开奖（会一次性扣除多期所需的嗨币）；
+					</p>
+					<p>
+						5.密室开启后，奖励的嗨币将在5分钟内到账；若因系统原因导致密室无法正常开启时，所消耗的嗨币将在2小时内返还；
+					</p>
+					<p>
+						6.密室寻宝及其活动，禁止任何形式的作弊刷奖，若有发现将取消派奖，对于已发放的奖励有权追回；
+					</p>
 				</div>
 			</div>
 			<div class="button">
-				<button id="btn-1">撤销追投</button>
-				<button id="btn-2">继续追投</button>
+				<button><a id="rule-close-btn-2">开始寻宝</a></button>
 			</div>
 		</div>
-
-
-
 	</div>
+	<!-- 往期密码 -->
+	<div class="mask pastcode pastcodeFrame">
+		<div class="pastcode-content">
+			<div class="close" id="pastcode-close-btn-1"></div>
+			<div class="title">往期密码</div>
+			<div class="content">
+				<div class="title">
+					<ul>
+						<li>期号</li>
+						<li>白银</li>
+						<li>黄金</li>
+						<li>青铜</li>
+					</ul>
+				</div>
+				<div class="middle-content" id="pastcode-item">
+				<!-- 
+					<div class="item">
+						<ul>
+							<li>18010618号密室</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+						</ul>						
+					</div>
+				-->					
+									
+				</div>
+				<div class="bottom-tip">
+					<p>仅保存一天内的往期密码</p>
+				</div>
+				
+			</div>
+			<div class="button">
+				<button><a id="pastcode-close-btn-2">开始寻宝</a></button>
+			</div>
+		</div>
+	</div>	
+	<!-- 排行榜 -->
+	<div class="rankFrame">
+		<div class="top">
+			<div class="rule">
+				<div class="rule-content" id="rank-openrule-btn">规则</div>
+			</div>
+			<div class="myInfo">
+				<div class="info-content info1">
+					<div class="info1-content"><img src="" id="user_image" /></div>
+				</div>
+				<div class="info-content info2">
+					<div class="title2">累计投注</div>
+					<div class="content2"><span id="self-cost-coin">200</span><img src="img/rank/icon-bean.png"></div>
+				</div>
+				<div class="info-content info3">
+					<div class="title3">我的排名</div>
+					<div class="content3" id="self-rank">2722</div>
+				</div>
+				<div class="info-content info4">
+					<div class="info4-content" id="rank-tag-btn" value="yesterday">
+						昨日排行
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="bottom-title">
+				<ul>
+					<li>排名</li>
+					<li></li>
+					<li>玩家</li>
+					<li>累计投注</li>
+				</ul>
+			</div>
+			<div class="bottom-content" id="rank-content">
+				<div class="item">
+					<ul>
+						<li><img src="img/rank/number1.png"></li>
+						<li><div class="head"></div></li>
+						<li>微信用户</li>
+						<li>24000000</li>
+					</ul>
+				</div>
+				<div class="item">
+					<ul>
+						<li><img src="img/rank/number2.png"></li>
+						<li><div class="head"></div></li>
+						<li>微信用户</li>
+						<li>24000000</li>
+					</ul>
+				</div>
+				<div class="item">
+					<ul>
+						<li><img src="img/rank/number3.png"></li>
+						<li><div class="head"></div></li>
+						<li>微信用户</li>
+						<li>24000000</li>
+					</ul>
+				</div>
+				<div class="item">
+					<ul>
+						<li><span>4</span></li>
+						<li><div class="head"></div></li>
+						<li>微信用户</li>
+						<li>24000000</li>
+					</ul>
+				</div>
+				<div class="item">
+					<ul>
+						<li><span>5</span></li>
+						<li><div class="head"></div></li>
+						<li>微信用户</li>
+						<li>24000000</li>
+					</ul>
+				</div>
+				<div class="item">
+					<ul>
+						<li><span>6</span></li>
+						<li><div class="head"></div></li>
+						<li>微信用户</li>
+						<li>24000000</li>
+					</ul>
+				</div>
+				<div class="item">
+					<ul>
+						<li><span>7</span></li>
+						<li><div class="head"></div></li>
+						<li>微信用户</li>
+						<li>24000000</li>
+					</ul>
+				</div>
+				<div class="item">
+					<ul>
+						<li><span>8</span></li>
+						<li><div class="head"></div></li>
+						<li>微信用户</li>
+						<li>24000000</li>
+					</ul>
+				</div>
+				<div class="item">
+					<ul>
+						<li><span>122</span></li>
+						<li><div class="head"></div></li>
+						<li>微信用户</li>
+						<li>24000000</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="bottom-btn">
+			<div class="bottom-btn-content">
+			<!-- <button><a href="../index.html">马上去竞猜</a></button> -->
+			<button><a id="rank-goback-btn">马上去竞猜</a></button>
+				
+			</div>
+		</div>
+	</div>
+	<!-- 解密记录 -->
+	<div class="recordFrame">
+		<div class="tab" id="record-tab">
+			<div class="tab-btn tab1"><span class="active">投注记录</span></div>
+			<i class="shu"></i>
+			<div class="tab-btn tab2"><span>追投记录</span></div>
+		</div>
+		<div class="content" id="record-content">
+			<!-- 投注记录 -->
+			<ul id="bett-record">
+				<li>
+					<a href="#">
+						<div class="left">
+							<p>
+								<span class="p_left">第18010306号密室</span><i class="p_left" id="chase">追投</i>
+								<span class="p_right">等待解密</span>
+							</p>
+							<p>
+								<span class="p_left">2018-01-02 10:04</span>
+								<span class="p_right">消耗200金币</span>
+							</p>
+						</div>
+						<div class="right">
+							>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="left">
+							<p>
+								<span class="p_left">第18010306号密室</span><i class="p_left" id="chase">追投</i>
+								<span class="p_right" id="coin">+1200金豆</span>
+							</p>
+							<p>
+								<span class="p_left">2018-01-02 10:04</span>
+								<span class="p_right">消耗200金币</span>
+							</p>
+						</div>
+						<div class="right">
+							>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="left">
+							<p>
+								<span class="p_left">第18010306号密室</span><i class="p_left" id="chase">追投</i>
+								<span class="p_right">等待解密</span>
+							</p>
+							<p>
+								<span class="p_left">2018-01-02 10:04</span>
+								<span class="p_right">消耗200金币</span>
+							</p>
+						</div>
+						<div class="right">
+							>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="left">
+							<p>
+								<span class="p_left">第18010306号密室</span><i class="p_left" id="chase">追投</i>
+								<span class="p_right">等待解密</span>
+							</p>
+							<p>
+								<span class="p_left">2018-01-02 10:04</span>
+								<span class="p_right">消耗200金币</span>
+							</p>
+						</div>
+						<div class="right">
+							>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="left">
+							<p>
+								<span class="p_left">第18010306号密室</span><i class="p_left" id="chase">追投</i>
+								<span class="p_right">等待解密</span>
+							</p>
+							<p>
+								<span class="p_left">2018-01-02 10:04</span>
+								<span class="p_right">消耗200金币</span>
+							</p>
+						</div>
+						<div class="right">
+							>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<!-- 追投记录 -->
+			<ul id="catch-record">
+				<li>
+					<a href="#">
+						<div class="left">
+							<p>
+								<span class="p_left">剩1期/共2期</span>
+								<span class="p_right">等待开奖</span>
+							</p>
+							<p>
+								<span class="p_left">2018-01-02 10:04</span>
+								<span class="p_right">共投200嗨币</span>
+							</p>
+						</div>
+						<div class="right">
+							>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="left">
+							<p>
+								<span class="p_left">已完成</span>
+								<span class="p_right">中奖1480嗨币</span>
+							</p>
+							<p>
+								<span class="p_left">2018-01-02 10:04</span>
+								<span class="p_right">消耗200嗨币</span>
+							</p>
+						</div>
+						<div class="right">
+							>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="left">
+							<p>
+								<span class="p_left">已完成</span><i class="p_left" id="chase">已撤单</i>
+								<span class="p_right">中奖1480嗨币</span>
+							</p>
+							<p>
+								<span class="p_left">2018-01-02 10:04</span>
+								<span class="p_right">消耗200金币</span>
+							</p>
+						</div>
+						<div class="right">
+							>
+						</div>
+					</a>
+				</li>
+			</ul>
+
+
+		</div>
+	</div>
+	<!-- 投注记录详情 -->
+	<div class="stakeRecordDetail">
+		<div class="stakeRecordDetail-content">
+			<div class="top">
+				<div class="top-title" id="param1">寻宝成功</div>
+				<div class="top-content">
+					<div class="top-period">
+						<span id="param2">1801111期</span>
+						<span><i id="param3">+120嗨币</i><img src="img/index/icon-bean.png" alt="嗨币"></span>
+					</div>
+					<ul>
+						<li><label>消耗嗨币：</label><span id="param4">200嗨币</span></li>
+						<li><label>密码内容：</label><span id="param5">"3":1倍</span></li>
+						<li><label>密码设定：</label><span id="param6">共1组密码</span></li>
+						<li><label>探墓时间：</label><span id="param7">2018-01-07 17:20</span></li>
+						<li><label>解密时间：</label><span id="param8">2018-01-07 17:59</span></li>
+						<li id="isParam" style="height: 4.5rem"><label style="display: block;float: left;">密码内容：</label>
+							<div style="display: block;float: left;">
+								<span><label>白银密室</label> <i>7</i><img id="isWinPrize1" src="img/record/cha.png"><label id="isWinPrize1-content"></label></span>
+								<br/>
+								<span><label>黄金密室</label> <i>7</i><img id="isWinPrize2" src="img/record/cha.png"><label id="isWinPrize2-content"></label></span>
+								<br/>
+								<span><label>青铜密室</label> <i>1</i><img id="isWinPrize3" src="img/record/cha.png"><label id="isWinPrize3-content"></label></span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="bottom">
+				<button class="btn btn-1" id="stakeRecordDetail-btn"><a>继续解密</a></button>
+			</div>	
+		</div>		
+	</div>
+	<!-- 金豆大奖 -->
+	<div class="mask goldBean goldBeanFrame">
+		<div class="goldBean-content">
+			<div class="close" id="goldBean-close-btn-1"></div>
+			<div class="title">
+				<div class="tab">
+					<div class="tab-btn tab-btn1 active">大奖密码</div>
+					<div class="tab-btn tab-btn2">大奖名单</div>
+				</div>
+			</div>
+			<div class="main-content">
+				
+			</div>
+			<!-- <div class="content grandPrixpassword">
+				<div class="title">
+					<ul>
+						<li>期号</li>
+						<li>0</li>
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+						<li>6</li>
+						<li>7</li>
+						<li>8</li>
+						<li>9</li>
+					</ul>
+				</div>
+				<div class="middle-content" id="pastcode-item">
+					<div class="item">
+						<ul>
+							<li>18010618</li>
+							<li><span>0</span></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>						
+					</div>										
+				</div>
+				<div class="bottom-tip">
+					<p>代表三个密室同时开出对的密码</p>
+				</div>				
+			</div> -->
+			<!-- <div class="content grandPrixList">
+					<div class="item">
+						<div class="item-img"><span></span></div>
+						<div class="item-title">微信用户</div>
+						<div class="item-coin">
+							<p>931600嗨币<img src="img/index/icon-bean.png" alt="嗨币"></p>
+							<p>01-08 14:59</p>
+						</div>
+					</div>
+				</div> -->	
+			<div class="button">
+				<button><a id="goldBean-close-btn-2">继续解密</a></button>
+			</div>	
+		</div>
+	</div>
+	<!-- 追投记录详情 -->
+	<div class="chasingRecordDetail">
+		<span style="display:none" id="stake_type"></span>
+        <span style="display:none" id="ran"></span>
+	
+
+		<div class="top-content">
+			<div class="top-title left">
+				<p>消耗嗨币</p>
+				<p><span id="param1">200</span><span><img src="img/index/icon-bean.png" alt="嗨币"></span></p>
+			</div>
+			<div class="top-title right">
+				<p>中奖嗨币</p>
+				<p><span id="param2">0</span><span><img src="img/index/icon-bean.png" alt="嗨币"></span></p>
+			</div>
+			<div class="bottom">
+				<ul>
+					<li>密码内容：<span id="param3">"1":1倍</span></li>
+					<li>密码设定：<span id="param4">共1个密码</span></li>
+					<li>探墓时间：<span id="param5">2018-01-12 18:29</span></li>
+					<li>解密时间：<span id="param6">2018-01-12 18:29</span></li>
+				</ul>
+			</div>
+		</div>
+		<div class="bottom-list">
+			<div class="item" id="item">
+				<div class="item-content-left">
+					<div class="item-left">
+						<span id="param7">第18011214期</span>
+						<span id="param8">200嗨币</span>
+					</div>
+					<div class="item-right">
+						<span>等待开奖</span>
+					</div>						
+				</div>
+				<div class="item-content-right">
+					<img src="img/record/right.png" alt="向右">
+				</div>
+				
+			</div>
+		</div>
+		<div class="button">
+			<button id="btn-1">撤销追投</button>
+			<button id="btn-2">继续追投</button>
+		</div>
+	</div>
+
+
+
+	
 </body>
 </html>
