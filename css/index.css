@@ -321,9 +321,9 @@ html,body{
     color: #febe81;
 }
 .deadLine .upcode .result{
-	text-align: left;
+    text-align: left;
     box-sizing: border-box;
-    padding-left: 0.5rem;
+    padding-left: 0.3rem;
 }
 .deadLine .upcode .result img{
 	width: 0.9rem;

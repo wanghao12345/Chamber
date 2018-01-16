@@ -129,6 +129,7 @@ $(function(){
 			$('#selectList ul li:nth-child('+index+') .list-bottom').html(txt);
 			//本按钮文字改变
 			$(this).html('立即消耗'+txt+'嗨币');
+			$('.select-bottom #sendBetting').html('立即消耗'+txt+'嗨币');
 			//追投密码列表
 			$('div#programme').append('<i>'+index+'</i>');
 			//是否有追投方案
