@@ -528,7 +528,7 @@ function chasingRequest(){
 	num = $('input#period-value').val();
 	//押注请求
 	var dataJSON = JSON.stringify(data);
-	var chasing_params = '{"path": "12002","num":"'+num+'","d": {"tk": "'+token+'","data": '+dataJSON+'}}';
+	var chasing_params = '{"path": "12002","d": {"tk": "'+token+'","num":"'+num+'","data": '+dataJSON+'}}';
 	sendSocket(chasing_params);
 }
 /******************----请求往期密码-----******************/
