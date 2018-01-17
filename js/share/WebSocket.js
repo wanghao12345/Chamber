@@ -557,7 +557,8 @@ function viewSetPasswordType(data){
          $('.stakeRecordDetail #param4').html(item.coin+'嗨币');
     } else {
         $('.stakeRecordDetail #param2').html(item.record[0].game_index+'期');
-         $('.stakeRecordDetail #param4').html(item.sumcoin+'嗨币');
+        $('.stakeRecordDetail #param4').html(item.sumcoin+'嗨币');
+        $('.stakeRecordDetail #isParam1').css('display','none');
     }
     $('.stakeRecordDetail #param3').html('+0嗨币');
    

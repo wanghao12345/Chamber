@@ -830,6 +830,7 @@ height: 100%; */
 /*规则说明*/
 .ruleFrame{
     display: none;
+    z-index: 11;
 }
 .ruleFrame .ruleFrame-content{
     width: 14rem;
