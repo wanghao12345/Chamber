@@ -5,7 +5,7 @@
     height: 28.4rem;    
     position: absolute;
     top: 0;
-    z-index: 3;
+    z-index: 10;
     display: none;
 }
 /*tab*/
@@ -224,7 +224,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 3;
+    z-index: 10;
 }
 .stakeRecordDetail .stakeRecordDetail-content{
     width: 100%;

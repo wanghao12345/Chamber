@@ -44,6 +44,9 @@ socket.onmessage = function(msg){
         case 12008:
             RevocationChasingType(data);
         break;
+        case 12009://追投记录详情
+            ChasingRecordDetailType(data);
+        break;
         case 12010:
             grandPrixpasswordType(data);
         break;
@@ -550,6 +553,10 @@ function viewSetPasswordType(data){
     $('.stakeRecordDetail #param7').html(item.created_at);
     $('.stakeRecordDetail #param8').html(item.updated_at);
     $('.stakeRecordDetail #isParam').css('display','none');
+
+}
+/******************----追投记录详情-----******************/
+function ChasingRecordDetailType(data){
 
 }
 /******************----是否获得红包碎片-----******************/
