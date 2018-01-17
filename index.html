@@ -268,7 +268,7 @@
 	<div class="mask bettingFrame">
 		<div class="bettingFrame-content">
 			<div class="title"><img src="img/betting/true.png" alt="成功"><span>密码设定成功</span></div>
-			<div class="content"><p>预计<span>10:59</span>解密</p></div>
+			<div class="content"><p>预计<span id="OpeningTime">10:59</span>解密</p></div>
 			<div class="button">
 				<button class="btn btn-1"><a id="viewSetPassword">查看已设密码</a></button>
 				<button class="btn btn-2">继续解密</button>
@@ -753,10 +753,10 @@
 			</div>
 			<div class="bottom">
 				<ul>
-					<li>密码内容：<span id="param3">"1":1倍</span></li>
-					<li>密码设定：<span id="param4">共1个密码</span></li>
-					<li>探墓时间：<span id="param5">2018-01-12 18:29</span></li>
-					<li>解密时间：<span id="param6">2018-01-12 18:29</span></li>
+					<li>密码进度：<span id="param3">剩1期/共5期</span></li>
+					<li>密码内容：<span id="param4">"1":1倍</span></li>
+					<li>密码设定：<span id="param5">共1个密码</span></li>
+					<li>方案时间：<span id="param6">2018-01-12 18:29</span></li>
 				</ul>
 			</div>
 		</div>
@@ -778,7 +778,7 @@
 			</div>
 		</div>
 		<div class="button">
-			<button id="btn-1">撤销追投</button>
+			<button id="btn-1"><span style="display: none" id="ran"></span><span style="display: none" id="stake_type"></span>撤销追投</button>
 			<button id="btn-2">继续追投</button>
 		</div>
 	</div>

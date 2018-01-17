@@ -248,6 +248,8 @@ function stakeType(data){
         $('a#dollar').html(dollar-cost);
         //动画
         $('.bettingFrame').css('display','block');
+        //开奖时间
+        $('.bettingFrame span#OpeningTime').html(data.d[1]);
         startFly();
     }else{
         maxTip('投注失败！','1.4rem');
@@ -262,6 +264,8 @@ function chasingType(data){
         $('a#dollar').html(dollar-cost);
         // 动画
         $('.bettingFrame').css('display','block');
+        //开奖时间
+        $('.bettingFrame span#OpeningTime').html(data.d[1]);
         startFly();
     }else{
         maxTip('追投失败！','1.4rem');
@@ -374,38 +378,35 @@ function ChasingRecordType(data){
         for (var i = 0; i < item.length; i++) {
             content += '<li><a href="#">';
 
-            content +='<span style="display:none" id="grandprix">'+item[i].grandprix+'</span>';
+            content +='<span style="display:none" id="getcoin">'+item[i].getcoin+'</span>';
             content +='<span style="display:none" id="qihao">'+item[i].index+'</span>';
             content +='<span style="display:none" id="cost_coin">'+item[i].coin+'</span>';
             content +='<span style="display:none" id="content">'+item[i].content+'</span>';
             content +='<span style="display:none" id="passwordSetting">'+item[i].num+'</span>';
             content +='<span style="display:none" id="creat_at">'+item[i].created_at+'</span>';
             content +='<span style="display:none" id="updated_at">'+item[i].updated_at+'</span>';
-
             content +='<span style="display:none" id="stake_type">'+item[i].stake_type+'</span>';
             content +='<span style="display:none" id="ran">'+item[i].ran+'</span>';
 
-
             content +='<div class="left">';
-            if (item[i].flag==0) {
-                content += '<p><span class="p_left">第'+item[i].index+'号密室</span>';
-            } else {        
+            if (item[i].decodingprogress=="0") {
                 content += '<p><span class="p_left">已完成</span>';
+            } else {        
+                content += '<p><span class="p_left">'+item[i].decodingprogress+'</span>';
             }
             if (item[i].status == 1) {
                 content += '<i class="p_left" id="chase">已撤单</i>';
             }
 
-            if (item[i].flag == 0) {//未开奖
+            if (item[i].decodingprogress!="0") {//未开奖
                 content += '<span class="p_right">等待开奖</span></p>';
             }else{//已开奖
-                if (item[i].grandprix == 0) {//未中奖
+                if (item[i].getcoin == 0) {//未中奖
                     content += '<span class="p_right">未中奖</span></p>';
                 } else {//中奖
-                    content += '<span class="p_right">中奖'+item[i].grandprix+'嗨币</span></p>';
+                    content += '<span class="p_right">中奖'+item[i].getcoin+'嗨币</span></p>';
                 }
             }
-
             content += '<p><span class="p_left">'+item[i].created_at+'</span>';
             content += '<span class="p_right">消耗'+item[i].coin+'嗨币</span></p>';
             content += '</div>';
@@ -543,11 +544,23 @@ function RevocationChasingType(data){
 /******************----查看当前投注详情记录-----******************/
 
 function viewSetPasswordType(data){
-    var item = data.d.data[0];
+    var item ;
+    if (typeof(data.d.data.length)=="number") {
+        item = data.d.data[0]
+    } else {
+        item = data.d.data;
+    }
+   
     $('.stakeRecordDetail #param1').html('等待开奖');
-    $('.stakeRecordDetail #param2').html(item.index+'期');
+    if (typeof(data.d.data.length)=="number") {
+        $('.stakeRecordDetail #param2').html(item.index+'期');
+         $('.stakeRecordDetail #param4').html(item.coin+'嗨币');
+    } else {
+        $('.stakeRecordDetail #param2').html(item.record[0].game_index+'期');
+         $('.stakeRecordDetail #param4').html(item.sumcoin+'嗨币');
+    }
     $('.stakeRecordDetail #param3').html('+0嗨币');
-    $('.stakeRecordDetail #param4').html(item.coin+'嗨币');
+   
     $('.stakeRecordDetail #param5').html(item.content);
     $('.stakeRecordDetail #param6').html('共'+item.num+'组密码');
     $('.stakeRecordDetail #param7').html(item.created_at);
@@ -557,7 +570,29 @@ function viewSetPasswordType(data){
 }
 /******************----追投记录详情-----******************/
 function ChasingRecordDetailType(data){
+    var item = data.d.data;
+    $('.chasingRecordDetail #param1').html(item.sumcoin);
+    $('.chasingRecordDetail #param2').html(item.sumgetcoin);
+    if (item.decodingprogress=="0") {
+        $('.chasingRecordDetail #param3').html('已完成');
+    } else {
+        $('.chasingRecordDetail #param3').html(item.decodingprogress);
+    }
+    $('.chasingRecordDetail #param4').html(item.content);
+    $('.chasingRecordDetail #param5').html('共'+item.num+'个密码');
+    $('.chasingRecordDetail #param6').html(item.creat_at);
+    $('.chasingRecordDetail #param7').html(item.record[0].game_index);
+    $('.chasingRecordDetail #param8').html(item.sumcoin+"嗨币");
 
+
+    $('.chasingRecordDetail #stake_type').html('');
+    $('.chasingRecordDetail #ran').html('');
+
+    $('.chasingRecordDetail #stake_type').html(item.record[0].stake_type);
+    $('.chasingRecordDetail #ran').html(item.record[0].ran);
+
+    $('.chasingRecordDetail').css('display','block');
+    $('.recordFrame').css('display','none');
 }
 /******************----是否获得红包碎片-----******************/
 function isGetRedBagType(data){
