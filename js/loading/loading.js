@@ -19,7 +19,7 @@ $(function(){
 //添加loading
 function addLoading(){
     //添加loadingDOM
-    $("body").append('<div id="foo" style="width:100%; z-index:5; height:100%; position:fixed;top:0px;left:0px;background: rgba(0, 0, 0, 0.6);"></div>');
+    $("body").append('<div id="foo" style="width:100%; z-index:555; height:100%; position:fixed;top:0px;left:0px;background: rgba(0, 0, 0, 0.6);"></div>');
     var opts = {
          lines: 20, // loading小块的数量
          length: 5, // 小块的长度
