@@ -125,8 +125,8 @@ function DJS(countTime) {
         else{ 
         clearInterval(timer); 
             // alert("时间到，结束!"); 
-            openAndCloseDoor();
-            DJS(3600);
+            // openAndCloseDoor();
+            // DJS(3600);
             // document.location.reload();
         } 
     },1000); 
@@ -184,6 +184,7 @@ function login_numberPeriodsAndMoney(data){
 //数字0到9，分别有几期没有出 
 function login_periodComeOut(data){
     var arr = data.d;
+    removeMinTip();
     var time1 = window.setInterval(function(){
         removeMinTip();
 
@@ -226,7 +227,8 @@ function login_stakeCountDown(data){
     $('div#last_result_param1').html(last_result_param[0]);
     $('div#last_result_param2').html(last_result_param[1]);
     $('div#last_result_param3').html(last_result_param[2]);
-    $('span#pastcode-btn i').html(last_result_param[0]+" "+last_result_param[1]+" "+last_result_param[2]);   
+    $('span#pastcode-btn i').html(last_result_param[0]+" "+last_result_param[1]+" "+last_result_param[2]); 
+    openAndCloseDoor();  
 }
 /******************----跑马灯-----******************/
 function horseLampType(data){
