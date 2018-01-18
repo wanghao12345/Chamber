@@ -182,20 +182,40 @@ function login_numberPeriodsAndMoney(data){
     $('a#dollar').html(data.d.hi_money);    
 }
 //数字0到9，分别有几期没有出 
+var minTipNumber = 5;
 function login_periodComeOut(data){
     var arr = data.d;
+    // addMinTip(4,arr[4])
     removeMinTip();
-    var time1 = window.setInterval(function(){
+    
+    var time = window.setInterval(function(){
+        var num = Math.round(Math.random()*9);
+        addAndRemoveTip(num,arr);
+        minTipNumber = minTipNumber -1;
+        if (minTipNumber<0) {
+            window.clearInterval(time);
+        }
+    },4000)
+/*    var num1 = Math.round(Math.random()*9);
+    addMinTip(num1,arr[num1]); */  
+/*    var time1 = window.setInterval(function(){
         removeMinTip();
+        if (minTipNumber>0) {
+            var time2 = window.setTimeout(function(){
+                var num1 = Math.round(Math.random()*9);
+                addMinTip(num1,arr[num1]);            
+            },4000);
+        } else {
+            window.clearInterval(time1);
+            window.clearTimeout(time2);
+            minTipNumber = 10;
+        }
+        minTipNumber--
+    },7000);  */
 
-        var time2 = window.setTimeout(function(){
-            var num1 = Math.round(Math.random()*9);
-            addMinTip(num1,arr[num1]);            
-        },4000);
 
 
 
-    },7000);   
 }
 //返回用户在这一期有没有押注
 function login_userIsStake(data){

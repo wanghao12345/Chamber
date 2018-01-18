@@ -155,6 +155,15 @@ function codeFlyDoor(){
 	},2000);
 }
 /**************************------提示框------************************/
+function addAndRemoveTip(num,arr){
+    addMinTip(num,arr[num]);
+    var time = window.setTimeout(function(){	
+    	 removeMinTip();
+    },1000)
+}
+
+
+
 //插入小提示框
 function addMinTip(index,num){
 	var top = "1rem";
