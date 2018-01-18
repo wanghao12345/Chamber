@@ -202,7 +202,7 @@ function login_userIsStake(data){
     //关闭loading
     var time = setTimeout(function(){
         clearLoading();
-        openAndCloseDoor();
+        // openAndCloseDoor();
     },2000);
 
     var time1 = setTimeout(function(){
