@@ -3,7 +3,7 @@ function openAndCloseDoor(){
 	openDoorAnimation();
 	var t = window.setTimeout(function(){
 		closeDoorAnimation();	
-	},3000);
+	},5000);
 }
 
 //开门动画
