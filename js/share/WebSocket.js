@@ -531,13 +531,20 @@ function grandPrixListType(data){
 // 撤销追投
 function RevocationChasingType(data){
     if (data.d.errcode == 0) {//正确
-        document.location.reload();
-    } else {
-        maxTip('撤销失败！','1.4rem');
+        maxTip('撤销成功！','3.4rem');
+        $('.maxtooltip').css('z-index','20');
 
         var time = window.setTimeout(function(){
             document.location.reload();
         },1000)
+
+    } else {
+        maxTip('撤销失败！','3.4rem');
+        $('.maxtooltip').css('z-index','20');
+
+/*        var time = window.setTimeout(function(){
+            document.location.reload();
+        },1000)*/
 
     }
 }
