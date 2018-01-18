@@ -136,15 +136,15 @@ function addCodeFlyThree(index){
 function codeFlyDoor(){
 	var time = window.setTimeout(function(){
 		$('.flyCode1').animate({
-			top:"8.8rem",
+			top:"8.4rem",
 			left:"2rem"
 		},"slow");		
 		$('.flyCode2').animate({
-			top:"7.3rem",
+			top:"6.7rem",
 			left:"7rem"
 		},"slow");	
 		$('.flyCode3').animate({
-			top:"8.9rem",
+			top:"8.4rem",
 			left:"12rem"
 		},"slow");
 		$('.flyCode').fadeOut("slow");

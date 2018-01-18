@@ -456,6 +456,7 @@ function StakeRecordDetailType(data){
     var item = data.d.data[0];
     if (item.flag == 0) {//等待开奖
         $('.stakeRecordDetail .top-title').html('等待开奖'); 
+        $('.stakeRecordDetail .top-period').css('display','none');
     } else {//已开奖（寻宝成功/寻宝失败）
         if (item.get_coin == 0) {
             $('.stakeRecordDetail .top-title').html('寻宝失败');      
@@ -584,6 +585,7 @@ function viewSetPasswordType(data){
     }
    
     $('.stakeRecordDetail #param1').html('等待开奖');
+    $('.stakeRecordDetail .top-period').css('display','none');
     if (typeof(data.d.data.length)=="number") {
         $('.stakeRecordDetail #param2').html(item.index+'期');
          $('.stakeRecordDetail #param4').html(item.coin+'嗨币');
@@ -618,6 +620,8 @@ function ChasingRecordDetailType(data){
     $('.chasingRecordDetail #param4').html(item.content);
     $('.chasingRecordDetail #param5').html('共'+item.num+'个密码');
     $('.chasingRecordDetail #param6').html(item.creat_at);
+
+    
     $('.chasingRecordDetail #param7').html(item.record[0].game_index);
     $('.chasingRecordDetail #param8').html(item.sumcoin+"嗨币");
 
