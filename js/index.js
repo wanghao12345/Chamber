@@ -301,13 +301,13 @@ $(function(){
 			var updated_at = $('.chasingRecordDetail span#param6').html();
 
 
-			if ($('.chasingRecordDetail span#param6').html()=='已完成') {
+			if ($('.chasingRecordDetail span#param9').html()=='已完成') {
 				if ($('.chasingRecordDetail span#param2').html()=='0') {
 					$('.stakeRecordDetail #param1').html('寻宝失败');
-					$('.stakeRecordDetail #param3').html('寻宝成功');	
+					$('.stakeRecordDetail #param3').html('+0嗨币');	
 				} else {
-					$('.stakeRecordDetail #param1').html('等待开奖');
-					$('.stakeRecordDetail #param3').html($('.chasingRecordDetail span#param2').html()+'嗨币');	
+					$('.stakeRecordDetail #param1').html('寻宝成功');
+					$('.stakeRecordDetail #param3').html('+'+$('.chasingRecordDetail span#param2').html()+'嗨币');	
 				}
 			} else {
 				$('.stakeRecordDetail #param1').html('等待开奖');

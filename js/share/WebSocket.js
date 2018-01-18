@@ -583,8 +583,12 @@ function ChasingRecordDetailType(data){
     $('.chasingRecordDetail #param2').html(item.sumgetcoin);
     if (item.decodingprogress=="0") {
         $('.chasingRecordDetail #param3').html('已完成');
+        
+        
+        $('.chasingRecordDetail #param9').html('已完成');
     } else {
         $('.chasingRecordDetail #param3').html(item.decodingprogress);
+        $('.chasingRecordDetail #param9').html('等待开奖');
     }
     $('.chasingRecordDetail #param4').html(item.content);
     $('.chasingRecordDetail #param5').html('共'+item.num+'个密码');
