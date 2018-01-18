@@ -477,19 +477,19 @@ function StakeRecordDetailType(data){
     }else if (item.flag != 0 && data.d.result_param.length!= 0){
         $('.stakeRecordDetail .top-content ul li:nth-child(6)').css('display','block');
 
-        $('.stakeRecordDetail .top-content ul li:nth-child(6) div span:nth-child(1) i').html(data.d.result_param[0][0]);
+        $('.stakeRecordDetail .top-content ul li:nth-child(6) i#code1').html(data.d.result_param[0][0]);
         var img_url1 = data.d.result_param[0][1]==0?'img/record/cha.png':'img/record/gou.png';
         var win_price1 = data.d.result_param[0][1]==0? ' ': '+'+data.d.result_param[0][1];
         $('img#isWinPrize1').attr('src',img_url1);
         $('label#isWinPrize1-content').html(win_price1);
 
-        $('.stakeRecordDetail .top-content ul li:nth-child(6) div span:nth-child(2) i').html(data.d.result_param[1][0]);
+        $('.stakeRecordDetail .top-content ul li:nth-child(6) i#code2').html(data.d.result_param[1][0]);
         var img_url2 = data.d.result_param[1][1]==0?'img/record/cha.png':'img/record/gou.png';
         var win_price2 = data.d.result_param[1][1]==0? ' ': '+'+data.d.result_param[1][1];
         $('img#isWinPrize2').attr('src',img_url2);
         $('label#isWinPrize2-content').html(win_price2);
 
-        $('.stakeRecordDetail .top-content ul li:nth-child(6) div span:nth-child(3) i').html(data.d.result_param[2][0]);        
+        $('.stakeRecordDetail .top-content ul li:nth-child(6) i#code3').html(data.d.result_param[2][0]);        
         var img_url3 = data.d.result_param[2][1]==0?'img/record/cha.png':'img/record/gou.png';
         var win_price3 = data.d.result_param[2][1]==0? ' ': '+'+data.d.result_param[2][1];
         $('img#isWinPrize3').attr('src',img_url3);
