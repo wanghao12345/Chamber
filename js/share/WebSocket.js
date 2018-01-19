@@ -600,16 +600,27 @@ function ChasingRecordDetailType(data){
     $('.chasingRecordDetail #param5').html('共'+item.num+'个密码');
     $('.chasingRecordDetail #param6').html(item.creat_at);
 
-    
-    $('.chasingRecordDetail #param7').html(item.record[0].game_index);
-    $('.chasingRecordDetail #param8').html(item.sumcoin+"嗨币");
-
-
-    $('.chasingRecordDetail #stake_type').html('');
-    $('.chasingRecordDetail #ran').html('');
-
-    $('.chasingRecordDetail #stake_type').html(item.record[0].stake_type);
-    $('.chasingRecordDetail #ran').html(item.record[0].ran);
+    var record = item.record;
+    $('#chasingRecordList').html('');
+    for (var i = 0; i < record.length; i++) {
+        var content = '<div class="item" id="item">';
+        content += '<span style="display:none" id="stake_type">'+record[i].stake_type+'</span>';
+        content += '<span style="display:none" id="ran">'+record[i].ran+'</span>';
+        content += '<div class="item-content-left">';
+        content += '<div class="item-left">';
+        content += '<span id="param7">第'+record[i].game_index+'期</span>';
+        content += '<span id="param8">'+record[i].coin+'嗨币</span>';
+        content += '</div>';
+        content += '<div class="item-right">';
+        content += '<span id="param9">'+(record[i]==0? '等待开奖':'已完成')+'</span>';
+        content += '</div>';
+        content += '</div>';
+        content += '<div class="item-content-right">';
+        content += '<img src="img/record/right.png" alt="向右">';
+        content += '</div>';
+        content += '</div>';
+        $('#chasingRecordList').append(content);
+    }
 
     $('.chasingRecordDetail').css('display','block');
     $('.recordFrame').css('display','none');

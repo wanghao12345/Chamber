@@ -290,10 +290,10 @@ $(function(){
 		sendSocket(ChasingRecordDetail_params);	
 	})
 	//
-	$('.chasingRecordDetail div#item').on('click',function(){
+	$('.chasingRecordDetail').on('click','div#item',function(){
 
-			var qihao = $('.chasingRecordDetail span#param7').html();
-			var cost_coin = $('.chasingRecordDetail span#param8').html();
+			var qihao = $(this).find('span#param7').html();
+			var cost_coin = $(this).find('span#param8').html();
 			var content = $('.chasingRecordDetail span#param4').html();
 			var passwordSetting = $('.chasingRecordDetail span#param5').html();
 			var creat_at = $('.chasingRecordDetail span#param6').html();
@@ -301,8 +301,8 @@ $(function(){
 			var updated_at = $('.chasingRecordDetail span#param6').html();
 
 
-			if ($('.chasingRecordDetail span#param9').html()=='已完成') {
-				if ($('.chasingRecordDetail span#param2').html()=='0') {
+			if ($(this).find('span#param9').html()=='已完成') {
+				if ($(this).find('span#param2').html()=='0') {
 					$('.stakeRecordDetail #param1').html('寻宝失败');
 					$('.stakeRecordDetail #param3').html('+0嗨币');	
 				} else {
@@ -313,13 +313,14 @@ $(function(){
 				$('.stakeRecordDetail #param1').html('等待开奖');
 				$('.stakeRecordDetail #param3').html('+0嗨币');	
 			}
-			$('.stakeRecordDetail #param2').html(qihao+'期');
+			$('.stakeRecordDetail #param2').html(qihao);
 			
 			$('.stakeRecordDetail #param4').html(cost_coin);
 			$('.stakeRecordDetail #param5').html(content);
 			$('.stakeRecordDetail #param6').html(passwordSetting);
 
-			$('.stakeRecordDetail #param7').html(creat_at);
+			// $('.stakeRecordDetail #param7').html(creat_at);
+			$(this).find('span#param7').html(creat_at);
 
 			$('.stakeRecordDetail #isParam').css('display','none');
 			$('.stakeRecordDetail #isParam1').css('display','none');

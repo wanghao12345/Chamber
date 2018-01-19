@@ -483,6 +483,8 @@
 
 .chasingRecordDetail .bottom-list{
     width: 100%;
+    height: 17rem;
+    overflow-y: auto;
 }
 .chasingRecordDetail .bottom-list .item{
     width: 100%;
