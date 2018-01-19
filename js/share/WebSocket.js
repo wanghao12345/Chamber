@@ -617,6 +617,7 @@ function ChasingRecordDetailType(data){
         var content = '<div class="item" id="item">';
         content += '<span style="display:none" id="stake_type">'+record[i].stake_type+'</span>';
         content += '<span style="display:none" id="ran">'+record[i].ran+'</span>';
+        content += '<span style="display:none" id="game_index">'+record[i].game_index+'</span>';
         content += '<div class="item-content-left">';
         content += '<div class="item-left">';
         content += '<span id="param7">第'+record[i].game_index+'期</span>';
@@ -636,6 +637,65 @@ function ChasingRecordDetailType(data){
     $('.chasingRecordDetail').css('display','block');
     $('.recordFrame').css('display','none');
 }
+
+function ChasingRecordDetailType_1(data){
+    //清除loading
+    var time = window.setTimeout(function(){
+        clearLoading();
+    },1000)
+    var item = data.d.data[0];
+    if (item.flag == 0) {//等待开奖
+        $('.stakeRecordDetail .top-title').html('等待开奖'); 
+        $('.stakeRecordDetail .top-period').css('display','none');
+    } else {//已开奖（寻宝成功/寻宝失败）
+        if (item.get_coin == 0) {
+            $('.stakeRecordDetail .top-title').html('寻宝失败');      
+        }else{
+            $('.stakeRecordDetail .top-title').html('寻宝成功');
+        }
+    }
+    //是否大奖
+    if (item.grandprix==0) {//否
+        $('.stakeRecordDetail .top-period-1').css('display','none');
+    } else {
+        $('.stakeRecordDetail .top-period-1').css('display','block');
+    }
+    $('.stakeRecordDetail .top-content .top-period span:nth-child(1)').html(item.index+'期');
+    $('.stakeRecordDetail .top-content .top-period span:nth-child(2) i').html('+'+item.get_coin+'嗨币');
+    $('.stakeRecordDetail .top-content .top-period-1 i#param3').html('+'+item.get_coin+'嗨币');
+
+
+    $('.stakeRecordDetail .top-content ul li:nth-child(1) span').html(item.coin+'嗨币');
+    $('.stakeRecordDetail .top-content ul li:nth-child(2) span').html(item.content);
+    $('.stakeRecordDetail .top-content ul li:nth-child(3) span').html('共'+item.num+'组密码');
+    $('.stakeRecordDetail .top-content ul li:nth-child(4) span').html(item.created_at);
+    $('.stakeRecordDetail .top-content ul li:nth-child(5) span').html(item.updated_at);
+
+    if (item.flag == 0 || data.d.result_param.length== 0 ) {
+        $('.stakeRecordDetail .top-content ul li:nth-child(6)').css('display','none');
+    }else if (item.flag != 0 && data.d.result_param.length!= 0){
+        $('.stakeRecordDetail .top-content ul li:nth-child(6)').css('display','block');
+
+        $('.stakeRecordDetail .top-content ul li:nth-child(6) i#code1').html(data.d.result_param[0][0]);
+        var img_url1 = data.d.result_param[0][1]==0?'img/record/cha.png':'img/record/gou.png';
+        var win_price1 = data.d.result_param[0][1]==0? ' ': '+'+data.d.result_param[0][1];
+        $('img#isWinPrize1').attr('src',img_url1);
+        $('label#isWinPrize1-content').html(win_price1);
+
+        $('.stakeRecordDetail .top-content ul li:nth-child(6) i#code2').html(data.d.result_param[1][0]);
+        var img_url2 = data.d.result_param[1][1]==0?'img/record/cha.png':'img/record/gou.png';
+        var win_price2 = data.d.result_param[1][1]==0? ' ': '+'+data.d.result_param[1][1];
+        $('img#isWinPrize2').attr('src',img_url2);
+        $('label#isWinPrize2-content').html(win_price2);
+
+        $('.stakeRecordDetail .top-content ul li:nth-child(6) i#code3').html(data.d.result_param[2][0]);        
+        var img_url3 = data.d.result_param[2][1]==0?'img/record/cha.png':'img/record/gou.png';
+        var win_price3 = data.d.result_param[2][1]==0? ' ': '+'+data.d.result_param[2][1];
+        $('img#isWinPrize3').attr('src',img_url3);
+        $('label#isWinPrize3-content').html(win_price3);
+    }     
+}
+
 /******************----是否获得红包碎片-----******************/
 function isGetRedBagType(data){
     if (data.d.errcode == 0) {

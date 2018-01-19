@@ -292,15 +292,13 @@ $(function(){
 	//
 	$('.chasingRecordDetail').on('click','div#item',function(){
 
-			var qihao = $(this).find('span#param7').html();
+/*			var qihao = $(this).find('span#param7').html();
 			var cost_coin = $(this).find('span#param8').html();
 			var content = $('.chasingRecordDetail span#param4').html();
 			var passwordSetting = $('.chasingRecordDetail span#param5').html();
 			var creat_at = $('.chasingRecordDetail span#param6').html();
 
 			var updated_at = $('.chasingRecordDetail span#param6').html();
-
-
 			if ($(this).find('span#param9').html()=='已完成') {
 				if ($(this).find('span#param2').html()=='0') {
 					$('.stakeRecordDetail #param1').html('寻宝失败');
@@ -325,8 +323,24 @@ $(function(){
 			$('.stakeRecordDetail #isParam').css('display','none');
 			$('.stakeRecordDetail #isParam1').css('display','none');
 			$('.stakeRecordDetail').css('display','block');
-			$('.chasingRecordDetail').css('display','none')
-			$('.recordFrame').css('display','none');
+			$('.chasingRecordDetail').css('display','none');
+			$('.recordFrame').css('display','none');*/
+
+			addLoading();
+			var index = $(this).find('span#game_index').html();
+			var ran = $(this).find('span#ran').html();
+			var StakeRecordDetail_params = '{"path": "12007","d": {"tk": "'+token+'","index":"'+index+'","ran":"'+ran+'"}}';
+			sendSocket(StakeRecordDetail_params);	
+
+		// $('.stakeRecordDetail #isParam').css('display','none');
+		// $('.stakeRecordDetail #isParam1').css('display','none');
+		$('.stakeRecordDetail').css('display','block');
+		$('.chasingRecordDetail').css('display','none');
+		$('.recordFrame').css('display','none');
+
+
+
+
 	})
 	//撤销追投
 	$('.chasingRecordDetail button#btn-1').on('click',function(){
