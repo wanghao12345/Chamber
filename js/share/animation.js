@@ -170,43 +170,43 @@ function addMinTip(index,num){
 	var left = "-0.6rem";
 	switch(index){
 		case 0:
-			top = "0.8rem";
+			top = "1.2rem";
 			left = "-0.6rem";
 		break;
 		case 1:
-			top = "0.8rem";
+			top = "1.2rem";
 			left = "2.4rem";
 		break;
 		case 2:
-			top = "0.8rem";
+			top = "1.2rem";
 			left = "5.4rem";
 		break;
 		case 3:
-			top = "0.8rem";
+			top = "1.2rem";
 			left = "8.4rem";
 		break;
 		case 4:
-			top = "0.8rem";
+			top = "1.2rem";
 			left = "11.4rem";
 		break;
 		case 5:
-			top = "3.6rem";
+			top = "4.8rem";
 			left = "-0.6rem";
 		break;
 		case 6:
-			top = "3.6rem";
+			top = "4.8rem";
 			left = "2.4rem";
 		break;
 		case 7:
-			top = "3.6rem";
+			top = "4.8rem";
 			left = "5.4rem";
 		break;
 		case 8:
-			top = "3.6rem";
+			top = "4.8rem";
 			left = "8.4rem";
 		break;
 		case 9:
-			top = "3.6rem";
+			top = "4.8rem";
 			left = "11.4rem";
 		break;
 	}
