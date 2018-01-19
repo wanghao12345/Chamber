@@ -96,7 +96,7 @@
 	color: #fbdab2;
 	font-size: 0.6rem;
 }
-.recordFrame .content ul#bett-record li .left p:first-child i#chase{
+.recordFrame .content ul#bett-record li .left p i#chase{
     border: 1px solid #fbdab2;
     width: 1.7rem;
     height: 0.7rem;
@@ -107,6 +107,7 @@
     font-size: 0.5rem;
     margin-top: 0.1rem;
     margin-left: 0.3rem;
+    color: #f3dba9;
 }
 .recordFrame .content ul#bett-record li .left p:first-child span#coin{
     background-color: rgba(0,0,0,0.3);
@@ -272,6 +273,53 @@
     background-size: 100% 100%;
     margin-left: 2rem;
 }
+
+
+
+.stakeRecordDetail .stakeRecordDetail-content .top .top-content .top-period-1{
+    overflow: hidden;
+    width: 11rem;
+    height: 1.4rem;
+    border-radius: 2rem;
+    line-height: 1.4rem;
+    font-size: 0.6rem;
+    box-sizing: border-box;
+    color: #e8976f;
+    margin-bottom: 0.5rem;
+    margin-left: 2rem;
+}
+.stakeRecordDetail .stakeRecordDetail-content .top .top-content  .top-period-left{
+    width: 40%;
+    height: 100%;
+    float: left;
+    border-right: 1px solid #af684c;
+    box-sizing: border-box;
+    padding-left: 1rem;
+}
+.stakeRecordDetail .stakeRecordDetail-content .top .top-content  .top-period-left span{
+    border: 1px solid #f3dba9;
+    box-sizing: border-box;
+    margin-right: 0.2rem;
+    height: 1.3rem;
+    line-height: 1.1rem;
+    border-radius: 0.2rem;
+    text-align: center;
+    display: block;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem !important;
+    width: 100%;
+}
+
+.stakeRecordDetail .stakeRecordDetail-content .top .top-content  .top-period-right{
+    width: 60%;
+    height: 100%;
+    float: left;
+    background: url(../img/record/titledetailback_1.png);
+    background-size: 100% 100%;
+
+}
+
+
 .stakeRecordDetail .stakeRecordDetail-content .top .top-content .top-period span:first-child{
     float: left;
     padding-right: 0.5rem;
@@ -287,9 +335,27 @@
     margin-top: 0.2rem;
     margin-left: 0.2rem;
 }
+
+.stakeRecordDetail .stakeRecordDetail-content .top .top-content .top-period-1 span:first-child{
+    float: left;
+    padding-right: 0.5rem;
+}
+.stakeRecordDetail .stakeRecordDetail-content .top .top-content .top-period-1 span:last-child{
+    float: right;
+    color: #f3dba9;
+}
+.stakeRecordDetail .stakeRecordDetail-content .top .top-content .top-period-1 img{
+    width: 1rem;
+    float: right;
+    margin-top: 0.2rem;
+    margin-left: 0.2rem;
+}
+
+
+
 .stakeRecordDetail .stakeRecordDetail-content .top .top-content ul{
     width: 100%;
-    height: 100%;
+    /*height: 100%;*/
 }
 .stakeRecordDetail .stakeRecordDetail-content .top .top-content ul li{
     width: 100%;
@@ -496,7 +562,7 @@
 }
 .chasingRecordDetail .bottom-list .item .item-content-left{
     width: 93%;
-    height: 99%;
+    height: 95%;
     float: left;
     overflow: hidden;
     font-size: 0.6rem;

@@ -351,7 +351,13 @@ function StakeRecordType(data){
             }
             content +='</p>';
             content +='<p>';
-            content +='<span class="p_left">'+item[i].created_at+'</span>';
+
+
+            if (item[i].grandprix==0) {
+                content +='<span class="p_left">'+item[i].created_at+'</span>';      
+            }else{
+                content +='<span class="p_left">'+item[i].created_at+'</span><i class="p_left" id="chase">大奖</i>';
+            }
             content +='<span class="p_right">消耗'+item[i].coin+'嗨币</span>';
             content +='</p></div>';
             content +='<div class="right"><img src="img/record/right.png" alt="向右" /><span class="index" style="display:none">'+item[i].index+'</span><span class="ran" style="display:none">'+item[i].ran+'</span></div>';
@@ -363,9 +369,6 @@ function StakeRecordType(data){
         var content1 = addNoRecordData();
          $('#record-content').append(content1);
     }
-
-
-
 }
 /******************----追投记录数据请求-----******************/
 function ChasingRecordType(data){
@@ -443,8 +446,16 @@ function StakeRecordDetailType(data){
             $('.stakeRecordDetail .top-title').html('寻宝成功');
         }
     }
+    //是否大奖
+    if (item.grandprix==0) {//否
+        $('.stakeRecordDetail .top-period-1').css('display','none');
+    } else {
+        $('.stakeRecordDetail .top-period-1').css('display','block');
+    }
     $('.stakeRecordDetail .top-content .top-period span:nth-child(1)').html(item.index+'期');
     $('.stakeRecordDetail .top-content .top-period span:nth-child(2) i').html('+'+item.get_coin+'嗨币');
+    $('.stakeRecordDetail .top-content .top-period-1 i#param3').html('+'+item.get_coin+'嗨币');
+
 
     $('.stakeRecordDetail .top-content ul li:nth-child(1) span').html(item.coin+'嗨币');
     $('.stakeRecordDetail .top-content ul li:nth-child(2) span').html(item.content);
