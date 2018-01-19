@@ -612,7 +612,7 @@ function ChasingRecordDetailType(data){
         content += '<span id="param8">'+record[i].coin+'嗨币</span>';
         content += '</div>';
         content += '<div class="item-right">';
-        content += '<span id="param9">'+(record[i]==0? '等待开奖':'已完成')+'</span>';
+        content += '<span id="param9">'+(record[i].flag==0? '等待开奖':'已完成')+'</span>';
         content += '</div>';
         content += '</div>';
         content += '<div class="item-content-right">';
