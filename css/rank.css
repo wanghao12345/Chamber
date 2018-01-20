@@ -71,11 +71,12 @@
 	
 }
 .rankFrame .top .myInfo .info2 .title2{
-	width: 100%;
-	height: 2rem;
-	line-height: 3rem;
-	text-align: center;
-	color: white;
+    width: 100%;
+    height: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    color: #c09a51;
+    font-size: 0.65rem;
 }
 .rankFrame .top .myInfo .info2 .content2{
 	width: 100%;
@@ -90,7 +91,8 @@
     float: left;
     width: 2.2rem;
     text-align: right;
-    font-size: 0.6rem;
+    font-size: 0.65rem;
+    font-weight: 600;
 }
 .rankFrame .top .myInfo .info2 .content2 img{
     width: 1rem;
@@ -102,11 +104,12 @@
 
 }
 .rankFrame .top .myInfo .info3 .title3{
-	width: 100%;
-	height: 2rem;
-	line-height: 3rem;
-	text-align: center;
-	color: white;	
+    width: 100%;
+    height: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    color: #c09a51;
+    font-size: 0.65rem;
 }
 .rankFrame .top .myInfo .info3 .content3{
     width: 100%;
@@ -114,7 +117,8 @@
     line-height: 1rem;
     color: white;
     text-align: center;
-    font-size: 0.6rem;
+    font-size: 0.65rem;
+    font-weight: 600;
 
 }
 .rankFrame .top .myInfo .info4{
@@ -204,15 +208,16 @@
     float: left;
     text-align: center;
     line-height: 3rem;
-    color: #cc9b84;
+    color: #c08062;
+    font-size: 0.6rem;
 }
 .rankFrame .bottom .bottom-content .item ul li:nth-child(1){
 	width: 15%;	
 	position: relative;
 }
 .rankFrame .bottom .bottom-content .item ul li:nth-child(1) img{
-    width: 1.2rem;
-    margin-top: 0.7rem;
+    width: 1rem;
+    margin-top: 0.8rem;
 }
 .rankFrame .bottom .bottom-content .item ul li:nth-child(1) span{
 	width: 1.2rem;
@@ -234,21 +239,21 @@
 	position: relative;
 }
 .rankFrame .bottom .bottom-content .item ul li:nth-child(2) div.head{
-	width: 2rem;
-	height: 2rem;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	margin-left: -1rem;
-	margin-top: -1rem;
-	border-radius: 2rem;
-	background-color: white;
+    width: 1.8rem;
+    height: 1.8rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -1rem;
+    margin-top: -0.9rem;
+    border-radius: 2rem;
+    background-color: white;
 }
 .rankFrame .bottom .bottom-content .item ul li:nth-child(2) div.head img{
-    width: 2rem;
-    height: 2rem;
+    width: 100%;
+    height: 100%;
     display: block;
-    border-radius: 2rem;  
+    border-radius: 2rem; 
 }
 .rankFrame .bottom .bottom-content .item ul li:nth-child(3){
 	width: 30%;	

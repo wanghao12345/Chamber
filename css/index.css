@@ -69,10 +69,10 @@ html,body{
     z-index: 3;
 }
 .box-top .back1 .back1-content .back1-right a{
-    color: #edbb64;
+    color: #dfa239;
     display: block;
     text-align: center;
-    margin-top: 1.8rem;
+    margin-top: 1.65rem;
     text-decoration: none;
     font-size: 0.6rem;
 }
@@ -359,7 +359,7 @@ html,body{
     line-height: 2rem;
     color: #edbb64;
     font-weight: 600;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     position: relative;
 }
 .selectList ul li .list-bottom{
