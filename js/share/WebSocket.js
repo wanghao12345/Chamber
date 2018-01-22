@@ -699,10 +699,14 @@ function ChasingRecordDetailType_1(data){
 /******************----是否获得红包碎片-----******************/
 function isGetRedBagType(data){
     if (data.d.errcode == 0) {
-        maxTip('恭喜您获得了红包碎片','1.4rem');
+        // maxTip('恭喜您获得了红包碎片','1.4rem');
+        $('.redBagFrame').css('display','block');
+        var time = window.setTimeout(function(){
+            $('.redBagFrame').css('display','none');
+        },2000)
     } 
     if (data.d.errcode == -1) {
-        maxTip('本次开奖您没有获得红包碎片','1.4rem');
+        // maxTip('本次开奖您没有获得红包碎片','1.4rem');
     }
 }
 
