@@ -219,8 +219,8 @@
 	position: relative;
 }
 .rankFrame .bottom .bottom-content .item ul li:nth-child(1) img{
-    width: 1rem;
-    margin-top: 0.8rem;
+    width: 1.2rem;
+    margin-top: 0.7rem;
 }
 .rankFrame .bottom .bottom-content .item ul li:nth-child(1) span{
 	width: 1.2rem;
