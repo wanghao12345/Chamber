@@ -257,7 +257,7 @@ function stakeType(data){
         $('.bettingFrame span#OpeningTime').html(data.d[1]);
         startFly();
     }else{
-        maxTip('投注失败！','1.4rem');
+        maxTip(data.d,'1.4rem');
     }
 }
 /******************----追投接口-----******************/
@@ -273,7 +273,7 @@ function chasingType(data){
         $('.bettingFrame span#OpeningTime').html(data.d[1]);
         startFly();
     }else{
-        maxTip('追投失败！','1.4rem');
+        maxTip(data.d,'1.4rem');
     }
 }
 /******************----往期密码接口-----******************/
