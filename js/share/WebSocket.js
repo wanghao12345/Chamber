@@ -415,7 +415,7 @@ function ChasingRecordType(data){
                     content += '<span class="p_right" style="font-size: 0.7rem;">中奖'+item[i].getcoin+'嗨币</span></p>';
                 }
             }
-            content += '<p><span class="p_left">'+item[i].created_at+'</span>';
+            content += '<p style="margin-top:-0.2rem"><span class="p_left">'+item[i].created_at+'</span>';
             content += '<span class="p_right">消耗'+item[i].coin+'嗨币</span></p>';
             content += '</div>';
             content += '<div class="right"><img src="img/record/right.png" alt="向右" /><span class="index" style="display:none">'+item[i].index+'</span><span class="ran" style="display:none">'+item[i].ran+'</span></div>';
