@@ -14,13 +14,16 @@ socket.onmessage = function(msg){
     console.log(msg.data);
     var data = JSON.parse(msg.data);
     switch(data.i){
+        case -1:
+            maxTip(data.d,'1.4rem');
+        break;
         case 1: case 2: case 3: case 4: case 5: case 6: case 7: case 8: //登录
             loginType(data);
         break;
         case 13:
             isGetRedBagType(data);
         break;
-        case 12001: case -1://投注
+        case 12001://投注
             stakeType(data);
         break;
         case 12002://追投
