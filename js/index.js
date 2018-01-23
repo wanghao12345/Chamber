@@ -115,6 +115,7 @@ $(function(){
 			var cost = parseInt($('#numberList ul li a.active').html());
 			if (dollor<cost) {//跳往充值界面
 				// window.location.href = Recharge_Path;
+				stakeRequest();
 			} else {
 				//押注请求
 				chasingRequest();
@@ -150,6 +151,7 @@ $(function(){
 			var cost = parseInt($('#numberList ul li a.active').html());
 			if (dollor<cost) {//跳往充值界面
 				// window.location.href = Recharge_Path;
+				stakeRequest();
 			} else {
 				//押注请求
 				stakeRequest();
