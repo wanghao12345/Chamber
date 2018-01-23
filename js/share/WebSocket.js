@@ -23,7 +23,7 @@ socket.onmessage = function(msg){
         case 12001: case -1://投注
             stakeType(data);
         break;
-        case 12002: case -1://追投
+        case 12002://追投
             chasingType(data);
         break;
         case 12003://过去一天的开奖结果
