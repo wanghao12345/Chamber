@@ -80,21 +80,21 @@ var closeSocket = function(){
     socket.close();
 }
 /******************----获取测试token-----******************/
-/*function GetToken(){
-	$.ajax({
-        url: "http://ateam.ticp.io:9109/1?d={%22hi_uid%22:%223%22,%22phone%22:%2218711111111%22,%22nickname%22:%22%E5%BC%A0%E9%A3%9E1%22,%22icon%22:%221111%22,%22time%22:%221510726176%22,%22sign%22:%2268799b666137cdcc54baf0dfcde2a28e%22}",
-        type: "get",
-        data: {},
-        dataType: "json",
-        success: function(data) {
-            console.log(data);
-            token = data.ret[0].d.token;
-			var login_params = '{"path":"12000","d":{"tk":"'+token+'"}}';
-            sendSocket(login_params);
-        }
-    })
+// function GetToken(){
+// 	$.ajax({
+//         url: "http://ateam.ticp.io:9109/1?d={%22hi_uid%22:%223%22,%22phone%22:%2218711111111%22,%22nickname%22:%22%E5%BC%A0%E9%A3%9E1%22,%22icon%22:%221111%22,%22time%22:%221510726176%22,%22sign%22:%2268799b666137cdcc54baf0dfcde2a28e%22}",
+//         type: "get",
+//         data: {},
+//         dataType: "json",
+//         success: function(data) {
+//             console.log(data);
+//             token = data.ret[0].d.token;
+// 			var login_params = '{"path":"12000","d":{"tk":"'+token+'"}}';
+//             sendSocket(login_params);
+//         }
+//     })
 
-}*/
+// }
 function GetToken(){
     var reg = new RegExp("(^|&)tk=([^&]*)(&|$)");
     var r = window.location.search.substr(1).match(reg);

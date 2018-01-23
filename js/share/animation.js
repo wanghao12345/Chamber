@@ -233,7 +233,7 @@ function maxTip(content,line_hight){
 
 //插入大提示框
 function addMaxTip(content,line_hight){
-	$('body').append('<div class="maxtooltip" style="'+line_hight+'">'+content+'</div>');
+	$('body').append('<div class="maxtooltip" style="line-height:'+line_hight+'">'+content+'</div>');
 }
 //清除大提示框
 function removeMaxTip(){
