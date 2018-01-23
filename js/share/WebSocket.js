@@ -95,6 +95,7 @@ var closeSocket = function(){
 //     })
 
 // }
+// 获取tk
 function GetToken(){
     var reg = new RegExp("(^|&)tk=([^&]*)(&|$)");
     var r = window.location.search.substr(1).match(reg);
