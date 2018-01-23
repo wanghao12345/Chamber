@@ -80,21 +80,21 @@ var closeSocket = function(){
     socket.close();
 }
 /******************----获取测试token-----******************/
-// function GetToken(){
-// 	$.ajax({
-//         url: "http://ateam.ticp.io:9109/1?d={%22hi_uid%22:%223%22,%22phone%22:%2218711111111%22,%22nickname%22:%22%E5%BC%A0%E9%A3%9E1%22,%22icon%22:%221111%22,%22time%22:%221510726176%22,%22sign%22:%2268799b666137cdcc54baf0dfcde2a28e%22}",
-//         type: "get",
-//         data: {},
-//         dataType: "json",
-//         success: function(data) {
-//             console.log(data);
-//             token = data.ret[0].d.token;
-// 			var login_params = '{"path":"12000","d":{"tk":"'+token+'"}}';
-//             sendSocket(login_params);
-//         }
-//     })
+/*function GetToken(){
+	$.ajax({
+        url: "http://ateam.ticp.io:9109/1?d={%22hi_uid%22:%223%22,%22phone%22:%2218711111111%22,%22nickname%22:%22%E5%BC%A0%E9%A3%9E1%22,%22icon%22:%221111%22,%22time%22:%221510726176%22,%22sign%22:%2268799b666137cdcc54baf0dfcde2a28e%22}",
+        type: "get",
+        data: {},
+        dataType: "json",
+        success: function(data) {
+            console.log(data);
+            token = data.ret[0].d.token;
+			var login_params = '{"path":"12000","d":{"tk":"'+token+'"}}';
+            sendSocket(login_params);
+        }
+    })
 
-// }
+}*/
 function GetToken(){
     var reg = new RegExp("(^|&)tk=([^&]*)(&|$)");
     var r = window.location.search.substr(1).match(reg);
@@ -167,6 +167,7 @@ function loginType(data){
 
 //返回服务器当前时间戳
 function login_serverTime(data){
+    
 
 }
 //返回登录用户数据
@@ -336,12 +337,12 @@ function StakeRecordType(data){
         for (var i = 0; i < item.length; i++) {
             content +='<li><a>';
             content +='<div class="left"><p>';
-            content +='<span class="p_left">第'+item[i].index+'号密室</span>';
+            content +='<span class="p_left" style="font-size: 0.7rem;">第'+item[i].index+'号密室</span>';
             if (item[i].stake_type != '0') {//追投
                 content +='<i class="p_left" id="chase">追投</i>';
             } 
             if (item[i].flag == 0) {//未开奖
-                content +='<span class="p_right">等待解密</span>';
+                content +='<span class="p_right" style="font-size: 0.7rem;">等待解密</span>';
             }else if (item[i].flag == 1) {//已开奖
                 if (item[i].get_coin == 0) {//未猜中
                     content +='<span class="p_right">未猜中</span>';
@@ -397,21 +398,21 @@ function ChasingRecordType(data){
 
             content +='<div class="left">';
             if (item[i].decodingprogress=="0") {
-                content += '<p><span class="p_left">已完成</span>';
+                content += '<p><span class="p_left" style="font-size: 0.7rem;">已完成</span>';
             } else {        
-                content += '<p><span class="p_left">'+item[i].decodingprogress+'</span>';
+                content += '<p><span class="p_left" style="font-size: 0.7rem;">'+item[i].decodingprogress+'</span>';
             }
             if (item[i].status == 1) {
                 content += '<i class="p_left" id="chase">已撤单</i>';
             }
 
             if (item[i].decodingprogress!="0") {//未开奖
-                content += '<span class="p_right">等待开奖</span></p>';
+                content += '<span class="p_right" style="font-size: 0.7rem;">等待开奖</span></p>';
             }else{//已开奖
                 if (item[i].getcoin == 0) {//未中奖
-                    content += '<span class="p_right">未中奖</span></p>';
+                    content += '<span class="p_right" style="font-size: 0.7rem;">未中奖</span></p>';
                 } else {//中奖
-                    content += '<span class="p_right">中奖'+item[i].getcoin+'嗨币</span></p>';
+                    content += '<span class="p_right" style="font-size: 0.7rem;">中奖'+item[i].getcoin+'嗨币</span></p>';
                 }
             }
             content += '<p><span class="p_left">'+item[i].created_at+'</span>';

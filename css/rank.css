@@ -75,7 +75,7 @@
     height: 2rem;
     line-height: 3rem;
     text-align: center;
-    color: #d7a55e;
+    color: #cd9e54;
     font-size: 0.65rem;
 }
 .rankFrame .top .myInfo .info2 .content2{
@@ -85,6 +85,8 @@
 	color: white;
 	text-align: center;	
 	overflow: hidden;
+    font-weight: 700;
+    font-size: .16rem;
 }
 .rankFrame .top .myInfo .info2 .content2 span{
     display: block;
@@ -108,7 +110,7 @@
     height: 2rem;
     line-height: 3rem;
     text-align: center;
-    color: #d7a55e;
+    color: #cd9e54;
     font-size: 0.65rem;
 }
 .rankFrame .top .myInfo .info3 .content3{
@@ -117,16 +119,16 @@
     line-height: 1rem;
     color: white;
     text-align: center;
-    font-size: 0.65rem;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: .16rem;
 
 }
 .rankFrame .top .myInfo .info4{
 	position: relative;
 }
 .rankFrame .top .myInfo .info4 .info4-content{
-    width: 2rem;
-    height: 2.5rem;
+    width: 1.7rem;
+    height: 2.2rem;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -136,11 +138,11 @@
     background-size: 100% 100%;
     text-align: center;
     box-sizing: border-box;
-    padding: 0 0.3rem;
-    padding-top: 0.8rem;
+    padding: 0 0.2rem;
+    padding-top: 0.7rem;
     color: #a86246;
-    font-size: 0.6rem;
-    line-height: 0.7rem;
+    line-height: 1;
+    font-size: .12rem;
 }
 
 
@@ -175,13 +177,14 @@
 	width: 15%;
 }
 .rankFrame .bottom .bottom-title ul li:nth-child(2){
-	width: 15%;
+	width: 20%;
 }
 .rankFrame .bottom .bottom-title ul li:nth-child(3){
-	width: 30%;
+	width: 20%;
+    text-align: left;
 }
 .rankFrame .bottom .bottom-title ul li:nth-child(4){
-	width: 40%;
+    width: 45%;
 }
 
 .rankFrame .bottom .bottom-content{
@@ -235,17 +238,16 @@
 	color: #5c3a32;
 }
 .rankFrame .bottom .bottom-content .item ul li:nth-child(2){
-	width: 15%;
+	width: 20%;
 	position: relative;
 }
 .rankFrame .bottom .bottom-content .item ul li:nth-child(2) div.head{
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 1.6rem;
+    height: 1.6rem;
     position: absolute;
-    left: 50%;
+    right: 0.5rem;
     top: 50%;
-    margin-left: -1rem;
-    margin-top: -0.9rem;
+    margin-top: -0.8rem;
     border-radius: 2rem;
     background-color: white;
 }
@@ -256,10 +258,11 @@
     border-radius: 2rem; 
 }
 .rankFrame .bottom .bottom-content .item ul li:nth-child(3){
-	width: 30%;	
+	width: 20%;	
+    text-align: left;
 }
 .rankFrame .bottom .bottom-content .item ul li:nth-child(4){
-	width: 40%;	
+	width: 45%;	
 }
 
 
@@ -278,11 +281,11 @@
 }
 .rankFrame .bottom-btn .bottom-btn-content button{
     position: absolute;
-    width: 8.4rem;
+    width: 7rem;
     height: 2rem;
     left: 50%;
     top: 50%;
-    margin-left: -4.2rem;
+    margin-left: -3.5rem;
     margin-top: -1rem;
     background: url(../img/rank/btn.png);
     background-size: 100% 100%;
